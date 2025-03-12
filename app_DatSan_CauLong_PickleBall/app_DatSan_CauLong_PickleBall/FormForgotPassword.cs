@@ -11,12 +11,10 @@ using System.Windows.Forms;
 
 namespace app_DatSan_CauLong_PickleBall
 {
-    
-
-    public partial class FormLogin: Form
+    public partial class FormForgotPassword: Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-            private static extern IntPtr CreateRoundRectRgn
+        private static extern IntPtr CreateRoundRectRgn
         (
             int nLeft,
             int nTop,
@@ -26,43 +24,51 @@ namespace app_DatSan_CauLong_PickleBall
             int nHeightEllipse
         );
 
-        public FormLogin()
+        public FormForgotPassword()
         {
             InitializeComponent();
         }
 
-        private void FormLogin_Load(object sender, EventArgs e)
+        private void FormForgotPassword_Load(object sender, EventArgs e)
         {
             //background
             this.BackgroundImage = Image.FromFile("./img/bg.jpg"); // Đặt ảnh nền
             this.BackgroundImageLayout = ImageLayout.Stretch; // Căn chỉnh ảnh nền
 
             //màu chữ
-            lb_DangNhap.ForeColor = ColorTranslator.FromHtml("#016d3b");
+            lb_QuenMatKhau.ForeColor = ColorTranslator.FromHtml("#016d3b");
             lb_TaiKhoan.ForeColor = ColorTranslator.FromHtml("#016d3b");
             lb_MatKhau.ForeColor = ColorTranslator.FromHtml("#016d3b");
-            lb_DangKy.ForeColor = ColorTranslator.FromHtml("#016d3b");
-            bt_DangNhap.ForeColor = Color.White;
-            bt_DangNhap.BackColor = ColorTranslator.FromHtml("#016d3b");
+            lb_GuiLaiMa.ForeColor = ColorTranslator.FromHtml("#016d3b");
+            bt_LayMatKhau.ForeColor = Color.White;
+            bt_LayMatKhau.BackColor = ColorTranslator.FromHtml("#016d3b");
+            bt_XacNhan.ForeColor = Color.White;
+            bt_XacNhan.BackColor = ColorTranslator.FromHtml("#016d3b");
 
 
             //bo góc 
             pn_TaiKhoan.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_TaiKhoan.Width, pn_TaiKhoan.Height, 30, 30));
-            pn_MatKhau.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_MatKhau.Width, pn_MatKhau.Height, 30, 30));
-            bt_DangNhap.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, bt_DangNhap.Width, bt_DangNhap.Height, 20, 20));
+            pn_MaCode.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_MaCode.Width, pn_MaCode.Height, 30, 30));
+            bt_LayMatKhau.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, bt_LayMatKhau.Width, bt_LayMatKhau.Height, 20, 20));
+            bt_XacNhan.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, bt_XacNhan.Width, bt_XacNhan.Height, 20, 20));
             pn_KhungDangNhap.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_KhungDangNhap.Width, pn_KhungDangNhap.Height, 20, 20));
 
             //placehoder
             tb_TaiKhoan.GotFocus += new EventHandler(RemoveText);
             tb_TaiKhoan.LostFocus += new EventHandler(AddText);
-            tb_MatKhau.GotFocus += new EventHandler(RemoveText);
-            tb_MatKhau.LostFocus += new EventHandler(AddText);
+            tb_MaCode.GotFocus += new EventHandler(RemoveText);
+            tb_MaCode.LostFocus += new EventHandler(AddText);
 
             //làm mờ khung panel để hiển thị background
             pn_KhungDangNhap.Paint += new PaintEventHandler(pn_KhungDangNhap_Paint);
 
             //lỗi đăng nhập
-            lb_LoiDangNhap.Visible = false;
+            lb_ThongTin.Visible = false;
+            lb_CauHoi.Visible = false;
+            lb_GuiLaiMa.Visible = false;
+            pn_MaCode.Visible = false;
+            lb_MaCode.Visible = false;
+            bt_XacNhan.Visible = false;
         }
 
         private void pn_KhungDangNhap_Paint(object sender, PaintEventArgs e)
@@ -84,7 +90,7 @@ namespace app_DatSan_CauLong_PickleBall
                 {
                     tb.Text = "";
                 }
-                else if (tb == tb_MatKhau && tb.Text == "Vui lòng nhập mật khẩu")
+                else if (tb == tb_MaCode && tb.Text == "Vui lòng nhập mã code")
                 {
                     tb.Text = "";
                 }
@@ -100,33 +106,37 @@ namespace app_DatSan_CauLong_PickleBall
                 {
                     tb.Text = "Nhập số điện thoại hoặc email";
                 }
-                else if (tb == tb_MatKhau && string.IsNullOrWhiteSpace(tb.Text))
+                else if (tb == tb_MaCode && string.IsNullOrWhiteSpace(tb.Text))
                 {
-                    tb.Text = "Vui lòng nhập mật khẩu";
+                    tb.Text = "Vui lòng mã code";
                 }
             }
         }
 
-
-        private void pt_Close_Click_1(object sender, EventArgs e)
+        private void bt_LayMatKhau_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //ẩn
+            lb_TaiKhoan.Visible = false;
+            pn_TaiKhoan.Visible = false;
+            tb_TaiKhoan.Visible = false;
+            bt_LayMatKhau.Visible = false;
+
+            //hiện
+            lb_ThongTin.Visible = true;
+            lb_CauHoi.Visible = true;
+            lb_GuiLaiMa.Visible = true;
+            lb_MaCode.Visible = true;
+            pn_MaCode.Visible = true;
+            tb_MaCode.Visible = true;
+            bt_XacNhan.Visible = true;
         }
 
-        private void tb_MatKhau_TextChanged(object sender, EventArgs e)
+        private void pt_Hide_Click_1(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        private void lb_DangKy_Click(object sender, EventArgs e)
-        {
-            FormRegister formRegister = new FormRegister();
-            this.Hide();
-            formRegister.ShowDialog();
-            this.Show();
-        }
-
-        private void pt_MiniMaxmize_Click(object sender, EventArgs e)
+        private void pt_MiniMaxmize_Click_1(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Maximized)
             {
@@ -138,22 +148,9 @@ namespace app_DatSan_CauLong_PickleBall
             }
         }
 
-        private void pt_Hide_Click(object sender, EventArgs e)
+        private void pt_Close_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void bt_DangNhap_Click(object sender, EventArgs e)
-        {
-            lb_LoiDangNhap.Visible = true;
-        }
-
-        private void lb_QuenMatKhau_Click(object sender, EventArgs e)
-        {
-            FormForgotPassword formForgotPassword = new FormForgotPassword();
-            this.Hide();
-            formForgotPassword.ShowDialog();
-            this.Show();
+            this.Close();
         }
     }
 }
