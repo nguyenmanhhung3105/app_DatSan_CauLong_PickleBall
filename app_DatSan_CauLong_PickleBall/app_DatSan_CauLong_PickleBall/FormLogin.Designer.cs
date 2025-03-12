@@ -36,32 +36,33 @@
             this.lb_DangKy = new System.Windows.Forms.Label();
             this.bt_DangNhap = new System.Windows.Forms.Button();
             this.pn_TaiKhoan = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tb_TaiKhoan = new System.Windows.Forms.TextBox();
             this.pn_MatKhau = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tb_MatKhau = new System.Windows.Forms.TextBox();
             this.pn_KhungDangNhap = new System.Windows.Forms.Panel();
+            this.lb_LoiDangNhap = new System.Windows.Forms.Label();
             this.pn_LoGo = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pt_Hide = new System.Windows.Forms.PictureBox();
             this.pt_MiniMaxmize = new System.Windows.Forms.PictureBox();
             this.pt_Close = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pn_TaiKhoan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pn_MatKhau.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pn_KhungDangNhap.SuspendLayout();
             this.pn_LoGo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pt_Hide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pt_MiniMaxmize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pt_Close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,6 +119,7 @@
             // lb_DangKy
             // 
             this.lb_DangKy.AutoSize = true;
+            this.lb_DangKy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_DangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_DangKy.Location = new System.Drawing.Point(247, 489);
             this.lb_DangKy.Name = "lb_DangKy";
@@ -139,6 +141,7 @@
             this.bt_DangNhap.TabIndex = 8;
             this.bt_DangNhap.Text = "Đăng nhập ";
             this.bt_DangNhap.UseVisualStyleBackColor = false;
+            this.bt_DangNhap.Click += new System.EventHandler(this.bt_DangNhap_Click);
             // 
             // pn_TaiKhoan
             // 
@@ -149,6 +152,17 @@
             this.pn_TaiKhoan.Name = "pn_TaiKhoan";
             this.pn_TaiKhoan.Size = new System.Drawing.Size(393, 48);
             this.pn_TaiKhoan.TabIndex = 12;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox2.Image = global::app_DatSan_CauLong_PickleBall.Properties.Resources.user1;
+            this.pictureBox2.Location = new System.Drawing.Point(344, 13);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 23);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
             // 
             // tb_TaiKhoan
             // 
@@ -172,6 +186,17 @@
             this.pn_MatKhau.Size = new System.Drawing.Size(393, 48);
             this.pn_MatKhau.TabIndex = 13;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox3.Image = global::app_DatSan_CauLong_PickleBall.Properties.Resources.padlock;
+            this.pictureBox3.Location = new System.Drawing.Point(345, 11);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 27);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            // 
             // tb_MatKhau
             // 
             this.tb_MatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -188,6 +213,7 @@
             // 
             this.pn_KhungDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pn_KhungDangNhap.BackColor = System.Drawing.Color.Transparent;
+            this.pn_KhungDangNhap.Controls.Add(this.lb_LoiDangNhap);
             this.pn_KhungDangNhap.Controls.Add(this.pn_MatKhau);
             this.pn_KhungDangNhap.Controls.Add(this.pn_TaiKhoan);
             this.pn_KhungDangNhap.Controls.Add(this.bt_DangNhap);
@@ -202,6 +228,17 @@
             this.pn_KhungDangNhap.Size = new System.Drawing.Size(447, 528);
             this.pn_KhungDangNhap.TabIndex = 2;
             // 
+            // lb_LoiDangNhap
+            // 
+            this.lb_LoiDangNhap.AutoSize = true;
+            this.lb_LoiDangNhap.Font = new System.Drawing.Font("Verdana", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_LoiDangNhap.ForeColor = System.Drawing.Color.Red;
+            this.lb_LoiDangNhap.Location = new System.Drawing.Point(22, 296);
+            this.lb_LoiDangNhap.Name = "lb_LoiDangNhap";
+            this.lb_LoiDangNhap.Size = new System.Drawing.Size(409, 20);
+            this.lb_LoiDangNhap.TabIndex = 14;
+            this.lb_LoiDangNhap.Text = "Tài khoản hoặc mật khẩu không chính xác";
+            // 
             // pn_LoGo
             // 
             this.pn_LoGo.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -212,6 +249,26 @@
             this.pn_LoGo.Name = "pn_LoGo";
             this.pn_LoGo.Size = new System.Drawing.Size(364, 159);
             this.pn_LoGo.TabIndex = 3;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::app_DatSan_CauLong_PickleBall.Properties.Resources.logoNhom;
+            this.pictureBox5.Location = new System.Drawing.Point(176, 13);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(185, 146);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::app_DatSan_CauLong_PickleBall.Properties.Resources.logoPM;
+            this.pictureBox4.Location = new System.Drawing.Point(17, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(167, 153);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
             // 
             // panel1
             // 
@@ -261,48 +318,6 @@
             this.pt_Close.TabStop = false;
             this.pt_Close.Click += new System.EventHandler(this.pt_Close_Click_1);
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::app_DatSan_CauLong_PickleBall.Properties.Resources.logoNhom;
-            this.pictureBox5.Location = new System.Drawing.Point(176, 13);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(185, 146);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::app_DatSan_CauLong_PickleBall.Properties.Resources.logoPM;
-            this.pictureBox4.Location = new System.Drawing.Point(17, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(167, 153);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox3.Image = global::app_DatSan_CauLong_PickleBall.Properties.Resources.padlock;
-            this.pictureBox3.Location = new System.Drawing.Point(345, 11);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 27);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox2.Image = global::app_DatSan_CauLong_PickleBall.Properties.Resources.user1;
-            this.pictureBox2.Location = new System.Drawing.Point(344, 13);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 23);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -326,22 +341,22 @@
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.FormRegister_Load);
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.pn_TaiKhoan.ResumeLayout(false);
             this.pn_TaiKhoan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pn_MatKhau.ResumeLayout(false);
             this.pn_MatKhau.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pn_KhungDangNhap.ResumeLayout(false);
             this.pn_KhungDangNhap.PerformLayout();
             this.pn_LoGo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pt_Hide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pt_MiniMaxmize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pt_Close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -371,6 +386,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pt_Hide;
         private System.Windows.Forms.PictureBox pt_MiniMaxmize;
+        private System.Windows.Forms.Label lb_LoiDangNhap;
     }
 }
 

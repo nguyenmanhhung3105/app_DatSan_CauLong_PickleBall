@@ -11,12 +11,10 @@ using System.Windows.Forms;
 
 namespace app_DatSan_CauLong_PickleBall
 {
-    
-
-    public partial class FormLogin: Form
+    public partial class FormRegister: Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-            private static extern IntPtr CreateRoundRectRgn
+        private static extern IntPtr CreateRoundRectRgn
         (
             int nLeft,
             int nTop,
@@ -26,43 +24,46 @@ namespace app_DatSan_CauLong_PickleBall
             int nHeightEllipse
         );
 
-        public FormLogin()
+        public FormRegister()
         {
             InitializeComponent();
         }
 
-        private void FormLogin_Load(object sender, EventArgs e)
+        private void FormRegister_Load(object sender, EventArgs e)
         {
             //background
             this.BackgroundImage = Image.FromFile("./img/bg.jpg"); // Đặt ảnh nền
             this.BackgroundImageLayout = ImageLayout.Stretch; // Căn chỉnh ảnh nền
 
             //màu chữ
-            lb_DangNhap.ForeColor = ColorTranslator.FromHtml("#016d3b");
+            lb_DangKy.ForeColor = ColorTranslator.FromHtml("#016d3b");
             lb_TaiKhoan.ForeColor = ColorTranslator.FromHtml("#016d3b");
             lb_MatKhau.ForeColor = ColorTranslator.FromHtml("#016d3b");
-            lb_DangKy.ForeColor = ColorTranslator.FromHtml("#016d3b");
-            bt_DangNhap.ForeColor = Color.White;
-            bt_DangNhap.BackColor = ColorTranslator.FromHtml("#016d3b");
+            lb_DangNhap.ForeColor = ColorTranslator.FromHtml("#016d3b");
+            bt_DangKy.ForeColor = Color.White;
+            bt_DangKy.BackColor = ColorTranslator.FromHtml("#016d3b");
 
 
             //bo góc 
             pn_TaiKhoan.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_TaiKhoan.Width, pn_TaiKhoan.Height, 30, 30));
-            pn_MatKhau.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_MatKhau.Width, pn_MatKhau.Height, 30, 30));
-            bt_DangNhap.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, bt_DangNhap.Width, bt_DangNhap.Height, 20, 20));
-            pn_KhungDangNhap.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_KhungDangNhap.Width, pn_KhungDangNhap.Height, 20, 20));
+            pn_Ten.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_Ten.Width, pn_Ten.Height, 30, 30));
+            pn_MatKhau1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_MatKhau1.Width, pn_MatKhau1.Height, 30, 30));
+            pn_MatKhau2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_MatKhau2.Width, pn_MatKhau2.Height, 30, 30));
+            bt_DangKy.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, bt_DangKy.Width, bt_DangKy.Height, 20, 20));
+            pn_KhungDangKy.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_KhungDangKy.Width, pn_KhungDangKy.Height, 20, 20));
 
             //placehoder
             tb_TaiKhoan.GotFocus += new EventHandler(RemoveText);
             tb_TaiKhoan.LostFocus += new EventHandler(AddText);
-            tb_MatKhau.GotFocus += new EventHandler(RemoveText);
-            tb_MatKhau.LostFocus += new EventHandler(AddText);
+            tb_Ten.GotFocus += new EventHandler(RemoveText);
+            tb_Ten.LostFocus += new EventHandler(AddText);
+            tb_MatKhau1.GotFocus += new EventHandler(RemoveText);
+            tb_MatKhau1.LostFocus += new EventHandler(AddText);
+            tb_MatKhau2.GotFocus += new EventHandler(RemoveText);
+            tb_MatKhau2.LostFocus += new EventHandler(AddText);
 
             //làm mờ khung panel để hiển thị background
-            pn_KhungDangNhap.Paint += new PaintEventHandler(pn_KhungDangNhap_Paint);
-
-            //lỗi đăng nhập
-            lb_LoiDangNhap.Visible = false;
+            pn_KhungDangKy.Paint += new PaintEventHandler(pn_KhungDangNhap_Paint);
         }
 
         private void pn_KhungDangNhap_Paint(object sender, PaintEventArgs e)
@@ -71,7 +72,7 @@ namespace app_DatSan_CauLong_PickleBall
             Color panelColor = Color.FromArgb(160, 255, 255, 255);
             using (SolidBrush brush = new SolidBrush(panelColor))
             {
-                e.Graphics.FillRectangle(brush, pn_KhungDangNhap.ClientRectangle);
+                e.Graphics.FillRectangle(brush, pn_KhungDangKy.ClientRectangle);
             }
         }
 
@@ -84,11 +85,21 @@ namespace app_DatSan_CauLong_PickleBall
                 {
                     tb.Text = "";
                 }
-                else if (tb == tb_MatKhau && tb.Text == "Vui lòng nhập mật khẩu")
+                else if (tb == tb_Ten && tb.Text == "Vui lòng nhập họ và tên")
                 {
                     tb.Text = "";
-                    tb.UseSystemPasswordChar = true; // Enable password masking
                 }
+                else if (tb == tb_MatKhau1 && tb.Text == "Vui lòng nhập mật khẩu")
+                {
+                    tb.Text = "";
+                    tb.UseSystemPasswordChar = true; 
+                }
+                else if (tb == tb_MatKhau2 && tb.Text == "Vui lòng nhập lại mật khẩu")
+                {
+                    tb.Text = "";
+                    tb.UseSystemPasswordChar = true;
+                }
+
             }
         }
 
@@ -101,34 +112,34 @@ namespace app_DatSan_CauLong_PickleBall
                 {
                     tb.Text = "Nhập số điện thoại hoặc email";
                 }
-                else if (tb == tb_MatKhau && string.IsNullOrWhiteSpace(tb.Text))
+                else if (tb == tb_Ten && string.IsNullOrWhiteSpace(tb.Text))
                 {
-                    tb.UseSystemPasswordChar = false; // Disable password masking
+                    tb.Text = "Vui lòng nhập họ và tên";
+                }
+                else if (tb == tb_MatKhau1 && string.IsNullOrWhiteSpace(tb.Text))
+                {
+                    tb.UseSystemPasswordChar = false; 
                     tb.Text = "Vui lòng nhập mật khẩu";
+                }
+                else if (tb == tb_MatKhau2 && string.IsNullOrWhiteSpace(tb.Text))
+                {
+                    tb.UseSystemPasswordChar = false; 
+                    tb.Text = "Vui lòng nhập lại mật khẩu";
                 }
             }
         }
 
-
-        private void pt_Close_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void tb_MatKhau_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lb_DangKy_Click(object sender, EventArgs e)
-        {
-            FormRegister formRegister = new FormRegister();
-            this.Hide();
-            formRegister.ShowDialog();
-            this.Show();
-        }
-
         private void pt_MiniMaxmize_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pt_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pt_MiniMaxmize_Click_1(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Maximized)
             {
@@ -143,11 +154,6 @@ namespace app_DatSan_CauLong_PickleBall
         private void pt_Hide_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void bt_DangNhap_Click(object sender, EventArgs e)
-        {
-            lb_LoiDangNhap.Visible = true;
         }
     }
 }
