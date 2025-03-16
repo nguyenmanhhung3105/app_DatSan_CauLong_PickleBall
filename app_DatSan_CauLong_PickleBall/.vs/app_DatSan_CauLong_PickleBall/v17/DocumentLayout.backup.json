@@ -1,0 +1,76 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\MyProject_______________________________________________\\app_DatSan_CauLong_PickleBall\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|c:\\myproject_______________________________________________\\app_datsan_caulong_pickleball\\app_datsan_caulong_pickleball\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Dang_Nhap\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\DatSan.Designer_ (2).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\MyProject_______________________________________________\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\DatSan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app_DatSan_CauLong_PickleBall\\GUI\\DatSan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\MyProject_______________________________________________\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\Program.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\Program.cs",
+              "ToolTip": "C:\\MyProject_______________________________________________\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\Program.cs",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T10:28:08.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DatSan.Designer_ (2).cs",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Dang_Nhap\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\DatSan.Designer_ (2).cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Dang_Nhap\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\DatSan.Designer_ (2).cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T17:17:07.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DatSan.cs",
+              "DocumentMoniker": "C:\\MyProject_______________________________________________\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\DatSan.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\DatSan.cs",
+              "ToolTip": "C:\\MyProject_______________________________________________\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\DatSan.cs",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\DatSan.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T16:46:21.431Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
