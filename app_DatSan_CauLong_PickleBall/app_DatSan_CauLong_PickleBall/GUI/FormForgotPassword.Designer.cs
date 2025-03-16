@@ -30,14 +30,20 @@
         {
             this.pn_KhungDangNhap = new System.Windows.Forms.Panel();
             this.pn_MaCode = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tb_MaCode = new System.Windows.Forms.TextBox();
+            this.bt_XacNhan = new System.Windows.Forms.Button();
+            this.lb_MaCode = new System.Windows.Forms.Label();
+            this.lb_ThongTin = new System.Windows.Forms.Label();
+            this.bt_LayMatKhau = new System.Windows.Forms.Button();
+            this.lb_GuiLaiMa = new System.Windows.Forms.Label();
+            this.lb_CauHoi = new System.Windows.Forms.Label();
+            this.lb_TaiKhoan = new System.Windows.Forms.Label();
+            this.lb_QuenMatKhau = new System.Windows.Forms.Label();
             this.pn_TaiKhoan = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tb_TaiKhoan = new System.Windows.Forms.TextBox();
-            this.bt_LayMatKhau = new System.Windows.Forms.Button();
             this.lb_MatKhau = new System.Windows.Forms.Label();
-            this.lb_TaiKhoan = new System.Windows.Forms.Label();
-            this.lb_QuenMatKhau = new System.Windows.Forms.Label();
             this.pn_LoGo = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -46,14 +52,9 @@
             this.pt_Hide = new System.Windows.Forms.PictureBox();
             this.pt_MiniMaxmize = new System.Windows.Forms.PictureBox();
             this.pt_Close = new System.Windows.Forms.PictureBox();
-            this.lb_GuiLaiMa = new System.Windows.Forms.Label();
-            this.lb_CauHoi = new System.Windows.Forms.Label();
-            this.lb_ThongTin = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.lb_MaCode = new System.Windows.Forms.Label();
-            this.bt_XacNhan = new System.Windows.Forms.Button();
             this.pn_KhungDangNhap.SuspendLayout();
             this.pn_MaCode.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.pn_TaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pn_LoGo.SuspendLayout();
@@ -64,7 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pt_Hide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pt_MiniMaxmize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pt_Close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // pn_KhungDangNhap
@@ -96,6 +96,17 @@
             this.pn_MaCode.Size = new System.Drawing.Size(465, 48);
             this.pn_MaCode.TabIndex = 13;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox6.Image = global::app_DatSan_CauLong_PickleBall.Properties.Resources.user1;
+            this.pictureBox6.Location = new System.Drawing.Point(412, 13);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(33, 23);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 11;
+            this.pictureBox6.TabStop = false;
+            // 
             // tb_MaCode
             // 
             this.tb_MaCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -106,6 +117,98 @@
             this.tb_MaCode.Size = new System.Drawing.Size(442, 21);
             this.tb_MaCode.TabIndex = 6;
             this.tb_MaCode.Text = "Vui lòng nhập mã code";
+            this.tb_MaCode.TextChanged += new System.EventHandler(this.tb_MaCode_TextChanged);
+            // 
+            // bt_XacNhan
+            // 
+            this.bt_XacNhan.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bt_XacNhan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_XacNhan.FlatAppearance.BorderSize = 0;
+            this.bt_XacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_XacNhan.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_XacNhan.Location = new System.Drawing.Point(83, 232);
+            this.bt_XacNhan.Name = "bt_XacNhan";
+            this.bt_XacNhan.Size = new System.Drawing.Size(361, 67);
+            this.bt_XacNhan.TabIndex = 16;
+            this.bt_XacNhan.Text = "XÁC NHẬN";
+            this.bt_XacNhan.UseVisualStyleBackColor = false;
+            // 
+            // lb_MaCode
+            // 
+            this.lb_MaCode.AutoSize = true;
+            this.lb_MaCode.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_MaCode.Location = new System.Drawing.Point(23, 124);
+            this.lb_MaCode.Name = "lb_MaCode";
+            this.lb_MaCode.Size = new System.Drawing.Size(124, 18);
+            this.lb_MaCode.TabIndex = 15;
+            this.lb_MaCode.Text = "Nhập mã code";
+            // 
+            // lb_ThongTin
+            // 
+            this.lb_ThongTin.Font = new System.Drawing.Font("Verdana", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ThongTin.ForeColor = System.Drawing.Color.Red;
+            this.lb_ThongTin.Location = new System.Drawing.Point(62, 69);
+            this.lb_ThongTin.Name = "lb_ThongTin";
+            this.lb_ThongTin.Size = new System.Drawing.Size(409, 40);
+            this.lb_ThongTin.TabIndex = 14;
+            this.lb_ThongTin.Text = "Mã code đã được gửi về email của bạn. Vui lòng kiểm tra và nhập vào ô dưới đây!";
+            this.lb_ThongTin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bt_LayMatKhau
+            // 
+            this.bt_LayMatKhau.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bt_LayMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_LayMatKhau.FlatAppearance.BorderSize = 0;
+            this.bt_LayMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_LayMatKhau.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_LayMatKhau.Location = new System.Drawing.Point(83, 232);
+            this.bt_LayMatKhau.Name = "bt_LayMatKhau";
+            this.bt_LayMatKhau.Size = new System.Drawing.Size(361, 67);
+            this.bt_LayMatKhau.TabIndex = 8;
+            this.bt_LayMatKhau.Text = "LẤY LẠI MẬT KHẨU";
+            this.bt_LayMatKhau.UseVisualStyleBackColor = false;
+            this.bt_LayMatKhau.Click += new System.EventHandler(this.bt_LayMatKhau_Click);
+            // 
+            // lb_GuiLaiMa
+            // 
+            this.lb_GuiLaiMa.AutoSize = true;
+            this.lb_GuiLaiMa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_GuiLaiMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_GuiLaiMa.Location = new System.Drawing.Point(332, 335);
+            this.lb_GuiLaiMa.Name = "lb_GuiLaiMa";
+            this.lb_GuiLaiMa.Size = new System.Drawing.Size(83, 20);
+            this.lb_GuiLaiMa.TabIndex = 5;
+            this.lb_GuiLaiMa.Text = "Gửi lại mã.";
+            // 
+            // lb_CauHoi
+            // 
+            this.lb_CauHoi.AutoSize = true;
+            this.lb_CauHoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_CauHoi.Location = new System.Drawing.Point(108, 335);
+            this.lb_CauHoi.Name = "lb_CauHoi";
+            this.lb_CauHoi.Size = new System.Drawing.Size(230, 20);
+            this.lb_CauHoi.TabIndex = 4;
+            this.lb_CauHoi.Text = "Bạn chưa nhận được mã code?";
+            // 
+            // lb_TaiKhoan
+            // 
+            this.lb_TaiKhoan.AutoSize = true;
+            this.lb_TaiKhoan.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_TaiKhoan.Location = new System.Drawing.Point(23, 124);
+            this.lb_TaiKhoan.Name = "lb_TaiKhoan";
+            this.lb_TaiKhoan.Size = new System.Drawing.Size(206, 18);
+            this.lb_TaiKhoan.TabIndex = 1;
+            this.lb_TaiKhoan.Text = "Số điện thoại hoặc email";
+            // 
+            // lb_QuenMatKhau
+            // 
+            this.lb_QuenMatKhau.AutoSize = true;
+            this.lb_QuenMatKhau.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_QuenMatKhau.Location = new System.Drawing.Point(137, 24);
+            this.lb_QuenMatKhau.Name = "lb_QuenMatKhau";
+            this.lb_QuenMatKhau.Size = new System.Drawing.Size(244, 32);
+            this.lb_QuenMatKhau.TabIndex = 0;
+            this.lb_QuenMatKhau.Text = "Quên mật khẩu";
             // 
             // pn_TaiKhoan
             // 
@@ -140,21 +243,6 @@
             this.tb_TaiKhoan.TabIndex = 7;
             this.tb_TaiKhoan.Text = "Nhập số điện thoại hoặc email";
             // 
-            // bt_LayMatKhau
-            // 
-            this.bt_LayMatKhau.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bt_LayMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_LayMatKhau.FlatAppearance.BorderSize = 0;
-            this.bt_LayMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_LayMatKhau.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_LayMatKhau.Location = new System.Drawing.Point(83, 232);
-            this.bt_LayMatKhau.Name = "bt_LayMatKhau";
-            this.bt_LayMatKhau.Size = new System.Drawing.Size(361, 67);
-            this.bt_LayMatKhau.TabIndex = 8;
-            this.bt_LayMatKhau.Text = "LẤY LẠI MẬT KHẨU";
-            this.bt_LayMatKhau.UseVisualStyleBackColor = false;
-            this.bt_LayMatKhau.Click += new System.EventHandler(this.bt_LayMatKhau_Click);
-            // 
             // lb_MatKhau
             // 
             this.lb_MatKhau.AutoSize = true;
@@ -164,26 +252,6 @@
             this.lb_MatKhau.Size = new System.Drawing.Size(84, 18);
             this.lb_MatKhau.TabIndex = 2;
             this.lb_MatKhau.Text = "Mật khẩu";
-            // 
-            // lb_TaiKhoan
-            // 
-            this.lb_TaiKhoan.AutoSize = true;
-            this.lb_TaiKhoan.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_TaiKhoan.Location = new System.Drawing.Point(23, 124);
-            this.lb_TaiKhoan.Name = "lb_TaiKhoan";
-            this.lb_TaiKhoan.Size = new System.Drawing.Size(206, 18);
-            this.lb_TaiKhoan.TabIndex = 1;
-            this.lb_TaiKhoan.Text = "Số điện thoại hoặc email";
-            // 
-            // lb_QuenMatKhau
-            // 
-            this.lb_QuenMatKhau.AutoSize = true;
-            this.lb_QuenMatKhau.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_QuenMatKhau.Location = new System.Drawing.Point(137, 24);
-            this.lb_QuenMatKhau.Name = "lb_QuenMatKhau";
-            this.lb_QuenMatKhau.Size = new System.Drawing.Size(244, 32);
-            this.lb_QuenMatKhau.TabIndex = 0;
-            this.lb_QuenMatKhau.Text = "Quên mật khẩu";
             // 
             // pn_LoGo
             // 
@@ -275,73 +343,6 @@
             this.pt_Close.TabStop = false;
             this.pt_Close.Click += new System.EventHandler(this.pt_Close_Click);
             // 
-            // lb_GuiLaiMa
-            // 
-            this.lb_GuiLaiMa.AutoSize = true;
-            this.lb_GuiLaiMa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_GuiLaiMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_GuiLaiMa.Location = new System.Drawing.Point(332, 335);
-            this.lb_GuiLaiMa.Name = "lb_GuiLaiMa";
-            this.lb_GuiLaiMa.Size = new System.Drawing.Size(83, 20);
-            this.lb_GuiLaiMa.TabIndex = 5;
-            this.lb_GuiLaiMa.Text = "Gửi lại mã.";
-            // 
-            // lb_CauHoi
-            // 
-            this.lb_CauHoi.AutoSize = true;
-            this.lb_CauHoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_CauHoi.Location = new System.Drawing.Point(108, 335);
-            this.lb_CauHoi.Name = "lb_CauHoi";
-            this.lb_CauHoi.Size = new System.Drawing.Size(230, 20);
-            this.lb_CauHoi.TabIndex = 4;
-            this.lb_CauHoi.Text = "Bạn chưa nhận được mã code?";
-            // 
-            // lb_ThongTin
-            // 
-            this.lb_ThongTin.Font = new System.Drawing.Font("Verdana", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ThongTin.ForeColor = System.Drawing.Color.Red;
-            this.lb_ThongTin.Location = new System.Drawing.Point(62, 69);
-            this.lb_ThongTin.Name = "lb_ThongTin";
-            this.lb_ThongTin.Size = new System.Drawing.Size(409, 40);
-            this.lb_ThongTin.TabIndex = 14;
-            this.lb_ThongTin.Text = "Mã code đã được gửi về email của bạn. Vui lòng kiểm tra và nhập vào ô dưới đây!";
-            this.lb_ThongTin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox6.Image = global::app_DatSan_CauLong_PickleBall.Properties.Resources.user1;
-            this.pictureBox6.Location = new System.Drawing.Point(412, 13);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(33, 23);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 11;
-            this.pictureBox6.TabStop = false;
-            // 
-            // lb_MaCode
-            // 
-            this.lb_MaCode.AutoSize = true;
-            this.lb_MaCode.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_MaCode.Location = new System.Drawing.Point(23, 124);
-            this.lb_MaCode.Name = "lb_MaCode";
-            this.lb_MaCode.Size = new System.Drawing.Size(124, 18);
-            this.lb_MaCode.TabIndex = 15;
-            this.lb_MaCode.Text = "Nhập mã code";
-            // 
-            // bt_XacNhan
-            // 
-            this.bt_XacNhan.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bt_XacNhan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_XacNhan.FlatAppearance.BorderSize = 0;
-            this.bt_XacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_XacNhan.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_XacNhan.Location = new System.Drawing.Point(83, 232);
-            this.bt_XacNhan.Name = "bt_XacNhan";
-            this.bt_XacNhan.Size = new System.Drawing.Size(361, 67);
-            this.bt_XacNhan.TabIndex = 16;
-            this.bt_XacNhan.Text = "XÁC NHẬN";
-            this.bt_XacNhan.UseVisualStyleBackColor = false;
-            // 
             // FormForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -360,6 +361,7 @@
             this.pn_KhungDangNhap.PerformLayout();
             this.pn_MaCode.ResumeLayout(false);
             this.pn_MaCode.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.pn_TaiKhoan.ResumeLayout(false);
             this.pn_TaiKhoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -371,7 +373,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pt_Hide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pt_MiniMaxmize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pt_Close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

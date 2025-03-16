@@ -108,7 +108,7 @@ namespace app_DatSan_CauLong_PickleBall
                 }
                 else if (tb == tb_MaCode && string.IsNullOrWhiteSpace(tb.Text))
                 {
-                    tb.Text = "Vui lòng mã code";
+                    tb.Text = "Vui lòng nhập mã code";
                 }
             }
         }
@@ -151,6 +151,11 @@ namespace app_DatSan_CauLong_PickleBall
         private void pt_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void tb_MaCode_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
