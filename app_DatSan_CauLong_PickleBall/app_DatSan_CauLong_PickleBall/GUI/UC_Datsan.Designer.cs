@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace app_DatSan_CauLong_PickleBall
+namespace GUI
 {
     partial class UC_Datsan
     {
@@ -36,24 +36,24 @@ namespace app_DatSan_CauLong_PickleBall
             this.btn_LSTT = new Guna.UI2.WinForms.Guna2Button();
             this.btn_LSDS = new Guna.UI2.WinForms.Guna2Button();
             this.pn_San = new System.Windows.Forms.FlowLayoutPanel();
-            this.san1 = new app_DatSan_CauLong_PickleBall.San();
-            this.san2 = new app_DatSan_CauLong_PickleBall.San();
-            this.san3 = new app_DatSan_CauLong_PickleBall.San();
-            this.san4 = new app_DatSan_CauLong_PickleBall.San();
-            this.san5 = new app_DatSan_CauLong_PickleBall.San();
-            this.san6 = new app_DatSan_CauLong_PickleBall.San();
-            this.san7 = new app_DatSan_CauLong_PickleBall.San();
-            this.san8 = new app_DatSan_CauLong_PickleBall.San();
-            this.san9 = new app_DatSan_CauLong_PickleBall.San();
-            this.san10 = new app_DatSan_CauLong_PickleBall.San();
-            this.san11 = new app_DatSan_CauLong_PickleBall.San();
-            this.san12 = new app_DatSan_CauLong_PickleBall.San();
-            this.san13 = new app_DatSan_CauLong_PickleBall.San();
-            this.san14 = new app_DatSan_CauLong_PickleBall.San();
             this.lbl_Pkb = new System.Windows.Forms.Label();
             this.lbl_Bad = new System.Windows.Forms.Label();
             this.btn_Bad = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Pkb = new Guna.UI2.WinForms.Guna2Button();
+            this.san1 = new GUI.San();
+            this.san2 = new GUI.San();
+            this.san3 = new GUI.San();
+            this.san4 = new GUI.San();
+            this.san5 = new GUI.San();
+            this.san6 = new GUI.San();
+            this.san7 = new GUI.San();
+            this.san8 = new GUI.San();
+            this.san9 = new GUI.San();
+            this.san10 = new GUI.San();
+            this.san11 = new GUI.San();
+            this.san12 = new GUI.San();
+            this.san13 = new GUI.San();
+            this.san14 = new GUI.San();
             this.pn_Dropdown.SuspendLayout();
             this.pn_San.SuspendLayout();
             this.SuspendLayout();
@@ -143,11 +143,73 @@ namespace app_DatSan_CauLong_PickleBall
             this.pn_San.Controls.Add(this.san12);
             this.pn_San.Controls.Add(this.san13);
             this.pn_San.Controls.Add(this.san14);
-            this.pn_San.Location = new System.Drawing.Point(121, 139);
+            this.pn_San.Location = new System.Drawing.Point(175, 150);
             this.pn_San.Name = "pn_San";
             this.pn_San.Size = new System.Drawing.Size(1275, 584);
             this.pn_San.TabIndex = 4;
             this.pn_San.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
+            // lbl_Pkb
+            // 
+            this.lbl_Pkb.AutoSize = true;
+            this.lbl_Pkb.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Pkb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_Pkb.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Pkb.Location = new System.Drawing.Point(17, 107);
+            this.lbl_Pkb.Name = "lbl_Pkb";
+            this.lbl_Pkb.Size = new System.Drawing.Size(126, 23);
+            this.lbl_Pkb.TabIndex = 5;
+            this.lbl_Pkb.Text = "Sân Pickle ball";
+            // 
+            // lbl_Bad
+            // 
+            this.lbl_Bad.AutoSize = true;
+            this.lbl_Bad.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Bad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_Bad.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bad.Location = new System.Drawing.Point(159, 107);
+            this.lbl_Bad.Name = "lbl_Bad";
+            this.lbl_Bad.Size = new System.Drawing.Size(112, 23);
+            this.lbl_Bad.TabIndex = 6;
+            this.lbl_Bad.Text = "Sân cầu lông";
+            // 
+            // btn_Bad
+            // 
+            this.btn_Bad.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Bad.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Bad.BackgroundImage")));
+            this.btn_Bad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Bad.BorderRadius = 10;
+            this.btn_Bad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Bad.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Bad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Bad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Bad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Bad.FillColor = System.Drawing.Color.Transparent;
+            this.btn_Bad.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Bad.ForeColor = System.Drawing.Color.White;
+            this.btn_Bad.Location = new System.Drawing.Point(149, 16);
+            this.btn_Bad.Name = "btn_Bad";
+            this.btn_Bad.Size = new System.Drawing.Size(95, 88);
+            this.btn_Bad.TabIndex = 1;
+            // 
+            // btn_Pkb
+            // 
+            this.btn_Pkb.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Pkb.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Pkb.BackgroundImage")));
+            this.btn_Pkb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Pkb.BorderRadius = 10;
+            this.btn_Pkb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Pkb.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Pkb.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Pkb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Pkb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Pkb.FillColor = System.Drawing.Color.Transparent;
+            this.btn_Pkb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Pkb.ForeColor = System.Drawing.Color.White;
+            this.btn_Pkb.Location = new System.Drawing.Point(21, 16);
+            this.btn_Pkb.Name = "btn_Pkb";
+            this.btn_Pkb.Size = new System.Drawing.Size(95, 88);
+            this.btn_Pkb.TabIndex = 0;
             // 
             // san1
             // 
@@ -303,73 +365,11 @@ namespace app_DatSan_CauLong_PickleBall
             this.san14.Size = new System.Drawing.Size(604, 222);
             this.san14.TabIndex = 13;
             // 
-            // lbl_Pkb
-            // 
-            this.lbl_Pkb.AutoSize = true;
-            this.lbl_Pkb.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Pkb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_Pkb.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Pkb.Location = new System.Drawing.Point(17, 107);
-            this.lbl_Pkb.Name = "lbl_Pkb";
-            this.lbl_Pkb.Size = new System.Drawing.Size(126, 23);
-            this.lbl_Pkb.TabIndex = 5;
-            this.lbl_Pkb.Text = "Sân Pickle ball";
-            // 
-            // lbl_Bad
-            // 
-            this.lbl_Bad.AutoSize = true;
-            this.lbl_Bad.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Bad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_Bad.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Bad.Location = new System.Drawing.Point(159, 107);
-            this.lbl_Bad.Name = "lbl_Bad";
-            this.lbl_Bad.Size = new System.Drawing.Size(112, 23);
-            this.lbl_Bad.TabIndex = 6;
-            this.lbl_Bad.Text = "Sân cầu lông";
-            // 
-            // btn_Bad
-            // 
-            this.btn_Bad.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Bad.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Bad.BackgroundImage")));
-            this.btn_Bad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Bad.BorderRadius = 10;
-            this.btn_Bad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Bad.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Bad.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Bad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Bad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Bad.FillColor = System.Drawing.Color.Transparent;
-            this.btn_Bad.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Bad.ForeColor = System.Drawing.Color.White;
-            this.btn_Bad.Location = new System.Drawing.Point(149, 16);
-            this.btn_Bad.Name = "btn_Bad";
-            this.btn_Bad.Size = new System.Drawing.Size(95, 88);
-            this.btn_Bad.TabIndex = 1;
-            // 
-            // btn_Pkb
-            // 
-            this.btn_Pkb.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Pkb.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Pkb.BackgroundImage")));
-            this.btn_Pkb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Pkb.BorderRadius = 10;
-            this.btn_Pkb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Pkb.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Pkb.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Pkb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Pkb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Pkb.FillColor = System.Drawing.Color.Transparent;
-            this.btn_Pkb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Pkb.ForeColor = System.Drawing.Color.White;
-            this.btn_Pkb.Location = new System.Drawing.Point(21, 16);
-            this.btn_Pkb.Name = "btn_Pkb";
-            this.btn_Pkb.Size = new System.Drawing.Size(95, 88);
-            this.btn_Pkb.TabIndex = 0;
-            // 
             // UC_Datsan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.lbl_Bad);
             this.Controls.Add(this.lbl_Pkb);
             this.Controls.Add(this.pn_Dropdown);

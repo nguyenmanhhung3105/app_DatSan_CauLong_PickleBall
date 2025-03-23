@@ -1,0 +1,16 @@
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\BLL\bin\Debug\BLL.dll.config
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\BLL\bin\Debug\BLL.dll
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\BLL\bin\Debug\BLL.pdb
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\BLL\bin\Debug\DAL.dll
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\BLL\bin\Debug\DTO.dll
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\BLL\bin\Debug\DAL.pdb
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\BLL\bin\Debug\DAL.dll.config
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\BLL\bin\Debug\DTO.pdb
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\BLL\bin\Debug\DTO.dll.config
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\BLL\obj\Debug\BLL.Properties.Resources.resources
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\BLL\obj\Debug\BLL.csproj.GenerateResource.cache
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\BLL\obj\Debug\BLL.dll
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\BLL\obj\Debug\BLL.pdb

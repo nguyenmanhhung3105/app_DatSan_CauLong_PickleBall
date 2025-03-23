@@ -1,4 +1,4 @@
-﻿namespace app_DatSan_CauLong_PickleBall
+﻿namespace GUI
 {
     partial class btn_DatLich
     {
@@ -150,7 +150,7 @@
             this.lbl_TenSan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_TenSan.Location = new System.Drawing.Point(19, 41);
             this.lbl_TenSan.Name = "lbl_TenSan";
-            this.lbl_TenSan.Size = new System.Drawing.Size(93, 31);
+            this.lbl_TenSan.Size = new System.Drawing.Size(90, 30);
             this.lbl_TenSan.TabIndex = 26;
             this.lbl_TenSan.Text = "Tên sân";
             // 
@@ -195,7 +195,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(19, 305);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 31);
+            this.label3.Size = new System.Drawing.Size(127, 30);
             this.label3.TabIndex = 21;
             this.label3.Text = "Thời lượng";
             // 
@@ -245,7 +245,7 @@
             this.lbl_GioDat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_GioDat.Location = new System.Drawing.Point(19, 239);
             this.lbl_GioDat.Name = "lbl_GioDat";
-            this.lbl_GioDat.Size = new System.Drawing.Size(93, 31);
+            this.lbl_GioDat.Size = new System.Drawing.Size(90, 30);
             this.lbl_GioDat.TabIndex = 19;
             this.lbl_GioDat.Text = "Giờ đặt";
             // 
@@ -256,7 +256,7 @@
             this.lbl_NgayDat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_NgayDat.Location = new System.Drawing.Point(19, 173);
             this.lbl_NgayDat.Name = "lbl_NgayDat";
-            this.lbl_NgayDat.Size = new System.Drawing.Size(112, 31);
+            this.lbl_NgayDat.Size = new System.Drawing.Size(109, 30);
             this.lbl_NgayDat.TabIndex = 18;
             this.lbl_NgayDat.Text = "Ngày đặt";
             // 
@@ -267,7 +267,7 @@
             this.lbl_LoaiSan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_LoaiSan.Location = new System.Drawing.Point(19, 107);
             this.lbl_LoaiSan.Name = "lbl_LoaiSan";
-            this.lbl_LoaiSan.Size = new System.Drawing.Size(101, 31);
+            this.lbl_LoaiSan.Size = new System.Drawing.Size(96, 30);
             this.lbl_LoaiSan.TabIndex = 17;
             this.lbl_LoaiSan.Text = "Loại sân";
             // 
@@ -275,7 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.grb_DatLich);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Black;

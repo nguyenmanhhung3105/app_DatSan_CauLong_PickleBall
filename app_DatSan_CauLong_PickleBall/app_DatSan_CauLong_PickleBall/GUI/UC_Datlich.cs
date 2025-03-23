@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace app_DatSan_CauLong_PickleBall
+namespace GUI
 {
     public partial class btn_DatLich : UserControl
     {

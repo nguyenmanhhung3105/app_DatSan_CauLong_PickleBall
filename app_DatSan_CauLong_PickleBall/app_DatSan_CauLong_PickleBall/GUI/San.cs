@@ -10,7 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace app_DatSan_CauLong_PickleBall
+namespace GUI
 {
     public partial class San : UserControl
     {

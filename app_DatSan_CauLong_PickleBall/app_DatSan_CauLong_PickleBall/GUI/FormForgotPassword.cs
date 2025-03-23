@@ -8,154 +8,312 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using Guna.UI2.WinForms;
 
-namespace app_DatSan_CauLong_PickleBall
+namespace GUI
 {
-    public partial class FormForgotPassword: Form
+    public partial class FormForgotPassword : Form
     {
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-        (
-            int nLeft,
-            int nTop,
-            int nRight,
-            int nBottom,
-            int nWidthEllipse,
-            int nHeightEllipse
-        );
 
         public FormForgotPassword()
         {
             InitializeComponent();
+            tb_OTP1.TextChanged += OTP_TextChanged;
+            tb_OTP2.TextChanged += OTP_TextChanged;
+            tb_OTP3.TextChanged += OTP_TextChanged;
+            tb_OTP4.TextChanged += OTP_TextChanged;
+            tb_OTP1.KeyDown += OTP_KeyDown;
+            tb_OTP2.KeyDown += OTP_KeyDown;
+            tb_OTP3.KeyDown += OTP_KeyDown;
+            tb_OTP4.KeyDown += OTP_KeyDown;
         }
 
         private void FormForgotPassword_Load(object sender, EventArgs e)
         {
-            //background
-            this.BackgroundImage = Image.FromFile("./img/bg.jpg"); // Đặt ảnh nền
-            this.BackgroundImageLayout = ImageLayout.Stretch; // Căn chỉnh ảnh nền
 
-            //màu chữ
-            lb_QuenMatKhau.ForeColor = ColorTranslator.FromHtml("#016d3b");
-            lb_TaiKhoan.ForeColor = ColorTranslator.FromHtml("#016d3b");
-            lb_MatKhau.ForeColor = ColorTranslator.FromHtml("#016d3b");
-            lb_GuiLaiMa.ForeColor = ColorTranslator.FromHtml("#016d3b");
-            bt_LayMatKhau.ForeColor = Color.White;
-            bt_LayMatKhau.BackColor = ColorTranslator.FromHtml("#016d3b");
-            bt_XacNhan.ForeColor = Color.White;
-            bt_XacNhan.BackColor = ColorTranslator.FromHtml("#016d3b");
-
-
-            //bo góc 
-            pn_TaiKhoan.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_TaiKhoan.Width, pn_TaiKhoan.Height, 30, 30));
-            pn_MaCode.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_MaCode.Width, pn_MaCode.Height, 30, 30));
-            bt_LayMatKhau.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, bt_LayMatKhau.Width, bt_LayMatKhau.Height, 20, 20));
-            bt_XacNhan.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, bt_XacNhan.Width, bt_XacNhan.Height, 20, 20));
-            pn_KhungDangNhap.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_KhungDangNhap.Width, pn_KhungDangNhap.Height, 20, 20));
-
-            //placehoder
-            tb_TaiKhoan.GotFocus += new EventHandler(RemoveText);
-            tb_TaiKhoan.LostFocus += new EventHandler(AddText);
-            tb_MaCode.GotFocus += new EventHandler(RemoveText);
-            tb_MaCode.LostFocus += new EventHandler(AddText);
-
-            //làm mờ khung panel để hiển thị background
-            pn_KhungDangNhap.Paint += new PaintEventHandler(pn_KhungDangNhap_Paint);
-
-            //lỗi đăng nhập
-            lb_ThongTin.Visible = false;
-            lb_CauHoi.Visible = false;
-            lb_GuiLaiMa.Visible = false;
-            pn_MaCode.Visible = false;
-            lb_MaCode.Visible = false;
-            bt_XacNhan.Visible = false;
         }
 
-        private void pn_KhungDangNhap_Paint(object sender, PaintEventArgs e)
+
+        private bool isPasswordVisible1 = false, isPasswordVisible2 = false;
+        private void btn_ShowPass1_Click(object sender, EventArgs e)
         {
-            // Màu xanh lá nhạt với độ trong suốt (Alpha = 160)
-            Color panelColor = Color.FromArgb(160, 255, 255, 255);
-            using (SolidBrush brush = new SolidBrush(panelColor))
+
+            if (!isPasswordVisible1)
             {
-                e.Graphics.FillRectangle(brush, pn_KhungDangNhap.ClientRectangle);
-            }
-        }
-
-        public void RemoveText(object sender, EventArgs e)
-        {
-            TextBox tb = sender as TextBox;
-            if (tb != null)
-            {
-                if (tb == tb_TaiKhoan && tb.Text == "Nhập số điện thoại hoặc email")
-                {
-                    tb.Text = "";
-                }
-                else if (tb == tb_MaCode && tb.Text == "Vui lòng nhập mã code")
-                {
-                    tb.Text = "";
-                }
-            }
-        }
-
-        public void AddText(object sender, EventArgs e)
-        {
-            TextBox tb = sender as TextBox;
-            if (tb != null)
-            {
-                if (tb == tb_TaiKhoan && string.IsNullOrWhiteSpace(tb.Text))
-                {
-                    tb.Text = "Nhập số điện thoại hoặc email";
-                }
-                else if (tb == tb_MaCode && string.IsNullOrWhiteSpace(tb.Text))
-                {
-                    tb.Text = "Vui lòng nhập mã code";
-                }
-            }
-        }
-
-        private void bt_LayMatKhau_Click(object sender, EventArgs e)
-        {
-            //ẩn
-            lb_TaiKhoan.Visible = false;
-            pn_TaiKhoan.Visible = false;
-            tb_TaiKhoan.Visible = false;
-            bt_LayMatKhau.Visible = false;
-
-            //hiện
-            lb_ThongTin.Visible = true;
-            lb_CauHoi.Visible = true;
-            lb_GuiLaiMa.Visible = true;
-            lb_MaCode.Visible = true;
-            pn_MaCode.Visible = true;
-            tb_MaCode.Visible = true;
-            bt_XacNhan.Visible = true;
-        }
-
-        private void pt_Hide_Click_1(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void pt_MiniMaxmize_Click_1(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
+                tb_MKNew.PasswordChar = (char)0;
+                btn_ShowPass1.BackgroundImage = Image.FromFile("./img/eye_open.png");
+                btn_ShowPass1.BackgroundImageLayout = ImageLayout.Zoom;
             }
             else
             {
-                this.WindowState = FormWindowState.Maximized;
+                tb_MKNew.PasswordChar = '*';
+                btn_ShowPass1.BackgroundImage = Image.FromFile("./img/eye_close.png");
+                btn_ShowPass1.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+            isPasswordVisible1 = !isPasswordVisible1;
+        }
+
+        private void btn_ShowPass2_Click(object sender, EventArgs e)
+        {
+
+            if (!isPasswordVisible2)
+            {
+                tb_XacnhanMK.PasswordChar = (char)0;
+                btn_ShowPass2.BackgroundImage = Image.FromFile("./img/eye_open.png");
+                btn_ShowPass2.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+            else
+            {
+                tb_XacnhanMK.PasswordChar = '*';
+                btn_ShowPass2.BackgroundImage = Image.FromFile("./img/eye_close.png");
+                btn_ShowPass2.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+            isPasswordVisible2 = !isPasswordVisible2;
+        }
+
+
+        private void btn_Otp_Click(object sender, EventArgs e)
+        {
+            if (tb_Email.Text.Trim() == "" || tb_MKNew.Text.Trim() == "")
+            {
+                lb_Error.Text = "Bạn cần nhập email và mật khẩu mới!";
+                ClearThongBao();
+                return;
+            }
+            if ((tb_Email.Text + tb_MKNew.Text).Contains('\''))
+            {
+                lb_Error.Text = "Thông tin nhập vào chứa ký tự không hợp lệ: \'";
+                ClearThongBao();
+                return;
+            }
+            if (!KhachHangBLL.checkEmailExist(tb_Email.Text))
+            {
+                lb_Error.Text = "Email không tồn tại";
+                ClearThongBao();
+                return;
+            }
+            if(tb_MKNew.Text != tb_XacnhanMK.Text)
+            {
+                lb_Error.Text = "Mật khẩu xác nhận không chính xác.";
+                ClearThongBao();
+                return;
+            }
+            tb_OTP1.Enabled = true;
+            tb_OTP2.Enabled = true;
+            tb_OTP3.Enabled = true;
+            tb_OTP4.Enabled = true;
+            btn_OTPAgain.Enabled = true;
+            lb_Error.Text = "Đã gửi OTP qua email, vui lòng kiểm tra.";
+            ClearThongBao();
+            tb_MKNew.Enabled = false;
+            tb_XacnhanMK.Enabled = false;
+            waitBeforeSentOTP();
+        }
+
+        private void tb_MKNew_TextChanged(object sender, EventArgs e)
+        {
+            if (tb_MKNew.Text.Trim() != "")
+            {
+
+                tb_XacnhanMK.Enabled = true;
+                
+            }
+            else
+            {
+                tb_XacnhanMK.Text = "";
+                tb_XacnhanMK.Enabled = false;
+                
             }
         }
 
-        private void pt_Close_Click(object sender, EventArgs e)
+        private async void waitBeforeSentOTP()
+        {
+            startCountdown();
+
+            await Task.Delay(2000);
+            OTP_BLL.sendOTP(tb_Email.Text, "ChangePassword");
+        }
+        private void tb_Email_TextChanged(object sender, EventArgs e)
+        {
+            if (tb_Email.Text.Trim() != "")
+            {
+                tb_MKNew.Enabled = true;
+                
+            }
+            else
+            {
+                tb_MKNew.Enabled = false;
+               
+            }
+        }
+
+
+        private async void ClearThongBao()
+        {
+            await Task.Delay(5000);
+            lb_Error.Text = "";
+        }
+        private int cntDown = 300;
+
+        private void InitTimer()
+        {
+
+            timer1.Tick += timer1_Tick;
+        }
+        private void startCountdown()
+        {
+            lblCountDown.Visible = true;
+            cntDown = 300; // Reset lại 5 phút
+            lblCountDown.Text = "05:00"; // Hiển thị ban đầu
+            timer1.Start();
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            cntDown--;
+            int minutes = cntDown / 60;
+            int seconds = cntDown % 60;
+            lblCountDown.Text = $"{minutes:D2}:{seconds:D2}";
+            if (cntDown <= 0)
+            {
+                timer1.Stop();
+                lblCountDown.Visible = false;
+            }
+        }
+
+        private void btn_OTPAgain_Click(object sender, EventArgs e)
+        {
+            btn_OTPAgain.Enabled = false;
+            waitBeforeSentOTP();
+            startCountdown();
+        }
+        private string GetOTPCode()
+        {
+            return tb_OTP1.Text + tb_OTP2.Text + tb_OTP3.Text + tb_OTP4.Text;
+        }
+        private bool isOTPValid(string code)
+        {
+            return code.All(char.IsDigit);
+        }
+        private async void WaitBeforeChangeForm(int delayTime)
+        {
+            await Task.Delay(delayTime);
+
+            this.Close();
+        }
+        private void btn_XacnhanOTP_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            string otpCode = GetOTPCode();
+           
+            if (!isOTPValid(otpCode))
+            {
+                lb_Error.Text = "Mã otp chỉ được chứa số, vui lòng kiểm tra OTP đã nhận quan email";
+                ClearThongBao();
+                return;
+            }
+            if (OTP_BLL.checkOTP(tb_Email.Text, otpCode))
+            {
+                
+                if (KhachHangBLL.DoiMatKhau(tb_Email.Text, tb_MKNew.Text))
+                {
+                    
+                    lb_Error.Text = "Đổi mật khẩu thành công. Chúc bạn tiếp tục đặt sân vui vẻ :)))";
+                    WaitBeforeChangeForm(5000);
+                }
+                else
+                {
+                    lb_Error.Text = "Huhu đã có lỗi trong quá trình đổi mật khẩu, vui lòng thử lại.";
+                    ClearThongBao();
+                    return;
+                }
+            }
+            else
+            {
+                lbl_Loi.Text = "Mã OTP nhập vào không hợp lệ, vui lòn kiểm tra OTP đã nhận qua email.";
+                ClearThongBao();
+                return;
+            }
+        }
+
+        private void HandleOTPTimedOut()
+        {
+            MessageBox.Show("OTP đã hết hạn! Vui lòng yêu cầu mã OTP mới.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            btn_OTPAgain.Enabled = true; // Cho phép gửi lại OTP
+            startCountdown();
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void tb_MaCode_TextChanged(object sender, EventArgs e)
+
+
+        private void OTP_TextChanged(object sender, EventArgs e)
         {
 
+            if (sender is Guna2TextBox cBox && !string.IsNullOrEmpty(cBox.Text) && cBox.Text.Length == 1)
+            {
+                Control parent = cBox.Parent;
+                if (parent != null)
+                {
+                    var textBoxes = parent.Controls.OfType<Guna2TextBox>().OrderBy(t => t.TabIndex).ToList();
+                    int index = textBoxes.IndexOf(cBox);
+                    if (index >= 0 && index < textBoxes.Count - 1)
+                    {
+                        textBoxes[index + 1].Focus();
+                    }
+                }
+            }
+            CheckOTPCompletion();
+        }
+
+        private void OTP_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (sender is Guna2TextBox cBox && e.KeyCode == Keys.Back)
+            {
+                var textBoxes = pn_OTP.Controls.OfType<Guna2TextBox>()
+                                              .OrderBy(t => t.TabIndex)
+                                              .ToList();
+                int index = textBoxes.IndexOf(cBox);
+
+                if (index > 0)
+                {
+                    if (string.IsNullOrEmpty(cBox.Text))
+                    {
+              
+                        textBoxes[index - 1].Clear();
+                        textBoxes[index - 1].Focus();
+                    }
+                    else
+                    {
+                     
+                        cBox.Clear();
+                    }
+                }
+                else
+                {
+             
+                    cBox.Clear();
+                }
+
+                CheckOTPCompletion();
+
+               
+                e.SuppressKeyPress = true;
+            }
+        }
+        
+        private void CheckOTPCompletion()
+        {
+            var textBoxes = pn_OTP.Controls.OfType<Guna2TextBox>().Where(tb => tb.Name.StartsWith("tb_OTP")).ToList();
+
+            // Kiểm tra tất cả TextBox đã có 1 ký tự chưa
+            bool isCompleted = textBoxes.All(tb => tb.Text.Length == 1);
+
+            // Bật/tắt button Xác nhận
+            btn_XacnhanOTP.Enabled = isCompleted;
         }
     }
 }

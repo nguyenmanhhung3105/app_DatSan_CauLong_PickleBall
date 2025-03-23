@@ -1,4 +1,4 @@
-﻿namespace app_DatSan_CauLong_PickleBall
+﻿namespace GUI
 {
     partial class UC_LSTT
     {

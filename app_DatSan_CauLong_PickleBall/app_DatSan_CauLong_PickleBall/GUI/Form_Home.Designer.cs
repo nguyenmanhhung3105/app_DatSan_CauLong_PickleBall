@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace app_DatSan_CauLong_PickleBall
+namespace GUI
 {
     partial class Form_Home
     {
@@ -68,9 +68,10 @@ namespace app_DatSan_CauLong_PickleBall
             this.panel6 = new System.Windows.Forms.Panel();
             this.pb_Menu = new System.Windows.Forms.PictureBox();
             this.lbl_Menu = new System.Windows.Forms.Label();
-            this.sidebar = new app_DatSan_CauLong_PickleBall.Form_Home.DoubleBufferedFlowLayoutPanel();
+            this.sidebar = new GUI.Form_Home.DoubleBufferedFlowLayoutPanel();
             this.pn_Main = new System.Windows.Forms.Panel();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.guna2AnimateWindow2 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pt_Hide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pt_MiniMaxmize)).BeginInit();
@@ -105,7 +106,7 @@ namespace app_DatSan_CauLong_PickleBall
             // pt_Hide
             // 
             this.pt_Hide.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pt_Hide.Image = global::app_DatSan_CauLong_PickleBall.Properties.Resources.minimize_sign;
+            this.pt_Hide.Image = global::GUI.Properties.Resources.minimize_sign;
             this.pt_Hide.Location = new System.Drawing.Point(9, 4);
             this.pt_Hide.Margin = new System.Windows.Forms.Padding(4);
             this.pt_Hide.Name = "pt_Hide";
@@ -117,7 +118,7 @@ namespace app_DatSan_CauLong_PickleBall
             // pt_MiniMaxmize
             // 
             this.pt_MiniMaxmize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pt_MiniMaxmize.Image = global::app_DatSan_CauLong_PickleBall.Properties.Resources.rounded_rectangle;
+            this.pt_MiniMaxmize.Image = global::GUI.Properties.Resources.rounded_rectangle;
             this.pt_MiniMaxmize.Location = new System.Drawing.Point(51, 4);
             this.pt_MiniMaxmize.Margin = new System.Windows.Forms.Padding(4);
             this.pt_MiniMaxmize.Name = "pt_MiniMaxmize";
@@ -129,7 +130,7 @@ namespace app_DatSan_CauLong_PickleBall
             // pt_Close
             // 
             this.pt_Close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pt_Close.Image = global::app_DatSan_CauLong_PickleBall.Properties.Resources.close;
+            this.pt_Close.Image = global::GUI.Properties.Resources.close;
             this.pt_Close.Location = new System.Drawing.Point(116, 4);
             this.pt_Close.Margin = new System.Windows.Forms.Padding(4);
             this.pt_Close.Name = "pt_Close";
@@ -282,9 +283,9 @@ namespace app_DatSan_CauLong_PickleBall
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(213, 117);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 38);
+            this.label2.Size = new System.Drawing.Size(130, 38);
             this.label2.TabIndex = 21;
-            this.label2.Text = "Tên tài khoản:";
+            this.label2.Text = "Xin chào:";
             // 
             // label1
             // 
@@ -299,7 +300,7 @@ namespace app_DatSan_CauLong_PickleBall
             // 
             // pnLogo
             // 
-            this.pnLogo.BackgroundImage = global::app_DatSan_CauLong_PickleBall.Properties.Resources.logoPM;
+            this.pnLogo.BackgroundImage = global::GUI.Properties.Resources.logoPM;
             this.pnLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnLogo.Location = new System.Drawing.Point(0, 0);
             this.pnLogo.Margin = new System.Windows.Forms.Padding(0);
@@ -529,7 +530,7 @@ namespace app_DatSan_CauLong_PickleBall
             // pn_Main
             // 
             this.pn_Main.AllowDrop = true;
-            this.pn_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pn_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.pn_Main.Location = new System.Drawing.Point(266, 221);
             this.pn_Main.Name = "pn_Main";
             this.pn_Main.Size = new System.Drawing.Size(1600, 750);
@@ -611,5 +612,6 @@ namespace app_DatSan_CauLong_PickleBall
         private System.Windows.Forms.Panel pn_Main;
         private DoubleBufferedFlowLayoutPanel sidebar;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow2;
     }
 }

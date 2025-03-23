@@ -1,111 +1,46 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
+
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace app_DatSan_CauLong_PickleBall
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Oauth2.v2;
+using Google.Apis.Oauth2.v2.Data;
+using Google.Apis.Services;
+
+using System.Threading;
+
+using DTO;
+using BLL;
+using Google.Apis.Util.Store;
+using System.IO;
+using System.Diagnostics;
+using Microsoft.Win32;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+namespace GUI
 {
     
 
     public partial class FormLogin: Form
     {
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-            private static extern IntPtr CreateRoundRectRgn
-        (
-            int nLeft,
-            int nTop,
-            int nRight,
-            int nBottom,
-            int nWidthEllipse,
-            int nHeightEllipse
-        );
+        
+        
 
         public FormLogin()
         {
             InitializeComponent();
+            tb_SoDTorEmail.Text = Properties.Settings.Default.soDienThoai_Email;
+            tb_SoDTorEmail.Focus();
         }
 
-        private void FormLogin_Load(object sender, EventArgs e)
-        {
-            //background
-            this.BackgroundImage = Image.FromFile("./img/bg.jpg"); // Đặt ảnh nền
-            this.BackgroundImageLayout = ImageLayout.Stretch; // Căn chỉnh ảnh nền
+        
 
-            //màu chữ
-            lb_DangNhap.ForeColor = ColorTranslator.FromHtml("#016d3b");
-            lb_TaiKhoan.ForeColor = ColorTranslator.FromHtml("#016d3b");
-            lb_MatKhau.ForeColor = ColorTranslator.FromHtml("#016d3b");
-            lb_DangKy.ForeColor = ColorTranslator.FromHtml("#016d3b");
-            bt_DangNhap.ForeColor = Color.White;
-            bt_DangNhap.BackColor = ColorTranslator.FromHtml("#016d3b");
+        
 
-
-            //bo góc 
-            pn_TaiKhoan.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_TaiKhoan.Width, pn_TaiKhoan.Height, 30, 30));
-            pn_MatKhau.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_MatKhau.Width, pn_MatKhau.Height, 30, 30));
-            bt_DangNhap.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, bt_DangNhap.Width, bt_DangNhap.Height, 20, 20));
-            pn_KhungDangNhap.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_KhungDangNhap.Width, pn_KhungDangNhap.Height, 20, 20));
-
-            //placehoder
-            tb_TaiKhoan.GotFocus += new EventHandler(RemoveText);
-            tb_TaiKhoan.LostFocus += new EventHandler(AddText);
-            tb_MatKhau.GotFocus += new EventHandler(RemoveText);
-            tb_MatKhau.LostFocus += new EventHandler(AddText);
-
-            //làm mờ khung panel để hiển thị background
-            pn_KhungDangNhap.Paint += new PaintEventHandler(pn_KhungDangNhap_Paint);
-
-            //lỗi đăng nhập
-            lb_LoiDangNhap.Visible = false;
-        }
-
-        private void pn_KhungDangNhap_Paint(object sender, PaintEventArgs e)
-        {
-            // Màu xanh lá nhạt với độ trong suốt (Alpha = 160)
-            Color panelColor = Color.FromArgb(160, 255, 255, 255);
-            using (SolidBrush brush = new SolidBrush(panelColor))
-            {
-                e.Graphics.FillRectangle(brush, pn_KhungDangNhap.ClientRectangle);
-            }
-        }
-
-        public void RemoveText(object sender, EventArgs e)
-        {
-            TextBox tb = sender as TextBox;
-            if (tb != null)
-            {
-                if (tb == tb_TaiKhoan && tb.Text == "Nhập số điện thoại hoặc email")
-                {
-                    tb.Text = "";
-                }
-                else if (tb == tb_MatKhau && tb.Text == "Vui lòng nhập mật khẩu")
-                {
-                    tb.Text = "";
-                }
-            }
-        }
-
-        public void AddText(object sender, EventArgs e)
-        {
-            TextBox tb = sender as TextBox;
-            if (tb != null)
-            {
-                if (tb == tb_TaiKhoan && string.IsNullOrWhiteSpace(tb.Text))
-                {
-                    tb.Text = "Nhập số điện thoại hoặc email";
-                }
-                else if (tb == tb_MatKhau && string.IsNullOrWhiteSpace(tb.Text))
-                {
-                    tb.Text = "Vui lòng nhập mật khẩu";
-                }
-            }
-        }
+        
 
 
         private void pt_Close_Click_1(object sender, EventArgs e)
@@ -113,10 +48,7 @@ namespace app_DatSan_CauLong_PickleBall
             Application.Exit();
         }
 
-        private void tb_MatKhau_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void lb_DangKy_Click(object sender, EventArgs e)
         {
@@ -143,16 +75,126 @@ namespace app_DatSan_CauLong_PickleBall
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void bt_DangNhap_Click(object sender, EventArgs e)
-        {
-            lb_LoiDangNhap.Visible = true;
-        }
+        
 
         private void lb_QuenMatKhau_Click(object sender, EventArgs e)
         {
             FormForgotPassword formForgotPassword = new FormForgotPassword();
             this.Hide();
             formForgotPassword.ShowDialog();
+            this.Show();
+        }
+
+        private void SaveLoginInfo(string sdt_email)
+        {
+            Properties.Settings.Default.soDienThoai_Email = sdt_email;
+            Properties.Settings.Default.Save();
+        }
+        private async void btn_LoginGoogle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var browserProcessesBefore = Process.GetProcessesByName("chrome");
+                string tokenPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "GoogleToken");
+                
+                if (Directory.Exists(tokenPath))
+                {
+                    Directory.Delete(tokenPath, true);
+                }
+                string clientId = "40447139026-3a7695r5bu7o9irrtvr4gudoc7fgebq6.apps.googleusercontent.com";
+                string clientSecret = "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";
+                string[] scopes = { "https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/userinfo.email" };
+                UserCredential credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
+                    new ClientSecrets { ClientId = clientId, ClientSecret = clientSecret },
+                    scopes,
+                    "user",
+                    CancellationToken.None,
+                    new NullDataStore());
+                
+                var service = new Oauth2Service(new BaseClientService.Initializer()
+                {
+                    HttpClientInitializer = credential,
+                    ApplicationName = "QuanLySan_Pickleball_CauLong"
+                });
+                Userinfo userInfo = await service.Userinfo.Get().ExecuteAsync();
+                if (!KhachHangBLL.checkEmailExist(userInfo.Email)) { 
+                    MessageBox.Show($"Email {userInfo.Email} chưa được đăng kí trong hệ thống!", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                
+                MessageBox.Show($"Xin chào trở lại, {userInfo.Name} , Mình hẹn nhau pickleball nhé!", "Đăng nhập thành công!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KhachHang kh = KhachHangBLL.selectOneKhachHang(userInfo.Email);
+                Form_Home mainForm = new Form_Home(kh);
+               
+                mainForm.ShowDialog(); // Đợi form chính đóng trước khi tiếp tục
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đăng nhập thất bại: " + ex.Message);
+            }
+        }
+
+        private bool isPasswordVisible = false;
+        private void btn_ShowPassWord_Click(object sender, EventArgs e)
+        {
+            if (!isPasswordVisible)
+            {
+                tb_MK.PasswordChar = (char)0;
+                btn_ShowPassWord.BackgroundImage = Image.FromFile("./img/eye_open.png");
+                btn_ShowPassWord.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+            else
+            {
+                tb_MK.PasswordChar = '*';
+                btn_ShowPassWord.BackgroundImage = Image.FromFile("./img/eye_close.png");
+                btn_ShowPassWord.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+            isPasswordVisible = !isPasswordVisible;
+        }
+
+        private void btn_DangNhap_Click(object sender, EventArgs e)
+        {
+            string soDT_Email = tb_SoDTorEmail.Text;
+            string mk = tb_MK.Text;
+            if (soDT_Email.Trim() == "" || mk.Trim() == "") { 
+                lbl_Loi.Text = "Vui lòng điền đầy đủ thông tin đăng nhập";
+                ClearThongBao();
+                return;
+            }
+            else if(soDT_Email.Contains('\'') || mk.Contains('\''))
+            {
+                lbl_Loi.Text = "Thông tin đăng nhập chứa ký tự không hợp lệ";
+                ClearThongBao();
+                return;
+            }
+
+            if (KhachHangBLL.checkLoginValid(soDT_Email, mk))
+            {
+                SaveLoginInfo(soDT_Email);
+                MessageBox.Show("Xin chào! Mình hẹn nhau picklebal nhé!", "Đăng nhập thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                KhachHang kh = KhachHangBLL.selectOneKhachHang(soDT_Email);
+                Form_Home mainForm = new Form_Home(kh);
+                mainForm.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                lbl_Loi.Text = "Thông tin đăng nhập không hợp lệ";
+                ClearThongBao();
+            }
+        }
+        private async void ClearThongBao()
+        {
+            await Task.Delay(5000);
+            lbl_Loi.Text = "";
+        }
+
+        private void lb_Dangky_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormRegister formRegister = new FormRegister();
+            this.Hide();
+            formRegister.ShowDialog();
             this.Show();
         }
     }

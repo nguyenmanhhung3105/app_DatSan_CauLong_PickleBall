@@ -9,29 +9,26 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using System.IO;
+using DTO;
+using System.Runtime.CompilerServices;
 
-namespace app_DatSan_CauLong_PickleBall
+namespace GUI
 {
     
     public partial class Form_Home : Form
     {
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-            private static extern IntPtr CreateRoundRectRgn
-        (
-            int nLeft,
-            int nTop,
-            int nRight,
-            int nBottom,
-            int nWidthEllipse,
-            int nHeightEllipse
-        );
-        public Form_Home()
-        {
+        public bool isAdmin = false;
 
+        public KhachHang khachHang;
+        //public QuanLy quanLy;
+        public Form_Home(KhachHang kh)
+        {
+            
             InitializeComponent();
             LoadUC_Datsan();
+            this.khachHang = kh;
             this.DoubleBuffered = true;
-            
+            txt_Ten_TK.Text = khachHang.tenKhachHang;
             LoadImagesAsync();
             //txt_Ten_TK
             txt_Ten_TK.FillColor = ColorTranslator.FromHtml("#C8DE96");
@@ -93,7 +90,7 @@ namespace app_DatSan_CauLong_PickleBall
         }
 
 
-
+        //form_load
         private void Form_Home_Load(object sender, EventArgs e) {
             add_UControls(new UC_Home());
             //pn_Ngay.Paint += new PaintEventHandler(pn_Ngay_Paint);
@@ -140,6 +137,9 @@ namespace app_DatSan_CauLong_PickleBall
         {
             btn_Search.Size = new Size(btn_Search.Width - 3, btn_Search.Height - 3);
         }
+
+
+        //sidebar
         bool sidebarExpand = false;
         private async void ToggleSidebar()
         {
@@ -172,15 +172,17 @@ namespace app_DatSan_CauLong_PickleBall
             
             sidebarExpand = !sidebarExpand;
         }
+
+        //add_usercontrol
         private void add_UControls(UserControl userControl)
         {
             if (pn_Main.Controls.Count > 0 && pn_Main.Controls[0].GetType() == userControl.GetType())
                 return;
             pn_Main.Controls.Clear();
+            userControl.Dock = DockStyle.Fill;
+            userControl.Size = pn_Main.Size;
             pn_Main.Controls.Add(userControl);
             userControl.BringToFront();
-            
-
         }
         private void Btn_Click(object sender, EventArgs e)
         {
@@ -212,7 +214,6 @@ namespace app_DatSan_CauLong_PickleBall
         }
         private void LoadUC_Datsan()
         {
-            
             UC_Datsan uc_Datsan = new UC_Datsan();
 
             uc_Datsan.SwitchUserControl += SwitchUserControlHandler;
@@ -223,6 +224,9 @@ namespace app_DatSan_CauLong_PickleBall
         {
             add_UControls(uc); // Thay đổi UserControl trong pn_Main
         }
+
+
+
 
     }
 }

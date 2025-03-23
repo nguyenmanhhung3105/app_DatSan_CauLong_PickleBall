@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace app_DatSan_CauLong_PickleBall
+namespace GUI
 {
     static class Program
     {
