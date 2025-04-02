@@ -28,8 +28,9 @@ namespace GUI
             LoadUC_Datsan();
             this.khachHang = kh;
             this.DoubleBuffered = true;
-            txt_Ten_TK.Text = khachHang.tenKhachHang;
-            LoadImagesAsync();
+            txt_Ten_TK.Clear();
+            txt_Ten_TK.Text =  kh.tenKhachHang.ToString();
+            
             //txt_Ten_TK
             txt_Ten_TK.FillColor = ColorTranslator.FromHtml("#C8DE96");
             txt_Ten_TK.ForeColor = ColorTranslator.FromHtml("#91855A");
@@ -65,19 +66,7 @@ namespace GUI
             this.Scroll += Form_Home_Scroll;
             
         }
-        private async void LoadImagesAsync()
-        {
-            
-            btn_Home.Image = await LoadImageAsync("./img/home.png");
-            btn_DatSan.Image = await LoadImageAsync("./img/book.png");
-            btn_Danhgia.Image = await LoadImageAsync("./img/review.png");
-            btn_Account.Image = await LoadImageAsync("./img/account.png");
-
-            // Thiết lập kích thước icon
-            btn_Home.ImageSize = btn_DatSan.ImageSize = btn_Danhgia.ImageSize = btn_Account.ImageSize = new Size(50, 50);
-            btn_Home.ImageAlign = btn_DatSan.ImageAlign = btn_Danhgia.ImageAlign = btn_Account.ImageAlign = HorizontalAlignment.Left;
-            
-        }
+        
         private async Task<Image> LoadImageAsync(string path)
         {
             return await Task.Run(() =>
@@ -93,18 +82,30 @@ namespace GUI
         //form_load
         private void Form_Home_Load(object sender, EventArgs e) {
             add_UControls(new UC_Home());
-            //pn_Ngay.Paint += new PaintEventHandler(pn_Ngay_Paint);
+            btn_Home.Click += MenuButton_Click;
+            btn_Danhgia.Click += MenuButton_Click;
+            btn_DatSan.Click += MenuButton_Click;
+           btn_Account.Click += MenuButton_Click;
 
         }
+        private void MenuButton_Click(object sender, EventArgs e)
+        {
+            // Đổi màu tất cả button về màu gốc
+            btn_Home.BackgroundImage = null;
+            btn_Danhgia.BackgroundImage = null;
+            btn_DatSan.BackgroundImage = null;
+            btn_Account.BackgroundImage = null;
 
-        //private void pn_Ngay_Paint(object sender, PaintEventArgs e)
-        //{
-        //    Color panelColor = Color.FromArgb(10, 0,0,0);
-        //    using (SolidBrush brush = new SolidBrush(panelColor))
-        //    {
-        //        e.Graphics.FillRectangle(brush, pn_Ngay.ClientRectangle);
-        //    }
-        //}
+
+            // Đổi màu của button vừa được nhấn
+            Guna2Button clickedButton = sender as Guna2Button;
+            if (clickedButton != null)
+            {
+                clickedButton.BackgroundImage = Image.FromFile("./img/layered-steps-haikei.png");
+                clickedButton.BackgroundImageLayout = ImageLayout.Stretch;
+            }
+        }
+
 
         private void txt_Ten_TK_MouseEnter(object sender, EventArgs e)
         {
@@ -225,8 +226,14 @@ namespace GUI
             add_UControls(uc); // Thay đổi UserControl trong pn_Main
         }
 
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
 
-
+        private void pt_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

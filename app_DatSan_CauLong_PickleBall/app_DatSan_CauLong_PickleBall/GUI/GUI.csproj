@@ -32,6 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="Google.Apis, Version=1.69.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Google.Apis.1.69.0\lib\net462\Google.Apis.dll</HintPath>
@@ -97,11 +98,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="San.cs">
+    <Compile Include="UC_San.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="San.Designer.cs">
-      <DependentUpon>San.cs</DependentUpon>
+    <Compile Include="UC_San.Designer.cs">
+      <DependentUpon>UC_San.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Account.cs">
       <SubType>UserControl</SubType>
@@ -176,8 +177,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="San.resx">
-      <DependentUpon>San.cs</DependentUpon>
+    <EmbeddedResource Include="UC_San.resx">
+      <DependentUpon>UC_San.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Account.resx">
       <DependentUpon>UC_Account.cs</DependentUpon>

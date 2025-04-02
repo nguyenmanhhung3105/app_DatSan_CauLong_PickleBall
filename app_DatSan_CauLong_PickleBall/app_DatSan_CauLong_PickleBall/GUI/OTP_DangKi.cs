@@ -82,7 +82,6 @@ namespace GUI
             {
                 btn_XacnhanOTP.Enabled = false;
                 KhachHangBLL.AddKhachHang(dangkyInstance.getThongTinDangKy());
-               
                 ClearThongBao() ;
                 MessageBox.Show($"Chào mừng {dangkyInstance.getThongTinDangKy().tenKhachHang}! Chúc quý khách có những trải nghiệm tuyệt vời, 8386 Mãi đỉnh, mãi đỉnh!", "Đăng ký thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dangkyInstance.Close();

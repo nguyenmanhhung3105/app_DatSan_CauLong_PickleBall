@@ -172,7 +172,6 @@
             this.btn_OTPAgain.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_OTPAgain.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_OTPAgain.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_OTPAgain.Enabled = false;
             this.btn_OTPAgain.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btn_OTPAgain.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_OTPAgain.ForeColor = System.Drawing.Color.White;
@@ -186,7 +185,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(39, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -199,12 +198,12 @@
             // 
             this.lb_Error.Font = new System.Drawing.Font("Verdana", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Error.ForeColor = System.Drawing.Color.Red;
-            this.lb_Error.Location = new System.Drawing.Point(33, 266);
+            this.lb_Error.Location = new System.Drawing.Point(33, 292);
             this.lb_Error.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_Error.Name = "lb_Error";
-            this.lb_Error.Size = new System.Drawing.Size(532, 91);
+            this.lb_Error.Size = new System.Drawing.Size(522, 79);
             this.lb_Error.TabIndex = 49;
-            this.lb_Error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lb_Error.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // timer1
             // 
@@ -223,7 +222,7 @@
             this.btn_XacnhanOTP.FillColor = System.Drawing.Color.LimeGreen;
             this.btn_XacnhanOTP.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_XacnhanOTP.ForeColor = System.Drawing.Color.White;
-            this.btn_XacnhanOTP.Location = new System.Drawing.Point(125, 360);
+            this.btn_XacnhanOTP.Location = new System.Drawing.Point(120, 387);
             this.btn_XacnhanOTP.Name = "btn_XacnhanOTP";
             this.btn_XacnhanOTP.Size = new System.Drawing.Size(333, 51);
             this.btn_XacnhanOTP.TabIndex = 50;

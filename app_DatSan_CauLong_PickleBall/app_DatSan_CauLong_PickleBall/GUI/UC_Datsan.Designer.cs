@@ -40,20 +40,20 @@ namespace GUI
             this.lbl_Bad = new System.Windows.Forms.Label();
             this.btn_Bad = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Pkb = new Guna.UI2.WinForms.Guna2Button();
-            this.san1 = new GUI.San();
-            this.san2 = new GUI.San();
-            this.san3 = new GUI.San();
-            this.san4 = new GUI.San();
-            this.san5 = new GUI.San();
-            this.san6 = new GUI.San();
-            this.san7 = new GUI.San();
-            this.san8 = new GUI.San();
-            this.san9 = new GUI.San();
-            this.san10 = new GUI.San();
-            this.san11 = new GUI.San();
-            this.san12 = new GUI.San();
-            this.san13 = new GUI.San();
-            this.san14 = new GUI.San();
+            this.san1 = new GUI.UC_San();
+            this.san2 = new GUI.UC_San();
+            this.san3 = new GUI.UC_San();
+            this.san4 = new GUI.UC_San();
+            this.san5 = new GUI.UC_San();
+            this.san6 = new GUI.UC_San();
+            this.san7 = new GUI.UC_San();
+            this.san8 = new GUI.UC_San();
+            this.san9 = new GUI.UC_San();
+            this.san10 = new GUI.UC_San();
+            this.san11 = new GUI.UC_San();
+            this.san12 = new GUI.UC_San();
+            this.san13 = new GUI.UC_San();
+            this.san14 = new GUI.UC_San();
             this.pn_Dropdown.SuspendLayout();
             this.pn_San.SuspendLayout();
             this.SuspendLayout();
@@ -145,7 +145,7 @@ namespace GUI
             this.pn_San.Controls.Add(this.san14);
             this.pn_San.Location = new System.Drawing.Point(175, 150);
             this.pn_San.Name = "pn_San";
-            this.pn_San.Size = new System.Drawing.Size(1275, 584);
+            this.pn_San.Size = new System.Drawing.Size(1314, 584);
             this.pn_San.TabIndex = 4;
             this.pn_San.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -154,7 +154,7 @@ namespace GUI
             this.lbl_Pkb.AutoSize = true;
             this.lbl_Pkb.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Pkb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_Pkb.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Pkb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Pkb.Location = new System.Drawing.Point(17, 107);
             this.lbl_Pkb.Name = "lbl_Pkb";
             this.lbl_Pkb.Size = new System.Drawing.Size(126, 23);
@@ -191,6 +191,7 @@ namespace GUI
             this.btn_Bad.Name = "btn_Bad";
             this.btn_Bad.Size = new System.Drawing.Size(95, 88);
             this.btn_Bad.TabIndex = 1;
+            this.btn_Bad.Click += new System.EventHandler(this.btn_Bad_Click);
             // 
             // btn_Pkb
             // 
@@ -210,6 +211,7 @@ namespace GUI
             this.btn_Pkb.Name = "btn_Pkb";
             this.btn_Pkb.Size = new System.Drawing.Size(95, 88);
             this.btn_Pkb.TabIndex = 0;
+            this.btn_Pkb.Click += new System.EventHandler(this.btn_Pkb_Click);
             // 
             // san1
             // 
@@ -395,21 +397,21 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2Button btn_LSTT;
         private Guna.UI2.WinForms.Guna2Button btn_LSDS;
         private System.Windows.Forms.FlowLayoutPanel pn_San;
-        private San san1;
-        private San san2;
-        private San san3;
-        private San san4;
-        private San san5;
-        private San san6;
-        private San san7;
-        private San san8;
-        private San san9;
-        private San san10;
-        private San san11;
-        private San san12;
-        private San san13;
-        private San san14;
         private Label lbl_Pkb;
         private Label lbl_Bad;
+        private UC_San san1;
+        private UC_San san2;
+        private UC_San san3;
+        private UC_San san4;
+        private UC_San san5;
+        private UC_San san6;
+        private UC_San san7;
+        private UC_San san8;
+        private UC_San san9;
+        private UC_San san10;
+        private UC_San san11;
+        private UC_San san12;
+        private UC_San san13;
+        private UC_San san14;
     }
 }

@@ -11,29 +11,41 @@ namespace DAL
     {
         public static void AddOTP(OTP otp)
         {
-            string query = "DELETE FROM OTP WHERE email = @email";
-            Dictionary<string, object> parameters = new Dictionary<string, object>
+            string checkQuery = "SELECT COUNT(*) FROM OTP WHERE email = @Email";
+            Dictionary<string, object> checkParameters = new Dictionary<string, object>
+    {
+        {"@Email", otp.email }
+    };
+
+            int count = Connection.selectQuery(checkQuery, checkParameters).Rows.Count;
+
+            // Nếu đã tồn tại thì xóa
+            if (count > 0)
             {
-                {"@email", otp.email }
-            };
+                string deleteQuery = "DELETE FROM OTP WHERE email = @Email";
+                try
+                {
+                    Connection.actionQuery(deleteQuery, checkParameters);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi xóa OTP {ex}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw new Exception($"Lỗi xóa OTP {ex}");
+                }
+            }
+
+            // Thêm OTP mới
+            string insertQuery = @"INSERT INTO OTP (email, otpCode, expireAt) 
+                           VALUES (@Email, @OtpCode, DATEADD(MINUTE, 5, GETDATE()))";
+            Dictionary<string, object> insertParameters = new Dictionary<string, object>
+    {
+        {"@Email", otp.email },
+        {"@OtpCode", otp.otpCode }
+    };
+
             try
             {
-                Connection.actionQuery(query, parameters);
-            }
-            catch (Exception ex) {
-                MessageBox.Show($"Lỗi xóa OTP {ex}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw new Exception($"Lỗi xóa OTP {ex}");
-            }
-            query = @"INSERT INTO OTP (email, otpCode, expiredAt) 
-              VALUES (@Email, @OtpCode, DATEADD(MINUTE, 5, GETDATE()))";
-            parameters = new Dictionary<string, object>
-            {
-                {"@email", otp.email },
-                {"@otpCode", otp.otpCode }
-            };
-            try
-            {
-                Connection.actionQuery(query, parameters);
+                Connection.actionQuery(insertQuery, insertParameters);
             }
             catch (Exception e)
             {
@@ -45,7 +57,7 @@ namespace DAL
         
             string query = @"SELECT * FROM OTP
                     WHERE email = @Email AND otpCode = @OtpCode 
-                     AND expiredAt > GETDATE()";
+                     AND expireAt > GETDATE()";
             Dictionary<string, object> parameters = new Dictionary<string, object>
     {
         { "@Email", email },

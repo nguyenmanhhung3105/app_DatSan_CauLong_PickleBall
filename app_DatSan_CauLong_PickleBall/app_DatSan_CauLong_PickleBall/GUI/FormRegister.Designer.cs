@@ -57,6 +57,7 @@
             this.lb_Email = new System.Windows.Forms.Label();
             this.lb_MatKhau = new System.Windows.Forms.Label();
             this.pn_OTPDK = new Guna.UI2.WinForms.Guna2Panel();
+            this.ptb_1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pt_Hide)).BeginInit();
@@ -69,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pn_OTPDK.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,6 +154,7 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 30;
+            this.guna2Panel1.Controls.Add(this.pn_OTPDK);
             this.guna2Panel1.Controls.Add(this.btn_DangKy);
             this.guna2Panel1.Controls.Add(this.lb_ThongBao);
             this.guna2Panel1.Controls.Add(this.pictureBox1);
@@ -172,13 +175,12 @@
             this.guna2Panel1.Controls.Add(this.lb_Ten);
             this.guna2Panel1.Controls.Add(this.lb_Email);
             this.guna2Panel1.Controls.Add(this.lb_MatKhau);
-            this.guna2Panel1.Controls.Add(this.pn_OTPDK);
-            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.guna2Panel1.Location = new System.Drawing.Point(277, 254);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.BorderRadius = 30;
             this.guna2Panel1.ShadowDecoration.Depth = 5;
-            this.guna2Panel1.ShadowDecoration.Enabled = true;
             this.guna2Panel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 15, 15, 5);
             this.guna2Panel1.Size = new System.Drawing.Size(1371, 629);
             this.guna2Panel1.TabIndex = 17;
@@ -194,31 +196,32 @@
             this.btn_DangKy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_DangKy.FillColor = System.Drawing.Color.LimeGreen;
             this.btn_DangKy.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_DangKy.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DangKy.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.btn_DangKy.ForeColor = System.Drawing.Color.White;
-            this.btn_DangKy.Location = new System.Drawing.Point(658, 521);
+            this.btn_DangKy.Location = new System.Drawing.Point(805, 516);
             this.btn_DangKy.Name = "btn_DangKy";
-            this.btn_DangKy.Size = new System.Drawing.Size(651, 48);
+            this.btn_DangKy.Size = new System.Drawing.Size(443, 48);
             this.btn_DangKy.TabIndex = 37;
             this.btn_DangKy.Text = "Đăng ký";
+            this.btn_DangKy.UseTransparentBackground = true;
             this.btn_DangKy.Click += new System.EventHandler(this.btn_DangKy_Click);
             // 
             // lb_ThongBao
             // 
-            this.lb_ThongBao.Font = new System.Drawing.Font("Verdana", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ThongBao.Font = new System.Drawing.Font("Verdana", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_ThongBao.ForeColor = System.Drawing.Color.Red;
-            this.lb_ThongBao.Location = new System.Drawing.Point(656, 457);
+            this.lb_ThongBao.Location = new System.Drawing.Point(676, 452);
             this.lb_ThongBao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_ThongBao.Name = "lb_ThongBao";
-            this.lb_ThongBao.Size = new System.Drawing.Size(658, 61);
+            this.lb_ThongBao.Size = new System.Drawing.Size(638, 61);
             this.lb_ThongBao.TabIndex = 38;
-            this.lb_ThongBao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lb_ThongBao.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1261, 323);
+            this.pictureBox1.Location = new System.Drawing.Point(1261, 312);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 28);
@@ -230,7 +233,7 @@
             // 
             this.lb_Dangnhap.AutoSize = true;
             this.lb_Dangnhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Dangnhap.Location = new System.Drawing.Point(989, 576);
+            this.lb_Dangnhap.Location = new System.Drawing.Point(1064, 572);
             this.lb_Dangnhap.Name = "lb_Dangnhap";
             this.lb_Dangnhap.Size = new System.Drawing.Size(108, 25);
             this.lb_Dangnhap.TabIndex = 35;
@@ -251,7 +254,7 @@
             this.btn_Showpassword2.FillColor = System.Drawing.Color.Transparent;
             this.btn_Showpassword2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_Showpassword2.ForeColor = System.Drawing.Color.White;
-            this.btn_Showpassword2.Location = new System.Drawing.Point(1256, 412);
+            this.btn_Showpassword2.Location = new System.Drawing.Point(1249, 399);
             this.btn_Showpassword2.Name = "btn_Showpassword2";
             this.btn_Showpassword2.Size = new System.Drawing.Size(44, 37);
             this.btn_Showpassword2.TabIndex = 34;
@@ -259,6 +262,8 @@
             // 
             // tb_XacnhanMK
             // 
+            this.tb_XacnhanMK.Animated = true;
+            this.tb_XacnhanMK.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tb_XacnhanMK.BorderRadius = 20;
             this.tb_XacnhanMK.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_XacnhanMK.DefaultText = "";
@@ -269,20 +274,20 @@
             this.tb_XacnhanMK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_XacnhanMK.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_XacnhanMK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_XacnhanMK.Location = new System.Drawing.Point(992, 405);
+            this.tb_XacnhanMK.Location = new System.Drawing.Point(1027, 393);
             this.tb_XacnhanMK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_XacnhanMK.Name = "tb_XacnhanMK";
             this.tb_XacnhanMK.PasswordChar = '*';
             this.tb_XacnhanMK.PlaceholderText = "Xác nhận mật khẩu...";
             this.tb_XacnhanMK.SelectedText = "";
-            this.tb_XacnhanMK.Size = new System.Drawing.Size(317, 48);
+            this.tb_XacnhanMK.Size = new System.Drawing.Size(278, 48);
             this.tb_XacnhanMK.TabIndex = 32;
             // 
             // lb_XacnhanMK
             // 
             this.lb_XacnhanMK.AutoSize = true;
             this.lb_XacnhanMK.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_XacnhanMK.Location = new System.Drawing.Point(988, 378);
+            this.lb_XacnhanMK.Location = new System.Drawing.Point(1027, 366);
             this.lb_XacnhanMK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_XacnhanMK.Name = "lb_XacnhanMK";
             this.lb_XacnhanMK.Size = new System.Drawing.Size(221, 23);
@@ -302,7 +307,7 @@
             this.btn_ShowPassWord1.FillColor = System.Drawing.Color.Transparent;
             this.btn_ShowPassWord1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_ShowPassWord1.ForeColor = System.Drawing.Color.White;
-            this.btn_ShowPassWord1.Location = new System.Drawing.Point(905, 412);
+            this.btn_ShowPassWord1.Location = new System.Drawing.Point(941, 399);
             this.btn_ShowPassWord1.Name = "btn_ShowPassWord1";
             this.btn_ShowPassWord1.Size = new System.Drawing.Size(44, 37);
             this.btn_ShowPassWord1.TabIndex = 30;
@@ -310,6 +315,8 @@
             // 
             // tb_MK
             // 
+            this.tb_MK.Animated = true;
+            this.tb_MK.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tb_MK.BorderRadius = 20;
             this.tb_MK.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_MK.DefaultText = "";
@@ -320,18 +327,19 @@
             this.tb_MK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_MK.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_MK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_MK.Location = new System.Drawing.Point(656, 405);
+            this.tb_MK.Location = new System.Drawing.Point(722, 393);
             this.tb_MK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_MK.Name = "tb_MK";
             this.tb_MK.PasswordChar = '*';
             this.tb_MK.PlaceholderText = "Nhập mật khẩu...";
             this.tb_MK.SelectedText = "";
-            this.tb_MK.Size = new System.Drawing.Size(317, 48);
+            this.tb_MK.Size = new System.Drawing.Size(276, 48);
             this.tb_MK.TabIndex = 29;
             // 
             // tb_SDT
             // 
             this.tb_SDT.Animated = true;
+            this.tb_SDT.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tb_SDT.BorderRadius = 20;
             this.tb_SDT.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_SDT.DefaultText = "";
@@ -342,19 +350,19 @@
             this.tb_SDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_SDT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_SDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_SDT.Location = new System.Drawing.Point(656, 314);
+            this.tb_SDT.Location = new System.Drawing.Point(722, 302);
             this.tb_SDT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_SDT.Name = "tb_SDT";
             this.tb_SDT.PlaceholderText = "Nhập số điện thoại...";
             this.tb_SDT.SelectedText = "";
-            this.tb_SDT.Size = new System.Drawing.Size(658, 48);
+            this.tb_SDT.Size = new System.Drawing.Size(592, 48);
             this.tb_SDT.TabIndex = 21;
             // 
             // lb_SDT
             // 
             this.lb_SDT.AutoSize = true;
             this.lb_SDT.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_SDT.Location = new System.Drawing.Point(652, 287);
+            this.lb_SDT.Location = new System.Drawing.Point(723, 275);
             this.lb_SDT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_SDT.Name = "lb_SDT";
             this.lb_SDT.Size = new System.Drawing.Size(154, 23);
@@ -365,7 +373,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox6.Image = global::GUI.Properties.Resources.user1;
-            this.pictureBox6.Location = new System.Drawing.Point(1263, 238);
+            this.pictureBox6.Location = new System.Drawing.Point(1263, 220);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(44, 28);
@@ -377,7 +385,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox2.Image = global::GUI.Properties.Resources.user1;
-            this.pictureBox2.Location = new System.Drawing.Point(1263, 148);
+            this.pictureBox2.Location = new System.Drawing.Point(1261, 133);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(44, 28);
@@ -388,6 +396,7 @@
             // tb_Email
             // 
             this.tb_Email.Animated = true;
+            this.tb_Email.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tb_Email.BorderRadius = 20;
             this.tb_Email.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_Email.DefaultText = "";
@@ -398,17 +407,18 @@
             this.tb_Email.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_Email.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_Email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_Email.Location = new System.Drawing.Point(656, 227);
+            this.tb_Email.Location = new System.Drawing.Point(722, 212);
             this.tb_Email.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_Email.Name = "tb_Email";
             this.tb_Email.PlaceholderText = "Nhập email...";
             this.tb_Email.SelectedText = "";
-            this.tb_Email.Size = new System.Drawing.Size(658, 48);
+            this.tb_Email.Size = new System.Drawing.Size(592, 48);
             this.tb_Email.TabIndex = 19;
             // 
             // tb_Hoten
             // 
             this.tb_Hoten.Animated = true;
+            this.tb_Hoten.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tb_Hoten.BorderRadius = 20;
             this.tb_Hoten.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_Hoten.DefaultText = "";
@@ -419,12 +429,12 @@
             this.tb_Hoten.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_Hoten.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tb_Hoten.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_Hoten.Location = new System.Drawing.Point(656, 138);
+            this.tb_Hoten.Location = new System.Drawing.Point(722, 124);
             this.tb_Hoten.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_Hoten.Name = "tb_Hoten";
             this.tb_Hoten.PlaceholderText = "Nhập họ tên..";
             this.tb_Hoten.SelectedText = "";
-            this.tb_Hoten.Size = new System.Drawing.Size(658, 48);
+            this.tb_Hoten.Size = new System.Drawing.Size(592, 48);
             this.tb_Hoten.TabIndex = 18;
             // 
             // lb_DangKy
@@ -432,7 +442,7 @@
             this.lb_DangKy.AutoSize = true;
             this.lb_DangKy.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_DangKy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lb_DangKy.Location = new System.Drawing.Point(479, 27);
+            this.lb_DangKy.Location = new System.Drawing.Point(523, 31);
             this.lb_DangKy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_DangKy.Name = "lb_DangKy";
             this.lb_DangKy.Size = new System.Drawing.Size(365, 41);
@@ -443,7 +453,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(816, 576);
+            this.label5.Location = new System.Drawing.Point(891, 576);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 20);
@@ -454,7 +464,7 @@
             // 
             this.lb_Ten.AutoSize = true;
             this.lb_Ten.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Ten.Location = new System.Drawing.Point(652, 111);
+            this.lb_Ten.Location = new System.Drawing.Point(723, 97);
             this.lb_Ten.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_Ten.Name = "lb_Ten";
             this.lb_Ten.Size = new System.Drawing.Size(114, 23);
@@ -465,7 +475,7 @@
             // 
             this.lb_Email.AutoSize = true;
             this.lb_Email.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Email.Location = new System.Drawing.Point(652, 200);
+            this.lb_Email.Location = new System.Drawing.Point(723, 185);
             this.lb_Email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_Email.Name = "lb_Email";
             this.lb_Email.Size = new System.Drawing.Size(70, 23);
@@ -476,7 +486,7 @@
             // 
             this.lb_MatKhau.AutoSize = true;
             this.lb_MatKhau.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_MatKhau.Location = new System.Drawing.Point(652, 378);
+            this.lb_MatKhau.Location = new System.Drawing.Point(723, 366);
             this.lb_MatKhau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_MatKhau.Name = "lb_MatKhau";
             this.lb_MatKhau.Size = new System.Drawing.Size(111, 23);
@@ -485,27 +495,46 @@
             // 
             // pn_OTPDK
             // 
-            this.pn_OTPDK.Controls.Add(this.guna2PictureBox1);
-            this.pn_OTPDK.Location = new System.Drawing.Point(52, 106);
+            this.pn_OTPDK.BorderRadius = 30;
+            this.pn_OTPDK.Controls.Add(this.ptb_1);
+            this.pn_OTPDK.Location = new System.Drawing.Point(52, 86);
             this.pn_OTPDK.Name = "pn_OTPDK";
             this.pn_OTPDK.Size = new System.Drawing.Size(561, 490);
             this.pn_OTPDK.TabIndex = 39;
             // 
+            // ptb_1
+            // 
+            this.ptb_1.BackColor = System.Drawing.Color.Transparent;
+            this.ptb_1.BorderRadius = 20;
+            this.ptb_1.Image = ((System.Drawing.Image)(resources.GetObject("ptb_1.Image")));
+            this.ptb_1.ImageRotate = 0F;
+            this.ptb_1.Location = new System.Drawing.Point(3, 0);
+            this.ptb_1.Name = "ptb_1";
+            this.ptb_1.Size = new System.Drawing.Size(561, 490);
+            this.ptb_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptb_1.TabIndex = 0;
+            this.ptb_1.TabStop = false;
+            this.ptb_1.UseTransparentBackground = true;
+            // 
             // guna2PictureBox1
             // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.BorderRadius = 30;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(-21, -27);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(-1, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(579, 517);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(1370, 629);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 40;
             this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
             // 
             // FormRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImage = global::GUI.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1924, 1029);
@@ -513,6 +542,7 @@
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -531,6 +561,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pn_OTPDK.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -564,6 +595,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2GradientButton btn_DangKy;
         private System.Windows.Forms.Label lb_ThongBao;
+        private Guna.UI2.WinForms.Guna2PictureBox ptb_1;
         private Guna.UI2.WinForms.Guna2Panel pn_OTPDK;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }

@@ -9,10 +9,11 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Xml.Serialization;
+using DTO;
 namespace GUI
 {
-    public partial class San : UserControl
+    public partial class UC_San : UserControl
     {
         private int panelMaxHeight = 95;
         private int animationTime = 20; // Tốc độ trượt panel
@@ -21,7 +22,7 @@ namespace GUI
         private int step;
         private bool isHovered = false;
         private int borderSize = 3;
-        public San()
+        public UC_San()
         {
             InitializeComponent();
             this.BackColor = Color.Transparent;
@@ -43,6 +44,17 @@ namespace GUI
             await ExpandPanel();
 
             
+        }
+        public void setData(DataRow row)
+        {
+            lbl_LoaiSan.Text = row["loaiSan"].ToString();
+            lbl_Tesan.Text = row["tenSan"].ToString();
+            lbl_GiaSan.Text = row["giaSanTheoPhut"].ToString() + " VND/h";
+            lbl_MaSan.Text = "ID: " + row["maSan"].ToString();
+        }
+        public San getDataSan()
+        {
+            return new San(lbl_MaSan.Text, lbl_Tesan.Text, lbl_LoaiSan.Text, int.Parse(lbl_GiaSan.Text.Replace(" VND/h", "")));
         }
         private async Task ExpandPanel()
         {
@@ -92,7 +104,7 @@ namespace GUI
             e.Control.MouseEnter += San_MouseEnter;
             e.Control.MouseLeave += San_MouseLeave;
         }
-        public event EventHandler<UserControl> OnDatSanClick;
+        public event EventHandler<San> OnDatSanClick;
         private void btn_DS_Click(object sender, EventArgs e)
         {
             isClicked = !isClicked;
@@ -107,7 +119,8 @@ namespace GUI
                 btn_DS.FillColor = Color.FromArgb(200, 0, 0, 0);
                 btn_DS.ForeColor = Color.GreenYellow;
             }
-            OnDatSanClick?.Invoke(this, new btn_DatLich());
+            San san = getDataSan();
+            OnDatSanClick?.Invoke(this, san);
             this.Invalidate();
         }
     }

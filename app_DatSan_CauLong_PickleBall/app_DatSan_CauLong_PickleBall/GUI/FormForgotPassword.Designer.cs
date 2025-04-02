@@ -38,6 +38,8 @@
             this.pt_MiniMaxmize = new System.Windows.Forms.PictureBox();
             this.pt_Close = new System.Windows.Forms.PictureBox();
             this.pn_QuenMK = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_ShowPass1 = new Guna.UI2.WinForms.Guna2Button();
+            this.lbl_NhapEmail = new System.Windows.Forms.Label();
             this.btn_Otp = new Guna.UI2.WinForms.Guna2Button();
             this.pn_OTP = new System.Windows.Forms.Panel();
             this.tb_OTP2 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -49,20 +51,18 @@
             this.btn_OTPAgain = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_ShowPass1 = new Guna.UI2.WinForms.Guna2Button();
             this.tb_MKNew = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_ShowPass2 = new Guna.UI2.WinForms.Guna2Button();
             this.lbl_Loi = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tb_Email = new Guna.UI2.WinForms.Guna2TextBox();
             this.tb_XacnhanMK = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbl_NhapEmail = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btn_Back = new Guna.UI2.WinForms.Guna2Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pt_Hide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pt_MiniMaxmize)).BeginInit();
@@ -192,6 +192,36 @@
             this.pn_QuenMK.Size = new System.Drawing.Size(596, 704);
             this.pn_QuenMK.TabIndex = 18;
             // 
+            // btn_ShowPass1
+            // 
+            this.btn_ShowPass1.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ShowPass1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ShowPass1.BackgroundImage")));
+            this.btn_ShowPass1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ShowPass1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ShowPass1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ShowPass1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ShowPass1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_ShowPass1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_ShowPass1.FillColor = System.Drawing.Color.Transparent;
+            this.btn_ShowPass1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_ShowPass1.ForeColor = System.Drawing.Color.White;
+            this.btn_ShowPass1.Location = new System.Drawing.Point(221, 256);
+            this.btn_ShowPass1.Name = "btn_ShowPass1";
+            this.btn_ShowPass1.Size = new System.Drawing.Size(44, 37);
+            this.btn_ShowPass1.TabIndex = 30;
+            this.btn_ShowPass1.Click += new System.EventHandler(this.btn_ShowPass1_Click);
+            // 
+            // lbl_NhapEmail
+            // 
+            this.lbl_NhapEmail.AutoSize = true;
+            this.lbl_NhapEmail.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_NhapEmail.Location = new System.Drawing.Point(40, 131);
+            this.lbl_NhapEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_NhapEmail.Name = "lbl_NhapEmail";
+            this.lbl_NhapEmail.Size = new System.Drawing.Size(506, 23);
+            this.lbl_NhapEmail.TabIndex = 1;
+            this.lbl_NhapEmail.Text = "Nhập email cho tài khoản muốn đổi mật khẩu";
+            // 
             // btn_Otp
             // 
             this.btn_Otp.Animated = true;
@@ -224,7 +254,9 @@
             // 
             // tb_OTP2
             // 
+            this.tb_OTP2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tb_OTP2.BorderRadius = 10;
+            this.tb_OTP2.BorderThickness = 2;
             this.tb_OTP2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_OTP2.DefaultText = "";
             this.tb_OTP2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -246,7 +278,9 @@
             // 
             // tb_OTP4
             // 
+            this.tb_OTP4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tb_OTP4.BorderRadius = 10;
+            this.tb_OTP4.BorderThickness = 2;
             this.tb_OTP4.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_OTP4.DefaultText = "";
             this.tb_OTP4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -268,7 +302,9 @@
             // 
             // tb_OTP1
             // 
+            this.tb_OTP1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tb_OTP1.BorderRadius = 10;
+            this.tb_OTP1.BorderThickness = 2;
             this.tb_OTP1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_OTP1.DefaultText = "";
             this.tb_OTP1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -290,7 +326,9 @@
             // 
             // tb_OTP3
             // 
+            this.tb_OTP3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tb_OTP3.BorderRadius = 10;
+            this.tb_OTP3.BorderThickness = 2;
             this.tb_OTP3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_OTP3.DefaultText = "";
             this.tb_OTP3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -382,28 +420,11 @@
             this.label2.TabIndex = 31;
             this.label2.Text = "Nhập mật khẩu mới";
             // 
-            // btn_ShowPass1
-            // 
-            this.btn_ShowPass1.BackColor = System.Drawing.Color.Transparent;
-            this.btn_ShowPass1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ShowPass1.BackgroundImage")));
-            this.btn_ShowPass1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ShowPass1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ShowPass1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_ShowPass1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_ShowPass1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_ShowPass1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_ShowPass1.FillColor = System.Drawing.Color.Transparent;
-            this.btn_ShowPass1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_ShowPass1.ForeColor = System.Drawing.Color.White;
-            this.btn_ShowPass1.Location = new System.Drawing.Point(221, 256);
-            this.btn_ShowPass1.Name = "btn_ShowPass1";
-            this.btn_ShowPass1.Size = new System.Drawing.Size(44, 37);
-            this.btn_ShowPass1.TabIndex = 30;
-            this.btn_ShowPass1.Click += new System.EventHandler(this.btn_ShowPass1_Click);
-            // 
             // tb_MKNew
             // 
+            this.tb_MKNew.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tb_MKNew.BorderRadius = 20;
+            this.tb_MKNew.BorderThickness = 2;
             this.tb_MKNew.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_MKNew.DefaultText = "";
             this.tb_MKNew.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -467,7 +488,9 @@
             // 
             // tb_Email
             // 
+            this.tb_Email.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tb_Email.BorderRadius = 20;
+            this.tb_Email.BorderThickness = 2;
             this.tb_Email.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_Email.DefaultText = "";
             this.tb_Email.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -488,7 +511,9 @@
             // 
             // tb_XacnhanMK
             // 
+            this.tb_XacnhanMK.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tb_XacnhanMK.BorderRadius = 20;
+            this.tb_XacnhanMK.BorderThickness = 2;
             this.tb_XacnhanMK.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_XacnhanMK.DefaultText = "";
             this.tb_XacnhanMK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -508,16 +533,17 @@
             this.tb_XacnhanMK.Size = new System.Drawing.Size(262, 48);
             this.tb_XacnhanMK.TabIndex = 11;
             // 
-            // lbl_NhapEmail
+            // label4
             // 
-            this.lbl_NhapEmail.AutoSize = true;
-            this.lbl_NhapEmail.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NhapEmail.Location = new System.Drawing.Point(40, 131);
-            this.lbl_NhapEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_NhapEmail.Name = "lbl_NhapEmail";
-            this.lbl_NhapEmail.Size = new System.Drawing.Size(506, 23);
-            this.lbl_NhapEmail.TabIndex = 1;
-            this.lbl_NhapEmail.Text = "Nhập email cho tài khoản muốn đổi mật khẩu";
+            this.label4.Font = new System.Drawing.Font("iCiel Brush Up", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(14, 72);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(566, 59);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "Quên mật khẩu nhưng đừng quên đến sân chơi nhá!";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox5
             // 
@@ -586,18 +612,6 @@
             this.guna2CirclePictureBox1.TabIndex = 42;
             this.guna2CirclePictureBox1.TabStop = false;
             this.guna2CirclePictureBox1.UseTransparentBackground = true;
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("iCiel Brush Up", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.LawnGreen;
-            this.label4.Location = new System.Drawing.Point(14, 72);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(566, 59);
-            this.label4.TabIndex = 44;
-            this.label4.Text = "Quên mật khẩu nhưng đừng quên đến sân chơi nhá!";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormForgotPassword
             // 

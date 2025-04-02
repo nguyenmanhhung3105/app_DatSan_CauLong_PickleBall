@@ -20,7 +20,7 @@ namespace GUI
         public FormRegister()
         {
             InitializeComponent();
-            
+            lb_ThongBao.Parent = guna2PictureBox1;
         }
 
         private void FormRegister_Load(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace GUI
         {
             
         }
-
+        
         private void pt_Close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -112,7 +112,7 @@ namespace GUI
                 ClearThongBao();
                 return;
             }
-            if(!Regex.IsMatch(soDT, @"^\d{10}$"))
+            if(!Regex.IsMatch(soDT, @"^0\d{9}$"))
             {
                 lb_ThongBao.Text = "Số điện thoại không hợp lệ";
                 ClearThongBao();
@@ -130,20 +130,19 @@ namespace GUI
         }
         private bool CheckEmailValid(string email)
         {
-            string pattern = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
             return Regex.IsMatch(email, pattern);
         }
         private void add_UControls(UserControl userControl)
         {
             pn_OTPDK.Controls.Clear();
             pn_OTPDK.Controls.Add(userControl);
-            userControl.BringToFront();
         }
         public void del_UControls()
         {
             pn_OTPDK.Controls.Clear();
-            pn_OTPDK.Visible=false;
-            pn_OTPDK.SendToBack();
+            pn_OTPDK.Controls.Add(ptb_1);
+            
         }
         private bool isPasswordVisible1 = false, isPasswordVisible2 = false;
 
@@ -163,6 +162,8 @@ namespace GUI
             }
             isPasswordVisible2 = !isPasswordVisible2;
         }
+
+        
 
         private void btn_ShowPassWord1_Click(object sender, EventArgs e)
         {

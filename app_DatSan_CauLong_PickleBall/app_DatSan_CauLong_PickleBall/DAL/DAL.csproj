@@ -65,9 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietPhieuDatSanAccess.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="KhachHangAccess.cs" />
+    <Compile Include="KhoAccess.cs" />
     <Compile Include="OTPAccess.cs" />
+    <Compile Include="PhieuDatSanAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SanAccess.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

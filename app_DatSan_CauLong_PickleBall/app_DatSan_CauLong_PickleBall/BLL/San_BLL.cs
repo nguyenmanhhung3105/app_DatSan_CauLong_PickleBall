@@ -17,5 +17,9 @@ namespace BLL
         {
             return SanAccess.selectAllSan();
         }
+        public static DataTable SelectSanByLoaiSan(string name)
+        {
+            return SanAccess.selectSanByLoaiSan(name);
+        }
     }
 }

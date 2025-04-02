@@ -51,7 +51,7 @@ namespace DAL
                 SELECT TOP (@limit) *
                 FROM KhachHang
                 WHERE ISNUMERIC(RIGHT(maKhachHang,8)) = 1
-                ORDER BY CAST(RIGHT(maKhachHang, 8) AS bigint) DES
+                ORDER BY CAST(RIGHT(maKhachHang, 8) AS bigint) DESC
             ";
             Dictionary<string, object> parameters = new Dictionary<string, object>
             {

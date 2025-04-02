@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BLL;
+using DTO;
 namespace GUI
 {
     public partial class UC_Datsan : UserControl
@@ -23,14 +24,8 @@ namespace GUI
         public UC_Datsan()
         {
             InitializeComponent();
-            foreach (Control control in pn_San.Controls)
-            {
-                if (control is San ucSan)
-                {
-                    ucSan.OnDatSanClick += UcSan_DatSanClicked;
-                }
-            }
-            pn_San.ControlAdded += Pn_San_ControlAdded;
+            loadSan();
+            
             this.DoubleBuffered = true;
             pn_Dropdown.Height = 0;  // Ẩn menu ban đầu
             pn_Dropdown.Visible = false;
@@ -38,19 +33,32 @@ namespace GUI
             SetupFlowLayoutPanel();
             
         }
-        private void Pn_San_ControlAdded(object sender, ControlEventArgs e)
+       
+        private void loadSan()
         {
-            if (e.Control is San ucSan)
+            pn_San.Controls.Clear();
+            DataTable dt = San_BLL.SelectAllSanBong();
+            if (dt != null && dt.Rows.Count > 0)
             {
-                ucSan.OnDatSanClick += UcSan_DatSanClicked;
+                foreach (DataRow dr in dt.Rows)
+                {
+                    UC_San uc = new UC_San();
+                    uc.OnDatSanClick += SanControl_OnDatSanClick;
+                    uc.setData(dr);
+                    pn_San.Controls.Add(uc);
+                }
             }
-        }
-        private void UcSan_DatSanClicked(object sender, UserControl uc)
-        {
-            SwitchUserControl?.Invoke(this, uc);
-        }
-        
+            else
+            {
+                MessageBox.Show("Không có sân bóng nào trong hệ thống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
+        }
+        private void SanControl_OnDatSanClick(object sender, San san)
+        {
+            UC_Datlich ucDL = new UC_Datlich(san);
+            SwitchUserControl?.Invoke(this, ucDL);
+        }
 
         private async void btn_DropList_Click(object sender, EventArgs e)
         {
@@ -154,10 +162,44 @@ namespace GUI
             SwitchUserControl?.Invoke(this, ucLSTT);
         }
         public event Action<UserControl> SanDuocChon;
-        
-        
 
-        
+        private void btn_Pkb_Click(object sender, EventArgs e)
+        {
+            btn_Pkb.BackColor = Color.PaleGreen;
+            btn_Bad.BackColor = Color.Transparent;
+            pn_San.Controls.Clear();
+            DataTable dt = San_BLL.SelectSanByLoaiSan("Sân Pickleball");
+            
+            
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    UC_San uc = new UC_San();
+                    uc.setData(dr);
+                    pn_San.Controls.Add(uc);
+                }
+            }
+        }
+
+        private void btn_Bad_Click(object sender, EventArgs e)
+        {
+            btn_Pkb.BackColor = Color.Transparent;
+            btn_Bad.BackColor = Color.PaleGreen;
+            pn_San.Controls.Clear();
+            DataTable dt = San_BLL.SelectSanByLoaiSan("Sân Cầu lông");
+
+
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    UC_San uc = new UC_San();
+                    uc.setData(dr);
+                    pn_San.Controls.Add(uc);
+                }
+            }
+        }
     }
     
 }

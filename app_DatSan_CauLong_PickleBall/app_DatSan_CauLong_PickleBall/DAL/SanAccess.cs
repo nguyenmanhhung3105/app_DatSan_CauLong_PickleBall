@@ -30,5 +30,15 @@ namespace DAL
             string query = "select * from San";
             return Connection.selectQuery(query);
         }
+        public static DataTable selectSanByLoaiSan(string name)
+        {
+            string query = "SELECT * FROM San WHERE loaiSan = @loaiSan";
+            Dictionary<string, object> parameters = new Dictionary<string, object>
+            {
+                {"@loaiSan", name}
+
+            };
+            return Connection.selectQuery(query, parameters);
+        }
     }
 }

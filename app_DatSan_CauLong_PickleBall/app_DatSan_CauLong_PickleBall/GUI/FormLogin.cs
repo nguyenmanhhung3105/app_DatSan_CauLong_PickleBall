@@ -20,6 +20,8 @@ using System.IO;
 using System.Diagnostics;
 using Microsoft.Win32;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using Guna.UI2.AnimatorNS;
+using Guna.UI2.WinForms;
 namespace GUI
 {
     
@@ -31,16 +33,23 @@ namespace GUI
 
         public FormLogin()
         {
+            
             InitializeComponent();
+            //Animator animator = new Animator();
+            //guna2AnimateWindow1.SetAnimateWindow(this);
+            this.Load += FormLogin_Load;
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
             tb_SoDTorEmail.Text = Properties.Settings.Default.soDienThoai_Email;
             tb_SoDTorEmail.Focus();
         }
 
-        
 
-        
 
-        
+
+
 
 
         private void pt_Close_Click_1(object sender, EventArgs e)
@@ -197,5 +206,7 @@ namespace GUI
             formRegister.ShowDialog();
             this.Show();
         }
+
+        
     }
 }

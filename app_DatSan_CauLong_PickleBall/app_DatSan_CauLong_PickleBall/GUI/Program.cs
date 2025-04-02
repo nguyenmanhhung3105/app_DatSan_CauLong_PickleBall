@@ -16,7 +16,20 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+            FormLogin loginForm = new FormLogin();
+            loginForm.Opacity = 0;  // Ẩn form ban đầu
+
+            // Dùng Task để không chặn UI
+            Task.Run(() =>
+            {
+                System.Threading.Thread.Sleep(2000); // Giả lập load dữ liệu
+
+                loginForm.Invoke(new Action(() =>
+                {
+                    loginForm.Opacity = 1; // Hiện form lên sau khi load xong
+                }));
+            });
+            Application.Run(loginForm);
         }
     }
 }

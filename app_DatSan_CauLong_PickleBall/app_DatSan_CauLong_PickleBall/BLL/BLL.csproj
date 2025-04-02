@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="KhachHangBLL.cs" />
+    <Compile Include="Kho_BLL.cs" />
     <Compile Include="OTP_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="San_BLL.cs" />
