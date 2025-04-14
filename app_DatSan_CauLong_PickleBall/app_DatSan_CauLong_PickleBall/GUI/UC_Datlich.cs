@@ -21,6 +21,7 @@ namespace GUI
         public event Action<object, UserControl> SwitchUserControl;
         San san;
         public KhachHang khachHang;
+        private bool daDatSan = false;
         public UC_Datlich(San san)
         {
             InitializeComponent();
@@ -38,10 +39,10 @@ namespace GUI
             cbb_ThoiLuong.DataSource = danhSach;
             cbb_ThoiLuong.SelectedIndex = -1;
             toolTip1.SetToolTip(this.tb_Ton, "Số lượng dụng cụ còn lại trong kho");
-            
+            daDatSan = false;
         }
-
-        
+       
+       
         private void SetupTrackBar()
         {
             tb_GioDat.Minimum = 360; // 0:00
@@ -139,7 +140,8 @@ namespace GUI
                 pb_DungCu.Image = null; // Hoặc xóa ảnh nếu không tìm thấy
             }
         }
-
+        
+       
         private void btn_Dat_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(pdt_NgayDat.Text))
@@ -165,6 +167,7 @@ namespace GUI
                 ClearThongBao() ;
                 return;
             }
+            
             string tenSan = txt_TenSan.Text;
             string maSan = tenSan.Replace("Sân ", "").Replace("-", "");
 
@@ -234,6 +237,7 @@ namespace GUI
                     pn_DatDungCu.Enabled = false;
                     btn_ThanhToan.Enabled = true;
                 }
+                daDatSan = true;
             }
             
         }
