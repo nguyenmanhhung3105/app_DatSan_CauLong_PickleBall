@@ -508,7 +508,11 @@ namespace GUI
             {
                 PhieuDatSan pds = PhieuDatSan_BLL.selectTop1PDSForMKH(khachHang.maKhachHang);
                 PhieuThue_DC ptdc = PhieuThueDC_BLL.selectTop1PTDCForMKH(khachHang.maKhachHang, pds.maPhieuDatSan);
-                PhieuThueDC_BLL.upDateTongTienThueDungCu(ptdc.maPhieuThueDC);
+                if(ptdc != null)
+                {
+                    PhieuThueDC_BLL.upDateTongTienThueDungCu(ptdc.maPhieuThueDC);
+                }
+                
                 
                 PhieuDatSan_BLL.upDateTongTienPhieuDatSanByMaPhieuDatSan(pds.maPhieuDatSan);
                 UC_ThanhToan uC_ThanhToan = new UC_ThanhToan(khachHang);

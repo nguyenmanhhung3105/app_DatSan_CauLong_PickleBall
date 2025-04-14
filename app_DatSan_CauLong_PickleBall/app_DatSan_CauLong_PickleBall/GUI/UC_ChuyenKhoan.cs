@@ -74,6 +74,7 @@ namespace GUI
 
                 var image = Base64ToImage(dataResult.data.qrDataURL.Replace("data:image/png;base64,", ""));
                 guna2PictureBox1.Image = image;
+                guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             }
             catch (Exception ex)
             {
@@ -102,6 +103,7 @@ namespace GUI
             MemoryStream ms = new MemoryStream(imageBytes, 0, imageBytes.Length);
             ms.Write(imageBytes, 0, imageBytes.Length);
             System.Drawing.Image image = System.Drawing.Image.FromStream(ms, true);
+
             return image;
         }
     }
