@@ -21,5 +21,9 @@ namespace BLL
         {
             return SanAccess.selectSanByLoaiSan(name);
         }
+        public static DataTable xemGiaSan()
+        {
+            return SanAccess.xemGiaSan();
+        }
     }
 }

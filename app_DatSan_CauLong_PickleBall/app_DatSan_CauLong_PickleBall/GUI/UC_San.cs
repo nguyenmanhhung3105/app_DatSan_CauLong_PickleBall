@@ -22,9 +22,11 @@ namespace GUI
         private int step;
         private bool isHovered = false;
         private int borderSize = 3;
+        
         public UC_San()
         {
             InitializeComponent();
+            
             this.BackColor = Color.Transparent;
             btn_DS.Click += btn_DS_Click;
             

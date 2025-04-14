@@ -215,11 +215,12 @@ namespace GUI
         }
         private void LoadUC_Datsan()
         {
-            UC_Datsan uc_Datsan = new UC_Datsan();
+            UC_Datsan uc_Datsan = new UC_Datsan(khachHang);
 
             uc_Datsan.SwitchUserControl += SwitchUserControlHandler;
             add_UControls(uc_Datsan);
         }
+        
 
         private void SwitchUserControlHandler(object sender, UserControl uc)
         {
@@ -235,5 +236,7 @@ namespace GUI
         {
             this.Close();
         }
+
+
     }
 }

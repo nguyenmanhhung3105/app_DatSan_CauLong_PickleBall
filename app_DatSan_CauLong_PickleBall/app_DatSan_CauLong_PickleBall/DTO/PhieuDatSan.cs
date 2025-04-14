@@ -10,18 +10,18 @@ namespace DTO
     {
         public string maPhieuDatSan {  get; set; }
         public string maKhachHang {  get; set; }
-        public string maNhanVien {  get; set; }
+        
         public string loaiSan {  get; set; }
         public DateTime ngayDatSan { get; set; }
         public DateTime thoiGianDat {  get; set; }
         public DateTime thoiGianKT { get; set; }
         public int tongTien {  get; set; }
         public string trangThai { get; set; }
-        public PhieuDatSan(string maPhieuDatSan, string maKhachHang, string maNhanVien, string loaiSan, DateTime ngayDatSan, DateTime thoiGianDat, DateTime thoiGianKT, int tongTien, string trangThai)
+        public PhieuDatSan(string maPhieuDatSan, string maKhachHang, string loaiSan, DateTime ngayDatSan, DateTime thoiGianDat, DateTime thoiGianKT, int tongTien)
         {
             this.maPhieuDatSan = maPhieuDatSan;
             this.maKhachHang = maKhachHang;
-            this.maNhanVien = maNhanVien;
+            
             this.loaiSan = loaiSan;
             this.ngayDatSan = ngayDatSan;
             this.thoiGianDat = thoiGianDat;

@@ -40,5 +40,16 @@ namespace DAL
             };
             return Connection.selectQuery(query, parameters);
         }
+        public static DataTable xemGiaSan()
+        {
+            string query = @"SELECT 
+                    tenSan AS N'Tên Sân', 
+                    FORMAT(giaSanTheoPhut * 30, 'N0') + N' VNĐ' AS N'Giá sân 30 phút', 
+                    FORMAT(giaSanTheoPhut * 60, 'N0') + N' VNĐ' AS N'Giá sân 60 phút', 
+                    FORMAT(giaSanTheoPhut * 90, 'N0') + N' VNĐ' AS N'Giá sân 90 phút', 
+                    FORMAT(giaSanTheoPhut * 120, 'N0') + N' VNĐ' AS N'Giá sân 120 phút'
+                FROM San";
+            return Connection.selectQuery(query);
+        }
     }
 }

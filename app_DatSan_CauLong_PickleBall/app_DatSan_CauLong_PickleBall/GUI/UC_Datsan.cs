@@ -20,10 +20,12 @@ namespace GUI
         private int frameRate = 60; // Số frame trên giây
         private int step;
         private CancellationTokenSource scrollCTS = new CancellationTokenSource();
-        public event EventHandler<UserControl> SwitchUserControl;
-        public UC_Datsan()
+        public event Action<object, UserControl> SwitchUserControl;
+        KhachHang khachHang;
+        public UC_Datsan(KhachHang khachHang)
         {
             InitializeComponent();
+            this.khachHang = khachHang;
             loadSan();
             
             this.DoubleBuffered = true;
@@ -57,6 +59,8 @@ namespace GUI
         private void SanControl_OnDatSanClick(object sender, San san)
         {
             UC_Datlich ucDL = new UC_Datlich(san);
+            ucDL.SwitchUserControl += SwitchUserControl;
+            ucDL.khachHang = khachHang;
             SwitchUserControl?.Invoke(this, ucDL);
         }
 

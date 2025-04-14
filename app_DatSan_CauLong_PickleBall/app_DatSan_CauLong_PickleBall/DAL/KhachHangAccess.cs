@@ -98,8 +98,6 @@ namespace DAL
 
             };
             int cnt = Connection.actionQuery(query, parameters);
-            Console.WriteLine(cnt);
-
         }
         public static bool UpdateKhachHang(string maKhachHang, string tenKhachHang, string gioiTinh, DateTime ngaySinh, string diaChi)
         {
@@ -227,6 +225,20 @@ namespace DAL
             Connection.actionQuery(query1, parameters);
             Connection.actionQuery(query2, parameters);
             Connection.actionQuery(query3, parameters);
+        }
+        public static void capNhatSoLanDatSan(string maKhachHang)
+        {
+            string query = @"
+        UPDATE KhachHang
+        SET soLanDatSan = ISNULL(soLanDatSan, 0) + 1
+        WHERE maKhachHang = @maKhachHang";
+
+            Dictionary<string, object> parameters = new Dictionary<string, object>
+    {
+        { "@maKhachHang", maKhachHang }
+    };
+
+            Connection.actionQuery(query, parameters);
         }
     }
 }

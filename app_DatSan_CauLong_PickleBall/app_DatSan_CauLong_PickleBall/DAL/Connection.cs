@@ -42,8 +42,8 @@ namespace DAL
                     }
                 }
             }
-            catch (Exception ex) { 
-                Console.WriteLine("Lỗi SQL: "+ex.Message);
+            catch (Exception ex) {
+                LogException(ex);
             }
             return count;
         }
@@ -78,7 +78,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi truy vấn SQL: " + ex.Message);
+                LogException(ex);
             }
 
             return table;
@@ -99,6 +99,13 @@ namespace DAL
                     return result != null ? Convert.ToInt32(result) : 0;
                 }
             }
+        }
+        private static void LogException(Exception ex)
+        {
+            Console.WriteLine("❌ Lỗi: " + ex.Message);
+            Console.WriteLine("→ Lớp: " + ex.TargetSite.DeclaringType);
+            Console.WriteLine("→ Phương thức: " + ex.TargetSite.Name);
+            Console.WriteLine("→ Stack Trace:\n" + ex.StackTrace);
         }
     }
 }

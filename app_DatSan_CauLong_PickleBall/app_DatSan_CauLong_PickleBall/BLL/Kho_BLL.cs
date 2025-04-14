@@ -18,5 +18,13 @@ namespace BLL
         {
             return KhoAccess.selectDCByMaDC(maDC);
         }
+        public static int getSoLuongKho(string maDungCu)
+        {
+            return KhoAccess.getSoLuongByMaDC(maDungCu);
+        }
+        public static bool xuLySauKhiThemChiTiet(string maDungCu, int soLuongThue, bool isXoa)
+        {
+            return KhoAccess.capNhatSoLuongVaTrangThai(maDungCu, soLuongThue, isXoa);
+        }
     }
 }
