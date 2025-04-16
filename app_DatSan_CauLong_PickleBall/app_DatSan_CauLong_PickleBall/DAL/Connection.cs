@@ -13,7 +13,7 @@ namespace DAL
         /// The main entry point for the application.
         /// </summary>
         
-        private static readonly string connectionString = @"Data Source=LAPTOP-KO4RO541\SQLEXPRESS;Initial Catalog=QuanLySan;Integrated Security=True;";
+        private static readonly string connectionString = @"Data Source=DESKTOP-2BOC853\SQLEXPRESS;Initial Catalog=QuanLySan;Integrated Security=True;";
         private static SqlConnection getConnection()
         {
             SqlConnection connection = new SqlConnection(connectionString);
