@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace app_DatSan_CauLong_PickleBall
+namespace GUI
 {
     public partial class UC_Account : UserControl
     {

@@ -1,0 +1,8 @@
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\Reports\obj\Debug\Reports.csproj.AssemblyReference.cache
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\Reports\obj\Debug\Reports.csproj.SuggestedBindingRedirects.cache
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\Reports\obj\Debug\Reports.exe.config
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\Reports\obj\Debug\Reports.Bill.resources
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\Reports\obj\Debug\Reports.Properties.Resources.resources
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\Reports\obj\Debug\Reports.csproj.GenerateResource.cache
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\Reports\obj\Debug\Reports.exe.licenses
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\Reports\obj\Debug\Reports.csproj.CoreCompileInputs.cache

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace app_DatSan_CauLong_PickleBall
+namespace GUI
 {
     partial class UC_Home
     {
@@ -43,7 +43,7 @@ namespace app_DatSan_CauLong_PickleBall
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Home));
-            this.flowLayoutPanel1 = new app_DatSan_CauLong_PickleBall.UC_Home.DoubleBufferedFlowLayoutPanel();
+            this.flowLayoutPanel1 = new GUI.UC_Home.DoubleBufferedFlowLayoutPanel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -198,7 +198,7 @@ namespace app_DatSan_CauLong_PickleBall
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.guna2PictureBox6);
             this.Controls.Add(this.flowLayoutPanel1);
             this.DoubleBuffered = true;

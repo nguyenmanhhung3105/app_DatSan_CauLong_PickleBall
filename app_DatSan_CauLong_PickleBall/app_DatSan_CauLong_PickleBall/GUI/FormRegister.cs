@@ -8,132 +8,33 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace app_DatSan_CauLong_PickleBall
+using DTO;
+using BLL;
+using System.Text.RegularExpressions;
+namespace GUI
 {
     public partial class FormRegister: Form
     {
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-        (
-            int nLeft,
-            int nTop,
-            int nRight,
-            int nBottom,
-            int nWidthEllipse,
-            int nHeightEllipse
-        );
+        
 
         public FormRegister()
         {
             InitializeComponent();
+            lb_ThongBao.Parent = guna2PictureBox1;
         }
 
         private void FormRegister_Load(object sender, EventArgs e)
         {
-            //background
-            this.BackgroundImage = Image.FromFile("./img/bg.jpg"); // Đặt ảnh nền
-            this.BackgroundImageLayout = ImageLayout.Stretch; // Căn chỉnh ảnh nền
-
-            //màu chữ
-            lb_DangKy.ForeColor = ColorTranslator.FromHtml("#016d3b");
-            lb_TaiKhoan.ForeColor = ColorTranslator.FromHtml("#016d3b");
-            lb_MatKhau.ForeColor = ColorTranslator.FromHtml("#016d3b");
-            lb_DangNhap.ForeColor = ColorTranslator.FromHtml("#016d3b");
-            bt_DangKy.ForeColor = Color.White;
-            bt_DangKy.BackColor = ColorTranslator.FromHtml("#016d3b");
-
-
-            //bo góc 
-            pn_TaiKhoan.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_TaiKhoan.Width, pn_TaiKhoan.Height, 30, 30));
-            pn_Ten.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_Ten.Width, pn_Ten.Height, 30, 30));
-            pn_MatKhau1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_MatKhau1.Width, pn_MatKhau1.Height, 30, 30));
-            pn_MatKhau2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_MatKhau2.Width, pn_MatKhau2.Height, 30, 30));
-            bt_DangKy.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, bt_DangKy.Width, bt_DangKy.Height, 20, 20));
-            pn_KhungDangKy.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pn_KhungDangKy.Width, pn_KhungDangKy.Height, 20, 20));
-
-            //placehoder
-            tb_TaiKhoan.GotFocus += new EventHandler(RemoveText);
-            tb_TaiKhoan.LostFocus += new EventHandler(AddText);
-            tb_Ten.GotFocus += new EventHandler(RemoveText);
-            tb_Ten.LostFocus += new EventHandler(AddText);
-            tb_MatKhau1.GotFocus += new EventHandler(RemoveText);
-            tb_MatKhau1.LostFocus += new EventHandler(AddText);
-            tb_MatKhau2.GotFocus += new EventHandler(RemoveText);
-            tb_MatKhau2.LostFocus += new EventHandler(AddText);
-
-            //làm mờ khung panel để hiển thị background
-            pn_KhungDangKy.Paint += new PaintEventHandler(pn_KhungDangNhap_Paint);
+           
         }
 
-        private void pn_KhungDangNhap_Paint(object sender, PaintEventArgs e)
-        {
-            // Màu xanh lá nhạt với độ trong suốt (Alpha = 160)
-            Color panelColor = Color.FromArgb(160, 255, 255, 255);
-            using (SolidBrush brush = new SolidBrush(panelColor))
-            {
-                e.Graphics.FillRectangle(brush, pn_KhungDangKy.ClientRectangle);
-            }
-        }
-
-        public void RemoveText(object sender, EventArgs e)
-        {
-            TextBox tb = sender as TextBox;
-            if (tb != null)
-            {
-                if (tb == tb_TaiKhoan && tb.Text == "Nhập số điện thoại hoặc email")
-                {
-                    tb.Text = "";
-                }
-                else if (tb == tb_Ten && tb.Text == "Vui lòng nhập họ và tên")
-                {
-                    tb.Text = "";
-                }
-                else if (tb == tb_MatKhau1 && tb.Text == "Vui lòng nhập mật khẩu")
-                {
-                    tb.Text = "";
-                    tb.UseSystemPasswordChar = true; 
-                }
-                else if (tb == tb_MatKhau2 && tb.Text == "Vui lòng nhập lại mật khẩu")
-                {
-                    tb.Text = "";
-                    tb.UseSystemPasswordChar = true;
-                }
-
-            }
-        }
-
-        public void AddText(object sender, EventArgs e)
-        {
-            TextBox tb = sender as TextBox;
-            if (tb != null)
-            {
-                if (tb == tb_TaiKhoan && string.IsNullOrWhiteSpace(tb.Text))
-                {
-                    tb.Text = "Nhập số điện thoại hoặc email";
-                }
-                else if (tb == tb_Ten && string.IsNullOrWhiteSpace(tb.Text))
-                {
-                    tb.Text = "Vui lòng nhập họ và tên";
-                }
-                else if (tb == tb_MatKhau1 && string.IsNullOrWhiteSpace(tb.Text))
-                {
-                    tb.UseSystemPasswordChar = false; 
-                    tb.Text = "Vui lòng nhập mật khẩu";
-                }
-                else if (tb == tb_MatKhau2 && string.IsNullOrWhiteSpace(tb.Text))
-                {
-                    tb.UseSystemPasswordChar = false; 
-                    tb.Text = "Vui lòng nhập lại mật khẩu";
-                }
-            }
-        }
+       
 
         private void pt_MiniMaxmize_Click(object sender, EventArgs e)
         {
             
         }
-
+        
         private void pt_Close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -154,6 +55,131 @@ namespace app_DatSan_CauLong_PickleBall
         private void pt_Hide_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+        public KhachHang getThongTinDangKy()
+        {
+            return new KhachHang(tb_Hoten.Text, tb_SDT.Text,tb_Email.Text , tb_MK.Text);
+        }
+
+        private void lb_Dangnhap_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormLogin dangnhap = new FormLogin();
+            dangnhap.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_DangKy_Click(object sender, EventArgs e)
+        {
+            string tenKH = tb_Hoten.Text;
+            string soDT = tb_SDT.Text;
+            string email = tb_Email.Text;
+            string matKhau = tb_MK.Text;
+            string xacNhanMK = tb_XacnhanMK.Text;
+            string allInput = tenKH+soDT+email+matKhau+xacNhanMK;
+            if(string.IsNullOrEmpty(tenKH) ||
+                string.IsNullOrEmpty(soDT) ||
+                string.IsNullOrEmpty(email) ||
+                string.IsNullOrEmpty(matKhau)||
+                string.IsNullOrEmpty(xacNhanMK))
+            {
+                lb_ThongBao.Text = "Bạn ơi từ từ, điền đầy đủ thông tin rồi hãy đăng ký nha";
+                ClearThongBao();
+                return;
+            }
+            if (allInput.Contains("\'"))
+            {
+                lb_ThongBao.Text = "Thông tin nhập vào chứa kí tự không hợp lệ: \'";
+            }
+            if (!CheckEmailValid(email))
+            {
+                lb_ThongBao.Text = "Định dạng email có vẽ không đúng lắm. Gợi ý:'abc@gmail.com'";
+                ClearThongBao();
+                return;
+            }
+            if (KhachHangBLL.checkEmailExist(email)) {
+                lb_ThongBao.Text = "Huhu! Email đã tồn tại, vui lòng chọn email khác";
+                ClearThongBao();
+                return;
+            }
+            if (KhachHangBLL.checkSoDienThoaiExist(soDT)) {
+                lb_ThongBao.Text = "Huhu! Số điện thoại đã tồn tại, vui lòng chọn số điện thoại khác";
+                ClearThongBao();
+                return;
+            }
+            if (!matKhau.Equals(xacNhanMK))
+            {
+                lb_ThongBao.Text = "Mật khẩu xác nhận không trùng khớp";
+                ClearThongBao();
+                return;
+            }
+            if(!Regex.IsMatch(soDT, @"^0\d{9}$"))
+            {
+                lb_ThongBao.Text = "Số điện thoại không hợp lệ";
+                ClearThongBao();
+                return;
+            }
+            pn_OTPDK.Visible = true;
+            pn_OTPDK.BringToFront();
+            add_UControls(new OTP_DangKi(this));
+            
+        }
+        private async void ClearThongBao()
+        {
+            await Task.Delay(5000);
+            lb_ThongBao.Text = "";
+        }
+        private bool CheckEmailValid(string email)
+        {
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            return Regex.IsMatch(email, pattern);
+        }
+        private void add_UControls(UserControl userControl)
+        {
+            pn_OTPDK.Controls.Clear();
+            pn_OTPDK.Controls.Add(userControl);
+        }
+        public void del_UControls()
+        {
+            pn_OTPDK.Controls.Clear();
+            pn_OTPDK.Controls.Add(ptb_1);
+            
+        }
+        private bool isPasswordVisible1 = false, isPasswordVisible2 = false;
+
+        private void btn_Showpassword2_Click(object sender, EventArgs e)
+        {
+            if (!isPasswordVisible2)
+            {
+                tb_XacnhanMK.PasswordChar = (char)0;
+                btn_Showpassword2.BackgroundImage = Image.FromFile("./img/eye_open.png");
+                btn_Showpassword2.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+            else
+            {
+                tb_XacnhanMK.PasswordChar = '*';
+                btn_Showpassword2.BackgroundImage = Image.FromFile("./img/eye_close.png");
+                btn_Showpassword2.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+            isPasswordVisible2 = !isPasswordVisible2;
+        }
+
+        
+
+        private void btn_ShowPassWord1_Click(object sender, EventArgs e)
+        {
+            if (!isPasswordVisible1)
+            {
+                tb_MK.PasswordChar = (char)0;
+                btn_ShowPassWord1.BackgroundImage = Image.FromFile("./img/eye_open.png");
+                btn_ShowPassWord1.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+            else
+            {
+                tb_XacnhanMK.PasswordChar = '*';
+                btn_ShowPassWord1.BackgroundImage = Image.FromFile("./img/eye_close.png");
+                btn_ShowPassWord1.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+            isPasswordVisible1 = !isPasswordVisible1;
         }
     }
 }
