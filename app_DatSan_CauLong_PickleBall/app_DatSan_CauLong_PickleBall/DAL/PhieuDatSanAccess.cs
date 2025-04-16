@@ -64,26 +64,56 @@ namespace DAL
         }
         public static DataTable xemAllLichSuDatSanByNgayDat(DateTime ngayDat)
         {
-            string query = @"SELECT
+            string query = @"
+            SELECT
                 pds.maPhieuDatSan AS N'Mã phiếu',
                 pds.maKhachHang AS N'Mã khách hàng', 
                 pds.maSan AS N'Mã Sân', 
                 pds.loaiSan AS N'Loại sân', 
                 pds.ngayDatSan AS N'Ngày đặt sân', 
                 pds.thoiGianDat AS N'Thời gian đặt', 
-                pds.thoiGianKT AS N'Thời gian kết thúc',
-                GROUP_CONCAT(CONCAT(k.tenDungCu, ' (', COALESCE(ct.soLuong, 0), ')')) AS N'Dụng cụ thuê',
-                FROM PhieuDatSan pds
-                LEFT JOIN ChiTietThueSanDungCu ct ON pds.maPhieuDatSan = ct.maPhieuDatSan
-                LEFT JOIN Kho k ON cttsdc.maDungCu = k.maDungCu
-                WHERE (pds.thoiGianDa AS DATE) = @ngayDat 
-                GROUP BY pds.maPhieuDatSan, pds.maQuanLy, pds.loaiSan, pds.ngayDatSan, pds.thoiGianDa, pds.thoiGianKetThuc, pds.tongTien, pds.tinhTrangXacNhan, pds.tinhTrangThanhToan;
-            ";
-            Dictionary<string, object> parameters = new Dictionary<string, object>
-            {
-                { "@ngayDat", ngayDat.Date}
-            };
+                pds.thoiGianKetThuc AS N'Thời gian kết thúc',
+                STRING_AGG(CONCAT(k.tenDungCu, ' (', ISNULL(ct.soLuong, 0), ')'), ', ') AS N'Dụng cụ thuê'
+            FROM PhieuDatSan pds
+            LEFT JOIN ChiTietThueSanDungCu ct ON pds.maPhieuDatSan = ct.maPhieuDatSan
+            LEFT JOIN Kho k ON ct.maDungCu = k.maDungCu
+            WHERE CAST(pds.ngayDatSan AS DATE) = @ngayDat
+            GROUP BY 
+                pds.maPhieuDatSan,
+                pds.maKhachHang,
+                pds.maSan,
+                pds.loaiSan,
+                pds.ngayDatSan,
+                pds.thoiGianDat,
+                pds.thoiGianKetThuc
+        ";
+
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+        {
+            { "@ngayDat", ngayDat.Date }
+        };
+
             return Connection.selectQuery(query, parameters);
+            //string query = @"SELECT
+            //    pds.maPhieuDatSan AS N'Mã phiếu',
+            //    pds.maKhachHang AS N'Mã khách hàng', 
+            //    pds.maSan AS N'Mã Sân', 
+            //    pds.loaiSan AS N'Loại sân', 
+            //    pds.ngayDatSan AS N'Ngày đặt sân', 
+            //    pds.thoiGianDat AS N'Thời gian đặt', 
+            //    pds.thoiGianKT AS N'Thời gian kết thúc',
+            //    GROUP_CONCAT(CONCAT(k.tenDungCu, ' (', COALESCE(ct.soLuong, 0), ')')) AS N'Dụng cụ thuê',
+            //    FROM PhieuDatSan pds
+            //    LEFT JOIN ChiTietThueSanDungCu ct ON pds.maPhieuDatSan = ct.maPhieuDatSan
+            //    LEFT JOIN Kho k ON cttsdc.maDungCu = k.maDungCu
+            //    WHERE (pds.thoiGianDa AS DATE) = @ngayDat 
+            //    GROUP BY pds.maPhieuDatSan, pds.maQuanLy, pds.loaiSan, pds.ngayDatSan, pds.thoiGianDa, pds.thoiGianKetThuc, pds.tongTien, pds.tinhTrangXacNhan, pds.tinhTrangThanhToan;
+            //";
+            //Dictionary<string, object> parameters = new Dictionary<string, object>
+            //{
+            //    { "@ngayDat", ngayDat.Date}
+            //};
+            //return Connection.selectQuery(query, parameters);
         }
         public static int tinhPhieuDatSanKhongCoDC(string maPhieuDatSan)
         {
