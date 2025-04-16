@@ -67,9 +67,14 @@ namespace BLL
         {
             return PhieuDatSanAccess.xemAllLichSuDatSanByNgayDat(ngayDat);
         }
-        public static void upDateTinhTrangPhieuDatSan(string maPDS, string trangThai, string maNV)
+        public static DataTable xemAllLichSuDatSanByMonth(DateTime startDate, DateTime endDate)
         {
-            PhieuDatSanAccess.updateTinhTrangPhieuDatSan(maPDS, trangThai, maNV);
+            return PhieuDatSanAccess.xemAllLichSuDatSanByMonth(startDate, endDate);
+        }
+
+        public static void upDateTinhTrangPhieuDatSan(string maPDS, string trangThai)
+        {
+            PhieuDatSanAccess.updateTinhTrangPhieuDatSan(maPDS, trangThai);
         }
         public static void deletePhieuDatSanByMaPDS(string maPDS)
         {

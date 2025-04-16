@@ -65,33 +65,23 @@ namespace DAL
         public static DataTable xemAllLichSuDatSanByNgayDat(DateTime ngayDat)
         {
             string query = @"
-            SELECT
-                pds.maPhieuDatSan AS N'Mã phiếu',
-                pds.maKhachHang AS N'Mã khách hàng', 
-                pds.maSan AS N'Mã Sân', 
-                pds.loaiSan AS N'Loại sân', 
-                pds.ngayDatSan AS N'Ngày đặt sân', 
-                pds.thoiGianDat AS N'Thời gian đặt', 
-                pds.thoiGianKetThuc AS N'Thời gian kết thúc',
-                STRING_AGG(CONCAT(k.tenDungCu, ' (', ISNULL(ct.soLuong, 0), ')'), ', ') AS N'Dụng cụ thuê'
-            FROM PhieuDatSan pds
-            LEFT JOIN ChiTietThueSanDungCu ct ON pds.maPhieuDatSan = ct.maPhieuDatSan
-            LEFT JOIN Kho k ON ct.maDungCu = k.maDungCu
-            WHERE CAST(pds.ngayDatSan AS DATE) = @ngayDat
-            GROUP BY 
-                pds.maPhieuDatSan,
-                pds.maKhachHang,
-                pds.maSan,
-                pds.loaiSan,
-                pds.ngayDatSan,
-                pds.thoiGianDat,
-                pds.thoiGianKetThuc
-        ";
+                SELECT
+                    pds.maPhieuDatSan AS N'Mã phiếu',
+                    pds.maKhachHang AS N'Mã khách hàng', 
+                    pds.loaiSan AS N'Loại sân', 
+                    pds.ngayDatSan AS N'Ngày đặt sân', 
+                    pds.thoiGianDat AS N'Thời gian đặt', 
+                    pds.thoiGianKetThuc AS N'Thời gian kết thúc',
+                    pds.tongTien AS N'Tổng tiền',
+                    pds.trangThai AS N'Trạng thái'
+                FROM PhieuDatSan pds
+                WHERE CAST(pds.ngayDatSan AS DATE) = @ngayDat
+                ";
 
                 Dictionary<string, object> parameters = new Dictionary<string, object>
-        {
-            { "@ngayDat", ngayDat.Date }
-        };
+            {
+                { "@ngayDat", ngayDat.Date }
+            };
 
             return Connection.selectQuery(query, parameters);
             //string query = @"SELECT
@@ -115,6 +105,34 @@ namespace DAL
             //};
             //return Connection.selectQuery(query, parameters);
         }
+
+        public static DataTable xemAllLichSuDatSanByMonth(DateTime startDate, DateTime endDate)
+        {
+            string query = @"
+                SELECT
+                    pds.maPhieuDatSan AS N'Mã phiếu',
+                    pds.maKhachHang AS N'Mã khách hàng', 
+                    pds.loaiSan AS N'Loại sân', 
+                    pds.ngayDatSan AS N'Ngày đặt sân', 
+                    pds.thoiGianDat AS N'Thời gian đặt', 
+                    pds.thoiGianKetThuc AS N'Thời gian kết thúc',
+                    pds.tongTien AS N'Tổng tiền',
+                    pds.trangThai AS N'Trạng thái'
+                FROM PhieuDatSan pds
+                WHERE pds.ngayDatSan >= @startDate AND pds.ngayDatSan <= @endDate
+            ";
+
+                    Dictionary<string, object> parameters = new Dictionary<string, object>
+            {
+                { "@startDate", startDate.ToString("yyyy-MM-dd") },
+                { "@endDate", endDate.ToString("yyyy-MM-dd") }
+            };
+
+            return Connection.selectQuery(query, parameters);
+        }
+
+
+
         public static int tinhPhieuDatSanKhongCoDC(string maPhieuDatSan)
         {
             int tongTienSan = 0;
@@ -180,12 +198,12 @@ WHERE CT_PhieuThueDC.maPhieuDatSan = @maPhieuDatSan";
 
             Connection.actionQuery(queryUpdate, updateParams);
         }
-        public static void updateTinhTrangPhieuDatSan(string maPDS, string tinhTrang, string nhanvien)
+        public static void updateTinhTrangPhieuDatSan(string maPDS, string trangThai)
         {
-            string query = "UPDATE PhieuDatSan SET trangThai = @tinhTrang WHERE maPhieuDatSan = @maPDS";
+            string query = "UPDATE PhieuDatSan SET trangThai = @trangThai WHERE maPhieuDatSan = @maPDS";
             Dictionary<string, object> parameters = new Dictionary<string, object>
             {
-                {"@tinhTrang", tinhTrang},
+                {"@trangThai", trangThai},
                 {"@maPDS", maPDS}
                 
             };

@@ -188,6 +188,12 @@
     <Compile Include="FormForgotPassword.Designer.cs">
       <DependentUpon>FormForgotPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTestQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTestQL.Designer.cs">
+      <DependentUpon>FormTestQL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,12 @@
     </Compile>
     <Compile Include="UC_ChuyenKhoan.Designer.cs">
       <DependentUpon>UC_ChuyenKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_QuanLyDatSan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_QuanLyDatSan.Designer.cs">
+      <DependentUpon>UC_QuanLyDatSan.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_San.cs">
       <SubType>UserControl</SubType>
@@ -283,6 +295,9 @@
     <EmbeddedResource Include="FormForgotPassword.resx">
       <DependentUpon>FormForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTestQL.resx">
+      <DependentUpon>FormTestQL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Home.resx">
       <DependentUpon>Form_Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -308,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ChuyenKhoan.resx">
       <DependentUpon>UC_ChuyenKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_QuanLyDatSan.resx">
+      <DependentUpon>UC_QuanLyDatSan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_San.resx">
       <DependentUpon>UC_San.cs</DependentUpon>
