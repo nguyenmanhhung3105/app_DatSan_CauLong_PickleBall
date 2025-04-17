@@ -128,6 +128,7 @@
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
@@ -225,6 +226,12 @@
     </Compile>
     <Compile Include="UC_QuanLyDatSan.Designer.cs">
       <DependentUpon>UC_QuanLyDatSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_QuanLyTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_QuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>UC_QuanLyTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_San.cs">
       <SubType>UserControl</SubType>
@@ -326,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_QuanLyDatSan.resx">
       <DependentUpon>UC_QuanLyDatSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_QuanLyTaiKhoan.resx">
+      <DependentUpon>UC_QuanLyTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_San.resx">
       <DependentUpon>UC_San.cs</DependentUpon>

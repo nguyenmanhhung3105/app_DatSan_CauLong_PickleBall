@@ -19,7 +19,7 @@ namespace GUI
 
         private void FormTestQL_Load(object sender, EventArgs e)
         {
-            UC_QuanLyDatSan ucds = new UC_QuanLyDatSan();
+            UC_QuanLyTaiKhoan ucds = new UC_QuanLyTaiKhoan();
             ucds.Dock = DockStyle.Fill; // Tự động co giãn theo panel
             guna2Panel1.Controls.Clear(); // Xoá control cũ nếu có
             guna2Panel1.Controls.Add(ucds);

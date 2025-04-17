@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Linq;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using BLL;
 
@@ -26,22 +27,48 @@ namespace GUI
             dTP_NgayDat.ValueChanged += dTP_NgayDat_ValueChanged;
             cb_TrangThai.SelectedIndexChanged += cb_TrangThai_SelectedIndexChanged;
 
-            //Tháng đặt
+            //Lọc theo tháng
             dTP_ThangDat.Format = DateTimePickerFormat.Custom;
             dTP_ThangDat.CustomFormat = "MM/yyyy";  // Hiển thị tháng và năm
             dTP_ThangDat.ShowUpDown = true;  // Hiển thị kiểu lên/xuống
 
+            //Lọc theo quý
+            cb_Quy.Items.AddRange(new string[] {
+                "Quý 1 (Tháng 1 - 3)",
+                "Quý 2 (Tháng 4 - 6)",
+                "Quý 3 (Tháng 7 - 9)",
+                "Quý 4 (Tháng 10 - 12)"
+            });
+            cb_Quy.SelectedIndex = 0;
 
+            // Năm (hiện tại ± 5 năm)
+            int currentYear = DateTime.Now.Year;
+            for (int year = currentYear - 5; year <= currentYear + 5; year++)
+            {
+                cb_Nam.Items.Add(year.ToString());
+            }
+            cb_Nam.SelectedItem = currentYear.ToString();
+
+            // Chọn quý mặc định (ví dụ quý hiện tại)
+            int currentQuarter = (DateTime.Now.Month - 1) / 3;
+            cb_Quy.SelectedIndex = currentQuarter;
+
+            //Hiển thị loại lọ
+            lb_HienThiLoaiLoc.Text = "Lọc theo quý: Quý " + (cb_Quy.SelectedIndex + 1) + " - Năm " + cb_Nam.SelectedItem.ToString();
         }
 
-        private bool isViewingByMonth = true;
+
+        private int view = 1; // 1 = quý, 2 = tháng, 3 = ngày
         private void ReloadGridView()
         {
-            if (isViewingByMonth)
+            if (view == 1)
+                FillDatagridviewForQuarter();
+            else if (view == 2)
                 FillDatagridviewForMonth();
             else
                 FillDatagridviewForDay();
         }
+
 
         private void AddDeleteButtonColumn()
         {
@@ -57,6 +84,73 @@ namespace GUI
                 dGV_PhieuDatSan.Columns.Add(deleteColumn);  // Thêm cột vào DataGridView
             }
         }
+
+        private void FillDatagridviewForQuarter()
+        {
+            if (dGV_PhieuDatSan.Columns.Contains("Xóa"))
+                dGV_PhieuDatSan.Columns.Remove("Xóa");
+
+            // Lấy năm và quý mặc định là năm và quý hiện tại nếu chưa chọn
+            int year = DateTime.Now.Year;
+            int quarter = (DateTime.Now.Month - 1) / 3 + 1;
+
+            // Nếu người dùng có chọn năm và quý, thì dùng giá trị đó
+            if (cb_Nam.SelectedItem != null)
+            {
+                year = int.Parse(cb_Nam.SelectedItem.ToString());
+            }
+
+            if (cb_Quy.SelectedIndex != -1)
+            {
+                quarter = cb_Quy.SelectedIndex + 1;
+            }
+
+            DateTime startDate, endDate;
+
+            switch (quarter)
+            {
+                case 1:
+                    startDate = new DateTime(year, 1, 1);
+                    endDate = new DateTime(year, 3, 31);
+                    break;
+                case 2:
+                    startDate = new DateTime(year, 4, 1);
+                    endDate = new DateTime(year, 6, 30);
+                    break;
+                case 3:
+                    startDate = new DateTime(year, 7, 1);
+                    endDate = new DateTime(year, 9, 30);
+                    break;
+                default:
+                    startDate = new DateTime(year, 10, 1);
+                    endDate = new DateTime(year, 12, 31);
+                    break;
+            }
+
+            // Gọi từ BLL
+            DataTable dt = PhieuDatSan_BLL.xemAllLichSuDatSanByMonth(startDate, endDate);
+
+            var filteredData = dt.AsEnumerable();
+            string tinhTrangThanhToan = cb_TrangThai.Text;
+
+            if (tinhTrangThanhToan != "Tất cả")
+            {
+                filteredData = filteredData
+                    .Where(row => row.Field<string>("Trạng thái") == tinhTrangThanhToan);
+            }
+
+            if (filteredData.Any())
+            {
+                dGV_PhieuDatSan.DataSource = filteredData.CopyToDataTable();
+                AddDeleteButtonColumn(); // Thêm nút xoá
+            }
+            else
+            {
+                dGV_PhieuDatSan.DataSource = null;
+            }
+        }
+
+
 
         private void FillDatagridviewForMonth()
         {
@@ -122,7 +216,7 @@ namespace GUI
             if (e.RowIndex >= 0 && dGV_PhieuDatSan.Columns[e.ColumnIndex].Name == "Xóa")
             {
                 // Xác nhận người dùng
-                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa dòng này không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
                     // Lấy mã phiếu từ dòng được chọn
@@ -144,19 +238,57 @@ namespace GUI
             }
         }
 
+        private void cb_Quy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            view = 1;
+
+            if (cb_Nam.SelectedItem != null)
+            {
+                lb_HienThiLoaiLoc.Text = "Lọc theo quý: Quý " + (cb_Quy.SelectedIndex + 1) + " - Năm " + cb_Nam.SelectedItem.ToString();
+            }
+            else
+            {
+                lb_HienThiLoaiLoc.Text = "Lọc theo quý: Quý " + (cb_Quy.SelectedIndex + 1);
+            }
+
+            FillDatagridviewForQuarter();
+        }
+
+        private void cb_Nam_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            view = 1;
+
+            if (cb_Quy.SelectedIndex != -1 && cb_Nam.SelectedItem != null)
+            {
+                lb_HienThiLoaiLoc.Text = "Lọc theo quý: Quý " + (cb_Quy.SelectedIndex + 1) + " - Năm " + cb_Nam.SelectedItem.ToString();
+            }
+            else if (cb_Quy.SelectedIndex != -1)
+            {
+                lb_HienThiLoaiLoc.Text = "Lọc theo quý: Quý " + (cb_Quy.SelectedIndex + 1);
+            }
+            else
+            {
+                lb_HienThiLoaiLoc.Text = "Lọc theo quý";
+            }
+
+            FillDatagridviewForQuarter();
+        }
 
 
         private void dTP_ThangDat_ValueChanged(object sender, EventArgs e)
         {
-            isViewingByMonth = true;
+            view = 2;
+            lb_HienThiLoaiLoc.Text = "Lọc theo tháng: " + dTP_ThangDat.Value.ToString("MM/yyyy");
             FillDatagridviewForMonth();
         }
 
         private void dTP_NgayDat_ValueChanged(object sender, EventArgs e)
         {
-            isViewingByMonth = false;
+            view = 3;
+            lb_HienThiLoaiLoc.Text = "Lọc theo ngày: " + dTP_NgayDat.Value.ToString("dd/MM/yyyy");
             FillDatagridviewForDay();
         }
+
 
         private void cb_TrangThai_SelectedIndexChanged(object sender, EventArgs e)
         {

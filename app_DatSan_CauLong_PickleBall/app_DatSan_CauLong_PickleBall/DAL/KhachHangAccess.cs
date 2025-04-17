@@ -34,7 +34,19 @@ namespace DAL
         }
         public static DataTable selectAllKhachHang()
         {
-            string query = "SELECT * FROM KhachHang";
+            string query = @"
+                SELECT
+                    maKhachHang AS N'Mã khách hàng', 
+                    tenKhachHang AS N'Tên khách hàng',
+                    soDienThoai AS N'Số điện thoại', 
+                    email AS N'Email', 
+                    matKhau AS N'Mật khẩu', 
+                    gioiTinh AS N'Giới tính', 
+                    ngaySinh AS N'Ngày sinh', 
+                    diaChi AS N'Địa chỉ', 
+                    soLanDatSan AS N'Số lần đặt sân'
+                FROM KhachHang 
+                ";
             try
             {
                 return Connection.selectQuery(query);
@@ -143,7 +155,7 @@ namespace DAL
         {
             try
             {
-                string query = "SELECT * FORM KhachHang WHERE maKhachHang = @maKhachHang";
+                string query = "SELECT * FROM KhachHang WHERE maKhachHang = @maKhachHang";
                 Dictionary<string, object> parameters = new Dictionary<string, object> {
                     {"@maKhachHang", maKhachHang },
 
@@ -178,7 +190,7 @@ namespace DAL
         {
             try
             {
-                string query = "SELECT * FROM KhachHang WHERE MaKhachHang IN (SELECT MaKhachHang FROM PhieuDatSan WHERE MaPhieuDatSan = @maPhieuDatSan)";
+                string query = "SELECT * FROM KhachHang WHERE maKhachHang IN (SELECT maKhachHang FROM PhieuDatSan WHERE maPhieuDatSan = @maPhieuDatSan)";
                 Dictionary<string, object> parameters = new Dictionary<string, object>
             {
                 { "@maPhieuDatSan", maPhieuDatSan }
@@ -213,19 +225,32 @@ namespace DAL
             string query = "UPDATE KhachHang SET soLanDatSan = (SELECT COUNT(maKhachHang) FROM PhieuDatSan WHERE TinhTrangThanhToan = N'Đã thanh toán' AND PhieuDatSan.maKhachHang = KhachHang.maKhachHang)";
             Connection.actionQuery(query);
         }
+
         public static void deleteKhachHangByMaKhachHang(string maKhachHang)
         {
-            string query1 = "DELETE FROM ChiTietPhieuDatSan WHERE maPhieuDatSan IN (SELECT maPhieuDatSan FROM PhieuDatSan WHERE maKhachhang = @maKhachHang)";
+            string query1 = "DELETE FROM ChiTietPhieuDatSan WHERE maPhieuDatSan IN (SELECT maPhieuDatSan FROM PhieuDatSan WHERE maKhachHang = @maKhachHang)";
             string query2 = "DELETE FROM PhieuDatSan WHERE maKhachHang = @maKhachHang";
             string query3 = "DELETE FROM KhachHang WHERE maKhachHang = @maKhachHang";
+
             Dictionary<string, object> parameters = new Dictionary<string, object>
-        {
-            { "@maKhachHang", maKhachHang }
-        };
-            Connection.actionQuery(query1, parameters);
-            Connection.actionQuery(query2, parameters);
-            Connection.actionQuery(query3, parameters);
+            {
+                { "@maKhachHang", maKhachHang }
+            };
+
+            try
+            {
+
+                Connection.actionQuery(query1, parameters);
+                Connection.actionQuery(query2, parameters);
+                Connection.actionQuery(query3, parameters);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi xóa khách hàng: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+
         public static void capNhatSoLanDatSan(string maKhachHang)
         {
             string query = @"

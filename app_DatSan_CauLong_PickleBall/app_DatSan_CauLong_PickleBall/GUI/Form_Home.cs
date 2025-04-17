@@ -237,6 +237,9 @@ namespace GUI
             this.Close();
         }
 
+        private void txt_Search_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
