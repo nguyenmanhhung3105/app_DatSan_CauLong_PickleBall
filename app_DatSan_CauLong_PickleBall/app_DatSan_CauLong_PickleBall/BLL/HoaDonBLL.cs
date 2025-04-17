@@ -16,12 +16,12 @@ namespace BLL
             HoaDonAccess.addHoaDon(hoaDon);
             return hoaDon.MaHoaDon;
         }
-        public static DataTable getHoaDon(string maHD)
+        public static DataSet getHoaDon(string maHD)
         {
-            return HoaDonBLL.getHoaDon(maHD);
+            return HoaDonAccess.getHoaDon(maHD);
         }
         private static string autoCreateMaHoaDon() {
-            if (HoaDonAccess.selectAllHoaDon().Rows.Count > 0) {
+            if (HoaDonAccess.selectAllHoaDon().Rows.Count == 0) {
                 return "HD00000001";
             }
             else
@@ -52,9 +52,10 @@ namespace BLL
         {
             return HoaDonAccess.TimKiemHoaDon(tuKhoa);
         }
-        public static void upDateTongTienHoaDon(int maHoaDon, Voucher voucher)
+        
+        public static void upDateTrangThaiHoaDon(string maHoaDon, string trangThai)
         {
-            HoaDonAccess.upDateTongTienHoaDon(maHoaDon, voucher);
+            HoaDonBLL.capNhatTrangThai(maHoaDon, trangThai);
         }
     }
 }

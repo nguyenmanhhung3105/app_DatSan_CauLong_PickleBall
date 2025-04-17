@@ -9,19 +9,25 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 using DevExpress.XtraReports.Parameters;
+using DTO;
+using GUI.Resources;
 using Newtonsoft.Json;
 using RestSharp;
-
+using Reports;
+using DevExpress.XtraReports.UI;
 namespace GUI
 {
     public partial class UC_ChuyenKhoan : UserControl
     {
-        public UC_ChuyenKhoan()
+        HoaDon hoaDon;
+        public UC_ChuyenKhoan(HoaDon hoaDon)
         {
             InitializeComponent();
+            this.hoaDon = hoaDon;
             this.Load += UC_ChuyenKhoan_Load;
-            
+            btn_XacnhanThanhToan.Enabled = false;
         }
 
         
@@ -80,6 +86,7 @@ namespace GUI
             {
                 MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            btn_XacnhanThanhToan.Enabled = true;
         }
 
         private void UC_ChuyenKhoan_Load(object sender, EventArgs e)
@@ -95,7 +102,10 @@ namespace GUI
                 cb_nganhang.Properties.ValueMember = "bin";
                 cb_nganhang.EditValue = listBankData.data.FirstOrDefault().bin;
                 cb_template.SelectedIndex = 0;
+
             }
+            txtSoTien.Text = hoaDon.TongTien.ToString();
+
         }
         public Image Base64ToImage(string base64String)
         {
@@ -105,6 +115,23 @@ namespace GUI
             System.Drawing.Image image = System.Drawing.Image.FromStream(ms, true);
 
             return image;
+        }
+
+        private void btn_XacnhanThanhToan_Click(object sender, EventArgs e)
+        {
+            PhieuDatSan_BLL.upDateTinhTrangPhieuDatSan(hoaDon.MaPhieuDatSan, "Chờ xác nhận");
+            HoaDonBLL.upDateTrangThaiHoaDon(hoaDon.MaHoaDon, "Chờ xác nhận");
+            MessageBox.Show("Cảm ơn bạn đã thanh toán.Giao dịch sẽ sớm được xác nhận. Hãy soạn vợt và chờ vài phút nhé", "Đã xác nhận", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            InHoaDon(hoaDon.MaHoaDon);
+        }
+        public void InHoaDon(string maHoaDon)
+        {
+            var dataSet = HoaDonBLL.getHoaDon(maHoaDon);
+            var report = new Bills();
+            report.DataSource = dataSet;
+            report.DataMember = "ThongTinChung";
+            ReportPrintTool printTool = new ReportPrintTool(report);
+            printTool.ShowPreviewDialog();
         }
     }
 }

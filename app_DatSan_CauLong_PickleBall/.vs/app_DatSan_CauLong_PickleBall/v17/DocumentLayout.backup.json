@@ -3,24 +3,104 @@
   "WorkspaceRootPath": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|d:\\cong_nghe_phan_mem\\code\\du_an_qlsb\\pull_1\\app_datsan_caulong_pickleball\\app_datsan_caulong_pickleball\\gui\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B383BBA8-F622-45D4-AEB8-23A062A3CD09}|Reports\\Reports.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\reports\\bills.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B383BBA8-F622-45D4-AEB8-23A062A3CD09}|Reports\\Reports.csproj|solutionrelative:reports\\bills.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B383BBA8-F622-45D4-AEB8-23A062A3CD09}|Reports\\Reports.csproj|d:\\cong_nghe_phan_mem\\code\\du_an_qlsb\\pull_1\\app_datsan_caulong_pickleball\\reports\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B383BBA8-F622-45D4-AEB8-23A062A3CD09}|Reports\\Reports.csproj|solutionrelative:reports\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|d:\\cong_nghe_phan_mem\\code\\du_an_qlsb\\pull_1\\app_datsan_caulong_pickleball\\app_datsan_caulong_pickleball\\gui\\uc_datsan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\uc_datsan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\uc_datsan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\uc_datsan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\form_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\form_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\form_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\form_home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|d:\\cong_nghe_phan_mem\\code\\du_an_qlsb\\pull_1\\app_datsan_caulong_pickleball\\app_datsan_caulong_pickleball\\gui\\uc_doimk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\uc_doimk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\uc_danhgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\uc_danhgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\uc_accountkh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\uc_accountkh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\uc_thongtincn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\uc_thongtincn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\uc_chuyenkhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\uc_chuyenkhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\formregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\formregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B383BBA8-F622-45D4-AEB8-23A062A3CD09}|Reports\\Reports.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\reports\\bills.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B383BBA8-F622-45D4-AEB8-23A062A3CD09}|Reports\\Reports.csproj|solutionrelative:reports\\bills.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B383BBA8-F622-45D4-AEB8-23A062A3CD09}|Reports\\Reports.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\reports\\bills.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B383BBA8-F622-45D4-AEB8-23A062A3CD09}|Reports\\Reports.csproj|solutionrelative:reports\\bills.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{053F0882-CC60-4EE6-802C-CB960FCDEA80}|app_DatSan_CauLong_PickleBall\\DAL\\DAL.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\dal\\hoadonaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{053F0882-CC60-4EE6-802C-CB960FCDEA80}|app_DatSan_CauLong_PickleBall\\DAL\\DAL.csproj|solutionrelative:app_datsan_caulong_pickleball\\dal\\hoadonaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\uc_chuyenkhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\uc_chuyenkhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\uc_datlich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\uc_datlich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{071710CF-1361-460E-B82D-259782DD4415}|app_DatSan_CauLong_PickleBall\\BLL\\BLL.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\bll\\hoadonbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071710CF-1361-460E-B82D-259782DD4415}|app_DatSan_CauLong_PickleBall\\BLL\\BLL.csproj|solutionrelative:app_datsan_caulong_pickleball\\bll\\hoadonbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\uc_thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\uc_thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\uc_thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\uc_thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6460E75-C1B3-4230-89DE-243628B904C3}|app_DatSan_CauLong_PickleBall\\DTO\\DTO.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\dto\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6460E75-C1B3-4230-89DE-243628B904C3}|app_DatSan_CauLong_PickleBall\\DTO\\DTO.csproj|solutionrelative:app_datsan_caulong_pickleball\\dto\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071710CF-1361-460E-B82D-259782DD4415}|app_DatSan_CauLong_PickleBall\\BLL\\BLL.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\bll\\phieudatsan_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071710CF-1361-460E-B82D-259782DD4415}|app_DatSan_CauLong_PickleBall\\BLL\\BLL.csproj|solutionrelative:app_datsan_caulong_pickleball\\bll\\phieudatsan_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071710CF-1361-460E-B82D-259782DD4415}|app_DatSan_CauLong_PickleBall\\BLL\\BLL.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\bll\\khachhangbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071710CF-1361-460E-B82D-259782DD4415}|app_DatSan_CauLong_PickleBall\\BLL\\BLL.csproj|solutionrelative:app_datsan_caulong_pickleball\\bll\\khachhangbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\giasan_sanbidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\giasan_sanbidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{071710CF-1361-460E-B82D-259782DD4415}|app_DatSan_CauLong_PickleBall\\BLL\\BLL.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\bll\\chitietphieudatsan_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{071710CF-1361-460E-B82D-259782DD4415}|app_DatSan_CauLong_PickleBall\\BLL\\BLL.csproj|solutionrelative:app_datsan_caulong_pickleball\\bll\\chitietphieudatsan_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\datum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,14 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\uc_datlich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\uc_datlich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\uc_thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\uc_thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{053F0882-CC60-4EE6-802C-CB960FCDEA80}|app_DatSan_CauLong_PickleBall\\DAL\\DAL.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\dal\\chitietphieudatsanaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,24 +123,8 @@
       "RelativeMoniker": "D:0:0:{053F0882-CC60-4EE6-802C-CB960FCDEA80}|app_DatSan_CauLong_PickleBall\\DAL\\DAL.csproj|solutionrelative:app_datsan_caulong_pickleball\\dal\\phieuthue_dcaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\uc_thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\uc_thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{071710CF-1361-460E-B82D-259782DD4415}|app_DatSan_CauLong_PickleBall\\BLL\\BLL.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\bll\\hoadonbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{071710CF-1361-460E-B82D-259782DD4415}|app_DatSan_CauLong_PickleBall\\BLL\\BLL.csproj|solutionrelative:app_datsan_caulong_pickleball\\bll\\hoadonbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{053F0882-CC60-4EE6-802C-CB960FCDEA80}|app_DatSan_CauLong_PickleBall\\DAL\\DAL.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\dal\\hoadonaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{053F0882-CC60-4EE6-802C-CB960FCDEA80}|app_DatSan_CauLong_PickleBall\\DAL\\DAL.csproj|solutionrelative:app_datsan_caulong_pickleball\\dal\\hoadonaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\resources\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\resources\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_datsan_caulong_pickleball\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56CAA2AC-9A90-48EA-9E9F-8BBA6E31780D}|app_DatSan_CauLong_PickleBall\\GUI\\GUI.csproj|solutionrelative:app_datsan_caulong_pickleball\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,7 +134,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 346,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,31 +150,114 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormLogin.cs [Design]",
-              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\FormLogin.cs",
-              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\FormLogin.cs",
-              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\FormLogin.cs [Design]",
-              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\FormLogin.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "UC_Datsan.cs",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_Datsan.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\UC_Datsan.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_Datsan.cs",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\UC_Datsan.cs",
+              "ViewState": "AgIAALcAAAAAAAAAAAAcwMQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T21:39:35.088Z",
+              "WhenOpened": "2025-04-17T00:17:15.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Bills.cs [Design]",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\Reports\\Bills.cs",
+              "RelativeDocumentMoniker": "Reports\\Bills.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\Reports\\Bills.cs [Design]",
+              "RelativeToolTip": "Reports\\Bills.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T02:25:06.673Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UC_ChuyenKhoan.cs",
-              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_ChuyenKhoan.cs",
-              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\UC_ChuyenKhoan.cs",
-              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_ChuyenKhoan.cs",
-              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\UC_ChuyenKhoan.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAcwEIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "UC_Datsan.cs [Design]",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_Datsan.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\UC_Datsan.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_Datsan.cs [Design]",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\UC_Datsan.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T07:02:13.476Z"
+              "WhenOpened": "2025-04-16T01:16:41.364Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "Form_Home.cs",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\Form_Home.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\Form_Home.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\Form_Home.cs",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\Form_Home.cs",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAewPIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T21:09:48.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form_Home.cs [Design]",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\Form_Home.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\Form_Home.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\Form_Home.cs [Design]",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\Form_Home.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T21:09:45.635Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UC_DoiMK.cs [Design]",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_DoiMK.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\UC_DoiMK.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_DoiMK.cs [Design]",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\UC_DoiMK.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T18:44:40.55Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UC_Danhgia.cs [Design]",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_Danhgia.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\UC_Danhgia.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_Danhgia.cs [Design]",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\UC_Danhgia.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T17:56:11.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UC_AccountKH.cs [Design]",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_AccountKH.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\UC_AccountKH.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_AccountKH.cs [Design]",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\UC_AccountKH.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T02:01:04.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UC_ThongTinCN.cs [Design]",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_ThongTinCN.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\UC_ThongTinCN.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_ThongTinCN.cs [Design]",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\UC_ThongTinCN.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T18:34:58.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "UC_ChuyenKhoan.cs [Design]",
               "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_ChuyenKhoan.cs",
               "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\UC_ChuyenKhoan.cs",
@@ -129,19 +268,185 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Bill.cs [Design]",
-              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\Reports\\Bill.cs",
-              "RelativeDocumentMoniker": "Reports\\Bill.cs",
-              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\Reports\\Bill.cs [Design]",
-              "RelativeToolTip": "Reports\\Bill.cs [Design]",
+              "DocumentIndex": 10,
+              "Title": "FormRegister.cs [Design]",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\FormRegister.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\FormRegister.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\FormRegister.cs [Design]",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\FormRegister.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T01:14:29.844Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-16T18:35:23.186Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
+              "Title": "FormLogin.cs [Design]",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\FormLogin.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\FormLogin.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\FormLogin.cs [Design]",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\FormLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T21:39:35.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UC_ChuyenKhoan.cs",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_ChuyenKhoan.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\UC_ChuyenKhoan.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_ChuyenKhoan.cs",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\UC_ChuyenKhoan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T07:02:13.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Bills.cs",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\Reports\\Bills.cs",
+              "RelativeDocumentMoniker": "Reports\\Bills.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\Reports\\Bills.cs",
+              "RelativeToolTip": "Reports\\Bills.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA9wBEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T02:25:09.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HoaDonAccess.cs",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\DAL\\HoaDonAccess.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\DAL\\HoaDonAccess.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\DAL\\HoaDonAccess.cs",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\DAL\\HoaDonAccess.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:16:06.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Bills.Designer.cs",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\Reports\\Bills.Designer.cs",
+              "RelativeDocumentMoniker": "Reports\\Bills.Designer.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\Reports\\Bills.Designer.cs",
+              "RelativeToolTip": "Reports\\Bills.Designer.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAiwIQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T06:17:20.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "HoaDonBLL.cs",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\BLL\\HoaDonBLL.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\BLL\\HoaDonBLL.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\BLL\\HoaDonBLL.cs",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\BLL\\HoaDonBLL.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T03:26:08.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UC_ThanhToan.cs [Design]",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_ThanhToan.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\UC_ThanhToan.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_ThanhToan.cs [Design]",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\UC_ThanhToan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T07:13:12.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UC_ThanhToan.cs",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_ThanhToan.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\UC_ThanhToan.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_ThanhToan.cs",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\UC_ThanhToan.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAAAIIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T07:13:53.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "HoaDon.cs",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\DTO\\HoaDon.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\DTO\\HoaDon.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\DTO\\HoaDon.cs",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\DTO\\HoaDon.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA7wCYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T03:22:52.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PhieuDatSan_BLL.cs",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\BLL\\PhieuDatSan_BLL.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\BLL\\PhieuDatSan_BLL.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\BLL\\PhieuDatSan_BLL.cs",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\BLL\\PhieuDatSan_BLL.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCYAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T01:44:34.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "KhachHangBLL.cs",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\BLL\\KhachHangBLL.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\BLL\\KhachHangBLL.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\BLL\\KhachHangBLL.cs",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\BLL\\KhachHangBLL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T01:44:28.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "GiaSan_SanBiDat.cs [Design]",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\GiaSan_SanBiDat.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\GiaSan_SanBiDat.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\GiaSan_SanBiDat.cs [Design]",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\GiaSan_SanBiDat.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T21:59:51.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ChiTietPhieuDatSan_BLL.cs",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\BLL\\ChiTietPhieuDatSan_BLL.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\BLL\\ChiTietPhieuDatSan_BLL.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\BLL\\ChiTietPhieuDatSan_BLL.cs",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\BLL\\ChiTietPhieuDatSan_BLL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T21:13:11.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\Program.cs",
+              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\Program.cs",
+              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\Program.cs",
+              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwB8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T20:49:24.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "PhieuThueDC_BLL.cs",
               "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\BLL\\PhieuThueDC_BLL.cs",
               "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\BLL\\PhieuThueDC_BLL.cs",
@@ -153,7 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 26,
               "Title": "Bank.cs",
               "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\Bank.cs",
               "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\Bank.cs",
@@ -165,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 25,
               "Title": "Datum.cs",
               "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\Datum.cs",
               "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\Datum.cs",
@@ -177,19 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UC_Datlich.cs",
-              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_Datlich.cs",
-              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\UC_Datlich.cs",
-              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_Datlich.cs",
-              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\UC_Datlich.cs",
-              "ViewState": "AgIAAOwBAAAAAAAAAAAewAUCAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T07:37:35.688Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 27,
               "Title": "ChiTietPhieuDatSanAccess.cs",
               "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\DAL\\ChiTietPhieuDatSanAccess.cs",
               "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\DAL\\ChiTietPhieuDatSanAccess.cs",
@@ -201,30 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UC_ThanhToan.cs",
-              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_ThanhToan.cs",
-              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\UC_ThanhToan.cs",
-              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_ThanhToan.cs",
-              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\UC_ThanhToan.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T07:13:53.07Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UC_Datlich.cs [Design]",
-              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_Datlich.cs",
-              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\UC_Datlich.cs",
-              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_Datlich.cs [Design]",
-              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\UC_Datlich.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T07:18:54.851Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 29,
               "Title": "PhieuThue_DCAccess.cs",
               "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\DAL\\PhieuThue_DCAccess.cs",
               "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\DAL\\PhieuThue_DCAccess.cs",
@@ -236,18 +506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UC_ThanhToan.cs [Design]",
-              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_ThanhToan.cs",
-              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\UC_ThanhToan.cs",
-              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\UC_ThanhToan.cs [Design]",
-              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\UC_ThanhToan.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T07:13:12.833Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 30,
               "Title": "Bill.cs [Design]",
               "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\Resources\\Bill.cs",
               "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\Resources\\Bill.cs",
@@ -255,42 +514,6 @@
               "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\Resources\\Bill.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-12T21:10:34.923Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "HoaDonBLL.cs",
-              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\BLL\\HoaDonBLL.cs",
-              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\BLL\\HoaDonBLL.cs",
-              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\BLL\\HoaDonBLL.cs",
-              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\BLL\\HoaDonBLL.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAgwA8AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T02:06:36.888Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "HoaDonAccess.cs",
-              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\DAL\\HoaDonAccess.cs",
-              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\DAL\\HoaDonAccess.cs",
-              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\DAL\\HoaDonAccess.cs",
-              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\DAL\\HoaDonAccess.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAswBIAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T00:12:01.184Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\Program.cs",
-              "RelativeDocumentMoniker": "app_DatSan_CauLong_PickleBall\\GUI\\Program.cs",
-              "ToolTip": "D:\\Cong_nghe_phan_mem\\Code\\Du_an_QLSB\\Pull_1\\app_DatSan_CauLong_PickleBall\\app_DatSan_CauLong_PickleBall\\GUI\\Program.cs",
-              "RelativeToolTip": "app_DatSan_CauLong_PickleBall\\GUI\\Program.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwB8AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T20:49:24.599Z"
             }
           ]
         }

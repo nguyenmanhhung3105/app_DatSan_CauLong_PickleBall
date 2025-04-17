@@ -9,51 +9,62 @@ namespace DAL
 {
     public class HoaDonAccess
     {
-        public static DataTable getHoaDon(string maHD)
-        {   
-            string query = @"
-                SELECT hd.MaHoaDon,
-                        kh.TenKhachHang,
-                        kh.soDienThoai,
-                        kh.email,
-                        s.tenSan,
-                        pds.thoiGianDat,
-                        pds.thoiGianKetThuc,
-                        ct.giaSanTheoPhut,
-                        DATEDIFF(MINUTE, pds.thoiGianDat, pds.thoiGianKetThuc) * ct.giaSanTheoPhut AS ThanhTienSan,
-                        ISNULL(k.tenDungCu,N'Không thuê'),                        
-                        ISNULL(ctdc.soLuong,0) AS SoLuong,
-                        ISNULL(k.DonGia, 0)AS DonGia,
-                        
-                        ISNULL(ctdc.thanhTien, 0) AS ThanhTienDC,
-                       
-                        pds.tongtien,
-                        ISNULL(v.MaVoucher, N'Không sử dụng') AS MaVoucher,
-                        ISNULL(V.TenVoucher, N'Không sử dụng') AS TenVoucher                        
-                        ISNULL(v.GiaTriGiam, 0) AS GiaTriGiam,
-                        ISNULL(v.KieuGiam, N'') AS KieuGiam,
-                        ISNULL(hd.GhiChu, N'') AS GhiChu
-                FROM HoaDon hd
-                JOIN KhachHang kh ON hd.MaKhachHang = kh.maKhachHang
-                JOIN PhieuDatSan pds ON hd.MaPhieuDatSan = pds.maPhieuDatSan
-                JOIN ChiTietPhieuDatSan ct ON pds.maPhieuDatSan = ct.maPDS
-                JOIN San s ON ct.maSan = s.maSan
-                
-                LEFT JOIN PhieuThueDC ptdc ON hd.MaPhieuThueDC = ptdc.maPhieu
-                LEFT JOIN CT_PhieuThueDC ctdc ON ptdc.maPhieu = ctdc.maPhieu
-                LEFT JOIN Kho k ON ctdc.maDungCu= k.maDungCu
-                LEFT JOIN Voucher v on hd.MaVoucher = v.maVoucher
-                WHERE hd.MaHoaDon = @maHoaDon
-            ";
-            Dictionary<string, object> parameters = new Dictionary<string, object>
-            {
-                {"@maHoaDon", maHD} 
-            };
-            return Connection.selectQuery(query, parameters);
+        public static DataSet getHoaDon(string maHD)
+        {
+            DataSet ds = new DataSet();
+            string querySan = @"
+        SELECT s.tenSan, pds.thoiGianDat, pds.thoiGianKetThuc, ct.giaSanTheoPhut,
+               DATEDIFF(MINUTE, pds.thoiGianDat, pds.thoiGianKetThuc) * ct.giaSanTheoPhut AS ThanhTienSan
+        FROM HoaDon hd
+        JOIN PhieuDatSan pds ON hd.MaPhieuDatSan = pds.maPhieuDatSan
+        JOIN ChiTietPhieuDatSan ct ON pds.maPhieuDatSan = ct.maPDS
+        JOIN San s ON ct.maSan = s.maSan
+        WHERE hd.MaHoaDon = @maHoaDon
+    ";
+            string queryDungCu = @"
+        SELECT k.tenDungCu, ISNULL(ctdc.soLuong,0) AS SoLuong, ISNULL(k.DonGia, 0) AS DonGia,
+               ISNULL(ctdc.thanhTien, 0) AS ThanhTienDC
+        FROM HoaDon hd
+        JOIN PhieuThueDC ptdc ON hd.MaPhieuThueDC = ptdc.maPhieu
+        JOIN CT_PhieuThueDC ctdc ON ptdc.maPhieu = ctdc.maPhieu
+        JOIN Kho k ON ctdc.maDungCu = k.maDungCu
+        WHERE hd.MaHoaDon = @maHoaDon
+    ";
+            string queryThongTinChung = @"
+        SELECT hd.MaHoaDon, kh.TenKhachHang, kh.soDienThoai, kh.email,
+               pds.tongtien,
+               
+               ISNULL(hd.GhiChu, N'') AS GhiChu
+        FROM HoaDon hd
+    JOIN KhachHang kh ON hd.MaKhachHang = kh.maKhachHang
+    JOIN PhieuDatSan pds ON hd.MaPhieuDatSan = pds.maPhieuDatSan
+    WHERE hd.MaHoaDon = @maHoaDon
+    ";
+            string queryVoucher = @"
+    SELECT v.MaVoucher, v.TenVoucher, v.GiaTriGiam, v.KieuGiam
+    FROM HoaDon hd
+    LEFT JOIN Voucher v on hd.MaVoucher = v.maVoucher
+    WHERE hd.MaHoaDon = @maHoaDon AND hd.MaVoucher IS NOT NULL
+";
+            var parameters = new Dictionary<string, object> { { "@maHoaDon", maHD } };
+            ds.Tables.Add(Connection.selectQuery(queryThongTinChung, parameters));
+            ds.Tables[0].TableName = "ThongTinChung";
+
+            ds.Tables.Add(Connection.selectQuery(querySan, parameters));
+            ds.Tables[1].TableName = "San";
+
+            ds.Tables.Add(Connection.selectQuery(queryDungCu, parameters));
+            ds.Tables[2].TableName = "DungCu";
+
+            DataTable dtVoucher = Connection.selectQuery(queryVoucher, parameters);
+            dtVoucher.TableName = "Voucher";
+            ds.Tables.Add(dtVoucher);
+            return ds;
         }
         public static void addHoaDon(HoaDon hoaDon)
         {
             hoaDon.MaHoaDon = autoGenerateMaHoaDon();
+            Console.Write(hoaDon.MaHoaDon);
             string query = "INSERT INTO HoaDon (MaHoaDon, MaPhieuDatSan, MaPhieuThueDC, MaKhachHang, NgayThanhToan, TongTien, PhuongThuc, TrangThai, EmailKhachHang, GhiChu, DuongDanHoaDonPDF, MaVoucher) VALUES(@MaHoaDon, @MaPhieuDatSan, @MaPhieuThueDC, @MaKhachHang, @NgayThanhToan, @TongTien, @PhuongThuc, @TrangThai, @Email, @GhiChu, @DuongDanHoaDonPDF, @maVoucher)";
             Dictionary<string, object> parameters = new Dictionary<string, object>
             {

@@ -21,7 +21,9 @@ namespace GUI
         public event Action<object, UserControl> SwitchUserControl;
         San san;
         public KhachHang khachHang;
-        private bool daDatSan = false;
+        public bool daDatSan = false;
+        public string tempMPDS = "";
+        public string tempMPTDC = "";
         public UC_Datlich(San san)
         {
             InitializeComponent();
@@ -40,6 +42,8 @@ namespace GUI
             cbb_ThoiLuong.SelectedIndex = -1;
             toolTip1.SetToolTip(this.tb_Ton, "Số lượng dụng cụ còn lại trong kho");
             daDatSan = false;
+            tempMPDS = "";
+            tempMPTDC = "";
         }
        
        
@@ -220,6 +224,7 @@ namespace GUI
                 int tongTien = 0;
                 PhieuDatSan phieuDatSan = new PhieuDatSan(maPhieuDatSan, maKH, loaiSan, ngayDatSan, thoigianDat, thoiGianKT, tongTien);
                 string maPhieuDatSan_ChiTietPhieuDatSan = PhieuDatSan_BLL.AddPhieuDatSan(phieuDatSan);
+                tempMPDS = maPhieuDatSan_ChiTietPhieuDatSan;
                 ChiTietPhieuDatSan_BLL.addChiTietPhieuDatSan(maPhieuDatSan_ChiTietPhieuDatSan, maSan, loaiSan);
                 DialogResult re =  MessageBox.Show("Chúc mừng bạn đã đặt lịch thành công!\nBạn có muốn đặt thêm dụng cụ không?","Xác nhận",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
                 if (re == DialogResult.Yes)
@@ -303,7 +308,6 @@ namespace GUI
                                 MessageBox.Show($"Cập nhật thất bại cho dụng cụ '{tenDC}'!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
-                    
                     }
 
 
@@ -340,11 +344,13 @@ namespace GUI
                     if (ptdc != null)
                     {
                         cT_PhieuThue_DC = new CT_PhieuThue_DC(ptdc.maPhieuThueDC, maDC, maPDS, soLuong, donGia);
+                        tempMPTDC = ptdc.maPhieuThueDC;
                     }
                     else
                     {
                         ptdc = new PhieuThue_DC(maPTDC, khachHang.maKhachHang, thoigianDat, 0, "Chưa thanh toán");
                         string maPTDC_maCTTDC = PhieuThueDC_BLL.addPhieuThueDC(ptdc);
+                        tempMPTDC = maPTDC_maCTTDC;
                         cT_PhieuThue_DC = new CT_PhieuThue_DC(maPTDC_maCTTDC, maDC, maPDS, soLuong, donGia);
                     }
                     
@@ -413,6 +419,7 @@ namespace GUI
                         {
                             if (!string.IsNullOrEmpty(maPTDC))
                             {
+                                tempMPTDC = "";
                                 bool xoaPhieu = PhieuThueDC_BLL.deletePhieuThueDungCu(maPTDC);
                                 if (xoaPhieu) {
                                     MessageBox.Show("Đã xóa hết dụng cụ và phiếu thuê dụng cụ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);

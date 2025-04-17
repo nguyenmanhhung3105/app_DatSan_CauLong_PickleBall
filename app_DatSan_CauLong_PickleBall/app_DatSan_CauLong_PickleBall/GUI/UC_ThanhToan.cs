@@ -33,7 +33,7 @@ namespace GUI
             tb_TienDatSan.Text = PhieuDatSan_BLL.tinhPhieuDatSanKhongCoDC(phieuDatSan.maPhieuDatSan).ToString("N0");
             if (phieuThue_DC != null)
             {
-                Console.WriteLine(phieuThue_DC.maPhieuThueDC);
+                
                 tb_DungCu.Enabled = true;
                 tb_DungCu.Text = PhieuThueDC_BLL.layDanhSachTenDungCu(phieuDatSan.maPhieuDatSan);
                 tb_TienDC.Text = phieuThue_DC.tongTien.ToString("N0") + " VNĐ";
@@ -113,10 +113,27 @@ namespace GUI
             timer1.Start();
         }
         public event Action<object, UserControl> SwitchUserControl;
-        private void btn_Dat_Click(object sender, EventArgs e)
+
+        private void btn_XacNhan_Click(object sender, EventArgs e)
         {
-            UC_ChuyenKhoan uC_ChuyenKhoan = new UC_ChuyenKhoan();
-            SwitchUserControl?.Invoke(this, uC_ChuyenKhoan);
+            string maPDC = null;
+            if (phieuThue_DC != null) { 
+                maPDC = phieuThue_DC.maPhieuThueDC.ToString();
+            }
+            string maVoucher = cbVoucher.Text == "-- Không sử dụng voucher --" ? null : cbVoucher.Text;
+            try
+            {
+                HoaDon hoaDon = new HoaDon("", phieuDatSan.maPhieuDatSan, maPDC, khachHang.maKhachHang, khachHang.email, DateTime.Now, Convert.ToInt32(phieuDatSan.tongTien), "Chuyển khoản", "Chưa thanh toán", tb_GhiChu.Text, "", maVoucher);
+                HoaDonBLL.addHoaDon(hoaDon);
+                UC_ChuyenKhoan uC_ChuyenKhoan = new UC_ChuyenKhoan(hoaDon);
+                SwitchUserControl?.Invoke(this, uC_ChuyenKhoan);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Có lỗi xảy ra: " + ex.Message);
+                
+            }
+           
         }
     }
 }

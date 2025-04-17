@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using System.IO;
 using DTO;
+using BLL;
 using System.Runtime.CompilerServices;
 
 namespace GUI
@@ -21,6 +22,10 @@ namespace GUI
 
         public KhachHang khachHang;
         //public QuanLy quanLy;
+        private UC_Datlich uc_DatLich = null;           // Lưu tham chiếu tới UC_DatLich hiện tại
+        private bool daDatLich = false;       // Cờ kiểm tra có đang ở UC_DatLich không
+        private string maPhieuDatSan = null;
+        private string maPhieuThueDungCu = null;
         public Form_Home(KhachHang kh)
         {
             
@@ -66,7 +71,54 @@ namespace GUI
             this.Scroll += Form_Home_Scroll;
             
         }
-        
+        private void AttachMouseDownEvents(Control parent)
+        {
+            foreach (Control ctrl in parent.Controls)
+            {
+                // Đừng gắn vào UC_DatLich vì click trong đó không tính là "ra ngoài"
+                if (uc_DatLich == null || ctrl != uc_DatLich)
+                {
+                    ctrl.MouseDown -= Control_MouseDown; // Gỡ trước cho chắc
+                    ctrl.MouseDown += Control_MouseDown;
+                }
+
+                if (ctrl.HasChildren)
+                {
+                    AttachMouseDownEvents(ctrl);
+                }
+            }
+        }
+        private void Control_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (uc_DatLich == null || !uc_DatLich.daDatSan) return;
+            Control clickedControl = sender as Control;
+            if (clickedControl != null && !uc_DatLich.Contains(clickedControl))
+            {
+                DialogResult result = MessageBox.Show(
+                    "Nếu bạn thoát thì phiếu đặt sân của bạn sẽ bị xóa. Bạn chắc chứ?",
+                    "Xác nhận hủy",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    string maPhieuDatSan = uc_DatLich.tempMPDS;
+
+                    if (!string.IsNullOrEmpty(maPhieuDatSan))
+                    {
+                        ChiTietPhieuDatSan_BLL.deleteChiTietPhieuDatSan(maPhieuDatSan);
+                        PhieuDatSan_BLL.deletePhieuDatSanByMaPDS(maPhieuDatSan);
+
+                        MessageBox.Show("Đã xóa phiếu đặt sân thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    // Reset
+                    uc_DatLich = null;
+                    LoadUC_Datsan();
+                }
+            }
+        }
         private async Task<Image> LoadImageAsync(string path)
         {
             return await Task.Run(() =>
@@ -86,6 +138,7 @@ namespace GUI
             btn_Danhgia.Click += MenuButton_Click;
             btn_DatSan.Click += MenuButton_Click;
            btn_Account.Click += MenuButton_Click;
+            AttachMouseDownEvents(this);
 
         }
         private void MenuButton_Click(object sender, EventArgs e)
@@ -184,6 +237,15 @@ namespace GUI
             userControl.Size = pn_Main.Size;
             pn_Main.Controls.Add(userControl);
             userControl.BringToFront();
+            if (userControl is UC_Datlich)
+            {
+                uc_DatLich = (UC_Datlich)userControl;
+            }
+            else
+            {
+                uc_DatLich = null;
+            }
+            AttachMouseDownEvents(this);
         }
         private void Btn_Click(object sender, EventArgs e)
         {
@@ -197,6 +259,12 @@ namespace GUI
                 case "btn_DatSan":
                     LoadUC_Datsan();
                     break;
+                //case "btn_Danhgia":
+                //    LoadUC_DanhGia();
+                //    break;
+                //case "btn_Account":
+                //    LoadUC_Account();
+                //    break;
             }
         }
 
@@ -221,16 +289,17 @@ namespace GUI
             add_UControls(uc_Datsan);
         }
         
-
+        //private void LoaUC_DanhGia()
+        //{
+        //    UC_Danhgia uc_DanhGia = new UC_Danhgia(khachHang);
+        //    uc_DanhGia.SwitchUserControl += SwitchUserControlHandler;
+        //}
         private void SwitchUserControlHandler(object sender, UserControl uc)
         {
             add_UControls(uc); // Thay đổi UserControl trong pn_Main
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void pt_Close_Click(object sender, EventArgs e)
         {

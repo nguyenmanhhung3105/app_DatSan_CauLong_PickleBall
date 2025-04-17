@@ -24,5 +24,9 @@ namespace BLL
         {
             return ChiTietPhieuDatSanAccess.xemLichSanBiDat(ngayXemLichSanBiDat);
         }
+        public static void deleteChiTietPhieuDatSan(string maPDS)
+        {
+            ChiTietPhieuDatSanAccess.deleteChiTietDatSanByMaPDS(maPDS);
+        }
     }
 }

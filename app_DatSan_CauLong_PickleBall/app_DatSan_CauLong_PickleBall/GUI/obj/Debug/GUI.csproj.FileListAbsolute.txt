@@ -65,7 +65,6 @@ D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_D
 D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\GUI\obj\Debug\GUI.FormForgotPassword.resources
 D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\GUI\obj\Debug\GUI.Form_Home.resources
 D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\GUI\obj\Debug\GUI.FormRegister.resources
-D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\GUI\obj\Debug\GUI.UC_Account.resources
 D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\GUI\obj\Debug\GUI.UC_Danhgia.resources
 D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\GUI\obj\Debug\GUI.UC_Datsan.resources
 D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\GUI\obj\Debug\GUI.UC_Home.resources
@@ -165,3 +164,9 @@ D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_D
 D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\GUI\bin\Debug\DevExpress.XtraBars.v24.2.xml
 D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\GUI\bin\Debug\DevExpress.XtraTreeList.v24.2.xml
 D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\GUI\obj\Debug\GUI.UC_ThanhToan.resources
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\GUI\bin\Debug\Reports.exe
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\GUI\bin\Debug\Reports.pdb
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\GUI\bin\Debug\Reports.exe.config
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\GUI\obj\Debug\GUI.UC_DoiMK.resources
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\GUI\obj\Debug\GUI.UC_AccountKH.resources
+D:\Cong_nghe_phan_mem\Code\Du_an_QLSB\Pull_1\app_DatSan_CauLong_PickleBall\app_DatSan_CauLong_PickleBall\GUI\obj\Debug\GUI.UC_ThongTinCN.resources

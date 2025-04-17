@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Datlich));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Datlich));
             this.label1 = new System.Windows.Forms.Label();
             this.pn_DatDungCu = new Guna.UI2.WinForms.Guna2Panel();
             this.tb_Ton = new Guna.UI2.WinForms.Guna2TextBox();
@@ -45,14 +45,12 @@
             this.btn_Dat_DC = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lb_tenDC = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pb_DungCu = new Guna.UI2.WinForms.Guna2PictureBox();
             this.tb_DonGia = new Guna.UI2.WinForms.Guna2TextBox();
             this.lb_Mota = new System.Windows.Forms.Label();
             this.cb_TenDC = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lbl_Soluong = new System.Windows.Forms.Label();
             this.nu_Soluong = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_XemSan = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.btn_Dat = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pn_DatLich = new Guna.UI2.WinForms.Guna2Panel();
@@ -68,7 +66,6 @@
             this.lbl_LoaiSan = new System.Windows.Forms.Label();
             this.lbl_NgayDat = new System.Windows.Forms.Label();
             this.pdt_NgayDat = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lb_ThongBao = new System.Windows.Forms.Label();
             this.dt_Dung_Cu_Thue = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,13 +76,16 @@
             this.maPTDC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btn_ThanhToan = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pb_DungCu = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pn_DatDungCu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_DungCu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nu_Soluong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.pn_DatLich.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_Dung_Cu_Thue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_DungCu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -278,18 +278,6 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "Bạn muốn thuê dụng cụ?";
             // 
-            // pb_DungCu
-            // 
-            this.pb_DungCu.BackColor = System.Drawing.Color.Transparent;
-            this.pb_DungCu.BorderRadius = 20;
-            this.pb_DungCu.ImageRotate = 0F;
-            this.pb_DungCu.Location = new System.Drawing.Point(13, 43);
-            this.pb_DungCu.Name = "pb_DungCu";
-            this.pb_DungCu.Size = new System.Drawing.Size(200, 196);
-            this.pb_DungCu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_DungCu.TabIndex = 31;
-            this.pb_DungCu.TabStop = false;
-            // 
             // tb_DonGia
             // 
             this.tb_DonGia.BackColor = System.Drawing.Color.Transparent;
@@ -397,17 +385,6 @@
             0,
             0});
             // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(-456, 0);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(1542, 500);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 38;
-            this.guna2PictureBox2.TabStop = false;
-            // 
             // btn_XemSan
             // 
             this.btn_XemSan.BackColor = System.Drawing.Color.Transparent;
@@ -513,7 +490,7 @@
             this.cbb_ThoiLuong.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbb_ThoiLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbb_ThoiLuong.ItemHeight = 30;
-            this.cbb_ThoiLuong.Location = new System.Drawing.Point(147, 293);
+            this.cbb_ThoiLuong.Location = new System.Drawing.Point(147, 292);
             this.cbb_ThoiLuong.Name = "cbb_ThoiLuong";
             this.cbb_ThoiLuong.Size = new System.Drawing.Size(265, 36);
             this.cbb_ThoiLuong.TabIndex = 25;
@@ -651,17 +628,6 @@
             this.pdt_NgayDat.Size = new System.Drawing.Size(265, 36);
             this.pdt_NgayDat.TabIndex = 20;
             this.pdt_NgayDat.Value = new System.DateTime(2025, 3, 16, 0, 56, 39, 902);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 0);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(1542, 507);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 37;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // lb_ThongBao
             // 
@@ -824,6 +790,40 @@
             this.btn_ThanhToan.UseTransparentBackground = true;
             this.btn_ThanhToan.Click += new System.EventHandler(this.btn_ThanhToan_Click);
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(1542, 507);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 37;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // pb_DungCu
+            // 
+            this.pb_DungCu.BackColor = System.Drawing.Color.Transparent;
+            this.pb_DungCu.BorderRadius = 20;
+            this.pb_DungCu.ImageRotate = 0F;
+            this.pb_DungCu.Location = new System.Drawing.Point(13, 43);
+            this.pb_DungCu.Name = "pb_DungCu";
+            this.pb_DungCu.Size = new System.Drawing.Size(200, 196);
+            this.pb_DungCu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_DungCu.TabIndex = 31;
+            this.pb_DungCu.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(-456, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(1542, 500);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 38;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // UC_Datlich
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -840,13 +840,13 @@
             this.Size = new System.Drawing.Size(1600, 750);
             this.pn_DatDungCu.ResumeLayout(false);
             this.pn_DatDungCu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_DungCu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nu_Soluong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.pn_DatLich.ResumeLayout(false);
             this.pn_DatLich.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_Dung_Cu_Thue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_DungCu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

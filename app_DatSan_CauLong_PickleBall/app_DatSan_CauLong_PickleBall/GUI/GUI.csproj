@@ -83,6 +83,7 @@
     <Reference Include="DevExpress.Xpo.v24.2, Version=24.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\DevExpress.Xpo.24.2.6\lib\net462\DevExpress.Xpo.v24.2.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraBars.v24.2, Version=24.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v24.2, Version=24.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\DevExpress.Charts.24.2.6\lib\net462\DevExpress.XtraCharts.v24.2.dll</HintPath>
     </Reference>
@@ -214,17 +215,23 @@
     <Compile Include="UC_ChuyenKhoan.Designer.cs">
       <DependentUpon>UC_ChuyenKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_DoiMK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_DoiMK.Designer.cs">
+      <DependentUpon>UC_DoiMK.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_San.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC_San.Designer.cs">
       <DependentUpon>UC_San.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Account.cs">
+    <Compile Include="UC_AccountKH.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Account.Designer.cs">
-      <DependentUpon>UC_Account.cs</DependentUpon>
+    <Compile Include="UC_AccountKH.Designer.cs">
+      <DependentUpon>UC_AccountKH.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Danhgia.cs">
       <SubType>UserControl</SubType>
@@ -274,6 +281,12 @@
     <Compile Include="UC_ThanhToan.Designer.cs">
       <DependentUpon>UC_ThanhToan.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_ThongTinCN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ThongTinCN.Designer.cs">
+      <DependentUpon>UC_ThongTinCN.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -309,11 +322,14 @@
     <EmbeddedResource Include="UC_ChuyenKhoan.resx">
       <DependentUpon>UC_ChuyenKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_DoiMK.resx">
+      <DependentUpon>UC_DoiMK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_San.resx">
       <DependentUpon>UC_San.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Account.resx">
-      <DependentUpon>UC_Account.cs</DependentUpon>
+    <EmbeddedResource Include="UC_AccountKH.resx">
+      <DependentUpon>UC_AccountKH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Danhgia.resx">
       <DependentUpon>UC_Danhgia.cs</DependentUpon>
@@ -335,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ThanhToan.resx">
       <DependentUpon>UC_ThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ThongTinCN.resx">
+      <DependentUpon>UC_ThongTinCN.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -387,6 +406,10 @@
     <None Include="bin\Debug\img\minimize-sign.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Reports\Reports.csproj">
+      <Project>{b383bba8-f622-45d4-aeb8-23a062a3cd09}</Project>
+      <Name>Reports</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{071710cf-1361-460e-b82d-259782dd4415}</Project>
       <Name>BLL</Name>

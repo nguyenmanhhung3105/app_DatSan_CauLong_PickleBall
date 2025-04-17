@@ -180,6 +180,7 @@ namespace GUI
                 foreach (DataRow dr in dt.Rows)
                 {
                     UC_San uc = new UC_San();
+                    uc.OnDatSanClick += SanControl_OnDatSanClick;
                     uc.setData(dr);
                     pn_San.Controls.Add(uc);
                 }
@@ -199,6 +200,7 @@ namespace GUI
                 foreach (DataRow dr in dt.Rows)
                 {
                     UC_San uc = new UC_San();
+                    uc.OnDatSanClick += SanControl_OnDatSanClick;
                     uc.setData(dr);
                     pn_San.Controls.Add(uc);
                 }

@@ -150,7 +150,7 @@ WHERE CT_PhieuThueDC.maPhieuDatSan = @maPhieuDatSan";
 
             Connection.actionQuery(queryUpdate, updateParams);
         }
-        public static void updateTinhTrangPhieuDatSan(string maPDS, string tinhTrang, string nhanvien)
+        public static void updateTinhTrangPhieuDatSan(string maPDS, string tinhTrang)
         {
             string query = "UPDATE PhieuDatSan SET trangThai = @tinhTrang WHERE maPhieuDatSan = @maPDS";
             Dictionary<string, object> parameters = new Dictionary<string, object>

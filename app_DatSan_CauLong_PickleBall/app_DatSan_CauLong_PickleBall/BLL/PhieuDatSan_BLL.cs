@@ -52,9 +52,9 @@ namespace BLL
         {
             return PhieuDatSanAccess.xemAllLichSuDatSanByNgayDat(ngayDat);
         }
-        public static void upDateTinhTrangPhieuDatSan(string maPDS, string trangThai, string maNV)
+        public static void upDateTinhTrangPhieuDatSan(string maPDS, string trangThai)
         {
-            PhieuDatSanAccess.updateTinhTrangPhieuDatSan(maPDS, trangThai, maNV);
+            PhieuDatSanAccess.updateTinhTrangPhieuDatSan(maPDS, trangThai);
         }
         public static void deletePhieuDatSanByMaPDS(string maPDS)
         {

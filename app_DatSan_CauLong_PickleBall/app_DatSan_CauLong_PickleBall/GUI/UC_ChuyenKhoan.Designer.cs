@@ -47,6 +47,7 @@
             this.lbl_LoaiSan = new System.Windows.Forms.Label();
             this.lbl_NgayDat = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btn_XacnhanThanhToan = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pn_DatLich.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cb_nganhang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
@@ -219,7 +220,7 @@
             this.txtSoTien.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.txtSoTien.BorderRadius = 10;
             this.txtSoTien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSoTien.DefaultText = "100000";
+            this.txtSoTien.DefaultText = "";
             this.txtSoTien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSoTien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSoTien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -325,6 +326,30 @@
             this.guna2PictureBox1.TabIndex = 41;
             this.guna2PictureBox1.TabStop = false;
             // 
+            // btn_XacnhanThanhToan
+            // 
+            this.btn_XacnhanThanhToan.Animated = true;
+            this.btn_XacnhanThanhToan.AutoRoundedCorners = true;
+            this.btn_XacnhanThanhToan.BackColor = System.Drawing.Color.Transparent;
+            this.btn_XacnhanThanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_XacnhanThanhToan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_XacnhanThanhToan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_XacnhanThanhToan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_XacnhanThanhToan.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_XacnhanThanhToan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_XacnhanThanhToan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_XacnhanThanhToan.FillColor2 = System.Drawing.Color.Chartreuse;
+            this.btn_XacnhanThanhToan.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btn_XacnhanThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btn_XacnhanThanhToan.Location = new System.Drawing.Point(382, 642);
+            this.btn_XacnhanThanhToan.Name = "btn_XacnhanThanhToan";
+            this.btn_XacnhanThanhToan.PressedColor = System.Drawing.Color.Transparent;
+            this.btn_XacnhanThanhToan.Size = new System.Drawing.Size(351, 66);
+            this.btn_XacnhanThanhToan.TabIndex = 42;
+            this.btn_XacnhanThanhToan.Text = "Xác nhận đã thanh toán";
+            this.btn_XacnhanThanhToan.UseTransparentBackground = true;
+            this.btn_XacnhanThanhToan.Click += new System.EventHandler(this.btn_XacnhanThanhToan_Click);
+            // 
             // UC_ChuyenKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -332,6 +357,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.btn_XacnhanThanhToan);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.pn_DatLich);
             this.DoubleBuffered = true;
@@ -367,5 +393,6 @@
         private DevExpress.XtraEditors.GridLookUpEdit cb_nganhang;
         private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_XacnhanThanhToan;
     }
 }
